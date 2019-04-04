@@ -1,3 +1,8 @@
+Project 2 for Wild Code School. 
+Members: Julia, Sarawi, Helder, Sébastien, Paul and Marc.
+
+Our project is to create a website about space and planets. There will be a lot of informations, photos and videos. 
+
 # NoName
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
