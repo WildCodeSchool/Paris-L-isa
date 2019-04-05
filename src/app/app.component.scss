@@ -9,6 +9,9 @@
 
 .background {
 
-    @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'))
-
+    @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
+    height: 90vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
 }
