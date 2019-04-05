@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { TabsCountdownComponent } from './tabs-countdown/tabs-countdown.component';
 import { CountDownComponent } from './count-down/count-down.component';
 
@@ -10,7 +11,9 @@ import { CountDownComponent } from './count-down/count-down.component';
   declarations: [
     AppComponent,
     TabsCountdownComponent,
-    CountDownComponent
+    CountDownComponent,
+    NavbarComponent,
+    TabsCountdownComponent
   ],
   imports: [
     BrowserModule,
