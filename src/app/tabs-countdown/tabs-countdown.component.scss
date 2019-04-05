@@ -1,0 +1,78 @@
+#main {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+#main:hover {
+  box-shadow: 0 8px 16px 0px black;
+}
+
+.eventsTitles {
+  font-family: 'nasalization';
+  color: #262626;
+}
+
+.tabs{
+  width : 30vw;
+  margin: 0 auto 0 !important;
+  opacity: 0.6;
+  border-bottom: none;
+  background-color: #262626;
+}
+
+li {
+  width: 50%;
+}
+
+.bodyEvent {
+  width: 30vw;
+  height: 15vw;
+  border-top: 0;
+  margin: 0 auto;
+  opacity: 0.6;
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fcfcfc;
+  
+}
+
+
+
+.eventsTitles{
+  color: #fcfcfc;
+}
+
+.eventsTitles2 {
+  font-family: 'nasalization';
+  color: #fcfcfc;
+}
+
+.conferences{
+  background-color: #5b5b5b;
+}
+
+.conferences:hover .eventsTitles2{
+  color: #262626;
+}
+
+img {
+  margin-right: 10%;
+}
+
+@media screen and (max-width: 414px) {
+  .conferences {
+    display: none;
+  }
+
+  .tabs {
+    width: 50vh;
+  }
+
+  .bodyEvent {
+    width: 50vh;
+    height: 50vh;
+  }
+}
