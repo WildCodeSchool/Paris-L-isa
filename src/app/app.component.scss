@@ -1,0 +1,14 @@
+@mixin backgroundM ($background) {
+
+    background-image: $background;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.background {
+
+    @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'))
+
+}
