@@ -3,6 +3,11 @@
 @import '../node_modules/font-awesome/scss/font-awesome';
 @import '../node_modules/bulma/';
 
-body{
+@font-face {
+  font-family: 'nasalization';
+  src: url('assets/nasalization/nasalization-rg.ttf');
+}
+
+body {
     margin: 0%;
 }
