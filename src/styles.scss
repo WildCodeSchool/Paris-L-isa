@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'variables';
 @import '../node_modules/font-awesome/scss/font-awesome';
-@import '../node_modules/bulma/'
+@import '../node_modules/bulma/';
+
+@font-face {
+  font-family: 'nasalization';
+  src: url('assets/nasalization/nasalization-rg.ttf');
+}
+
+body {
+    margin: 0%;
+}
