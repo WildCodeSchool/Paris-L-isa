@@ -1,0 +1,146 @@
+#main {
+    background-image: url("https://spacenews.com/wp-content/uploads/2018/04/SST-Trifid-Nebula-879x485.png");
+    color: #fcfcfc;
+    height: 700px;
+    font-family: 'nasalization';
+    margin-top: 60px;
+    
+
+
+    .bodyInfo {
+        background-color: #262626;
+        color: #fcfcfc;
+        height: 60vh;
+        margin: 0 auto 0 !important;
+        opacity: 0.6;
+        width: 79vw;
+    }
+
+
+    .tabs{
+        border-bottom: none;
+        background-color: #262626;
+        margin: 0 auto 0 !important;
+        opacity: 0.6;
+        width : 79vw;
+
+        .astroNick { 
+            width: 20%
+        };
+
+        .astroAlexey {
+            width: 20%
+        };
+
+        .astroChristina {
+             width: 20%
+            };
+        .astroAnne { 
+            width: 20%
+        };
+
+        .astroOleg {
+             width: 20%
+            };
+
+        .astroDavid {
+             width: 20%
+            };
+
+        .nameNick {
+             color: #fcfcfc
+            };
+
+        .nameAlexey { 
+            color: #fcfcfc
+        };
+
+        .nameChristina { 
+            color: #fcfcfc
+        };
+
+        .nameAnne {
+             color: #fcfcfc
+            };
+
+        .nameOleg {
+             color: #fcfcfc
+            };
+
+        .nameDavid {
+             color: #fcfcfc
+            };
+
+        .astroNick:hover .nameNick {
+            color: #262626
+        };
+
+        .astroAlexey:hover .nameAlexey {
+            color: #262626
+        };
+
+        .astroChristina:hover .nameChristina {
+            color: #262626
+        };
+
+        .astroAnne:hover .nameAnne {
+            color: #262626
+        };
+
+        .astroOleg:hover .nameOleg {
+            color: #262626
+        };
+
+        .astroDavid:hover .nameDavid {
+            color: #262626
+        };
+
+    }
+
+    .menuBurger {
+        display: none
+    };
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .tabs {
+
+        .astroNick {
+            display: none
+        };
+        .astroAlexey {
+            display: none
+        };
+        .astroChristina {
+            display: none
+        };
+        .astroAnne {
+            display: none
+        };
+        .astroOleg {
+            display: none
+        };
+        .astroDavid {
+            display: none
+        };
+        
+        .menuBurger{
+            display: inline !important;
+            margin: 2px auto;
+
+            .astronome {
+                background-color: #262626;
+                border: none;
+                color: #fcfcfc;
+                font-size: 9vw;
+                font-family: 'nasalization';
+
+
+            }
+        }
+        
+    }
+
+}
