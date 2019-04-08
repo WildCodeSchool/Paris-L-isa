@@ -143,4 +143,17 @@
         
     }
 
+    .bodyInfo {
+
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-gap: 10px;
+    }
+
+    picture {
+
+        grid-column: 1;
+        grid-row: 1;
+    }
 }
