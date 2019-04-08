@@ -1,26 +1,136 @@
+$fontFamily : 'nasalization';
+
 section {
-    margin-top : 100px;
-    display :flex;
-    justify-content: center;
+    min-height: 100vh;
+    height:100%;
+    background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    color:white;
+    text-align: center;
+    font-family: $fontFamily;
+    padding-top: 120px;
+    font-size: 2rem;
+}
+
+#calendarCards {
+    height:auto;
+    width:100vw;
+    display: flex;
+    justify-content : center;
     display:grid;
     grid-template-columns: 30% 30% 30%;
     grid-template-rows: 3fr 3fr 3fr;
     grid-gap: 15px;
-    height: auto;
-    width:99.2vw;
+    padding-top: 80px;
+    padding-bottom:0;
+
+    #card1 {
+        background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
+        width:100%;
+    }
+
+    #card2 {
+        background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
+        width:100%;
+    }
+
+    #card3 {
+        background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
+        width:100%;
+    }
+
+    #card4 {
+        background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
+        width:100%;
+    }
+
+    #card5 {
+        background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
+        width:100%;
+    }
+
+    #card6 {
+        background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
+        width:100%;
+    }
+
 }
+
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: 0.2s;
+    background: none;
+    height:200px;
+    perspective: 1000px;
+}
+
+.container, .cardsBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
   }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  /* Add some padding inside the card container */
-  .container {
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor:pointer;
+}
+
+.container {
     padding: 2px 16px;
+    display: flex;
+    flex-direction: column;
+
+    p, h4 {
+        color:white;
+        text-align: center;
+        font-family: $fontFamily;
+    }
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
   }
+
+.cardsBack {
+    transform: rotateY(180deg);
+    background-color: white;
+
+    p, h4 {
+        color:black;
+        font-family: $fontFamily;
+    }
+}
