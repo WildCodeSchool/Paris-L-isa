@@ -4,29 +4,46 @@
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 <div id="main">
-
   <div class="tabs is-boxed">
     <ul>
       <li class="eclipse">
-        <a>
+        <a
+          id="buttonEclipses"
+          (click)="showEclipse($event)"
+        >
           <img src="../../assets/icons/telescope1.png/" alt='icon'><span class="eventsTitles">Éclipses</span>
         </a>
       </li>
 
       <li class="conferences">
-        <a>
+        <a
+          id="buttonConferences"
+          (click)="showConference($event)"
+        >
           <img src="../../assets/icons/rocket.png" alt='icon' class="icon2"><span class="eventsTitles2">Conférences</span>
         </a>
       </li>
     </ul>
   </div>
 
-  <div class='bodyEvent'> <app-count-down></app-count-down>
-  
-      <h2>Event name</h2>
+  <div *ngIf="eclipses" class='bodyEvent'>
+
+    <app-count-down></app-count-down>
+
+      <h2>Eclipses</h2>
 
       <p >This event is iencibeiuc izbndiuezb.</p>
-  
+
+  </div>
+
+  <div *ngIf="conference" class='bodyEvent'>
+
+      <app-count-down></app-count-down>
+
+      <h2>Conferences</h2>
+
+      <p >This event is iencibeiuc izbndiuezb.</p>
+
   </div>
 
 </div>
