@@ -8,6 +8,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TabsCountdownComponent } from './tabs-countdown/tabs-countdown.component';
 import { CountDownComponent } from './count-down/count-down.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CountDownComponent } from './count-down/count-down.component';
     CountDownComponent,
     FooterComponent,
     NavbarComponent,
-    TabsCountdownComponent
+    TabsCountdownComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
