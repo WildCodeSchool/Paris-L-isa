@@ -1,0 +1,28 @@
+@mixin backgroundM ($background) {
+
+  background-image: $background;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+.background {
+
+  @include backgroundM(url('../../assets/LiveISS/moonBackground.png'));
+  
+}
+
+.video-container{
+  text-align: center;
+  padding-top: 12vh;
+}
+
+iframe {
+  height: 500px;
+  width: 900px;
+  max-width: 80%;
+  max-height: 80vw;
+}
+
