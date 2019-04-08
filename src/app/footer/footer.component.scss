@@ -28,6 +28,11 @@ a {
 
 }
 
+i:hover {
+    transition: transform .2s;
+    transform: scale(1.20);
+}
+
 span {
     
     font-weight: bold;
