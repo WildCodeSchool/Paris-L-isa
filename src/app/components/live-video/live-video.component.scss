@@ -9,10 +9,24 @@
 }
 
 
+@media screen and (max-width: 1087px) {
+  .background {
+    @include backgroundM(url('../../../assets/LiveISS/moonBackground.png'));
+  }
+}
 .background {
-
-  @include backgroundM(url('../../../assets/LiveISS/moonBackground.png'));
-  
+  padding-top: 12vh;
+  padding-bottom: 21vh;
+}
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  min-width: 100vw; 
+  min-height: 100vh;
+  z-index: -1;
 }
 
 .video-container{
