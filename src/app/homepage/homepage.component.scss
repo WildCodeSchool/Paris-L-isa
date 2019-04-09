@@ -1,0 +1,37 @@
+$fontFamily : 'nasalization';
+
+@mixin backgroundM ($background) {
+    background-image: $background;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+@mixin title () {
+    color: #eee;
+    font-family: $fontFamily;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 16vh;
+}
+
+.h1title{
+    @include title;
+}
+
+.background {
+    @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));  
+}
+
+.tabs {
+    height: 50vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    
+    #eventsCards {
+        margin-top : 10vh;
+    }
+}
+    
