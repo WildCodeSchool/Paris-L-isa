@@ -1,32 +1,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 <div id="main">
-
-  <div class="tabs is-boxed">
+  <div class="tabsComponent is-boxed">
     <ul>
-      <li class="eclipse">
-        <a>
-          <img src="../../assets/icons/telescope1.png/" alt='icon'><span class="eventsTitles">Éclipses</span>
+      <li [ngClass]="{backGroundTabs: conferences}" class="eclipses">
+        <a id="buttonEclipses" (click)="showEclipse($event)">
+          <img src="../../assets/icons/telescope1.png/" alt='icon'><span class="eventsTitles1">Éclipses</span>
         </a>
       </li>
 
-      <li class="conferences">
-        <a>
+      <li [ngClass]="{backGroundTabs: eclipses}" class="conferences">
+        <a id="buttonConferences" (click)="showConference($event)">
           <img src="../../assets/icons/rocket.png" alt='icon' class="icon2"><span class="eventsTitles2">Conférences</span>
         </a>
       </li>
     </ul>
   </div>
 
-  <div class='bodyEvent'> <app-count-down></app-count-down>
-  
-      <h2>Event name</h2>
+  <div *ngIf="eclipses" class='bodyEvent'>
 
-      <p >This event is iencibeiuc izbndiuezb.</p>
-  
+    <app-count-down></app-count-down>
+
+      <h2>Eclipses</h2>
+
+      <p >This event is ECLIPSES.</p>
+
+  </div>
+
+  <div *ngIf="conferences" class='bodyEvent'>
+
+      <app-count-down></app-count-down>
+
+      <h2>Conferences</h2>
+
+      <p >This event is CONFERENCES.</p>
+
   </div>
 
 </div>

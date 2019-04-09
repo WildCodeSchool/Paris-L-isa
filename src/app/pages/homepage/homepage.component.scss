@@ -14,18 +14,14 @@ $fontFamily : 'nasalization';
 .background {
 
     @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
-    
+
 }
 
 .tabs {
-    height: 70vh;
     display : flex;
     justify-content: center;
     align-items: center;
-}
-
-#eventsCards {
-    margin-top : 10vh;
+    margin: 20px;
 }
 
 .h1title{
