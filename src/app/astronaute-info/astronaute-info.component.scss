@@ -1,19 +1,19 @@
+
+
 #main {
     background-image: url("https://spacenews.com/wp-content/uploads/2018/04/SST-Trifid-Nebula-879x485.png");
     color: #fcfcfc;
-    height: 700px;
+    height: 900px;
     font-family: 'nasalization';
     margin-top: 60px;
     
 
-
     .bodyInfo {
-        background-color: #262626;
+        background-color:rgba(38,38,38,0.6);
         color: #fcfcfc;
-        height: 60vh;
         margin: 0 auto 0 !important;
-        opacity: 0.6;
         width: 79vw;
+        
     }
 
 
@@ -71,6 +71,8 @@
              color: #fcfcfc
             };
 
+        /*   HOVER   */
+
         .astroNick:hover .nameNick {
             color: #262626
         };
@@ -101,7 +103,63 @@
         display: none
     };
 
-}
+    /* GRID SET UP */
+
+    .bodyInfo {
+
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 20px;
+        grid-template-rows: auto;
+        padding: 1vw;
+        
+    }
+
+    .picture {
+
+        grid-column: 1;
+        grid-row: 1/2;
+        text-align: center;
+    }
+
+    .summary {
+        grid-column: 2/4;
+        grid-row: 1;
+
+        h3{
+            text-align: center;
+            padding: 2px 0;
+            font-size: 25px;
+        }
+    }
+
+    .personalData {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .nasaExperience {
+        grid-column: 2/4;
+        grid-row: 2;
+
+        h3{
+            text-align: center;
+            padding: 2px 0;
+            font-size: 25px;
+        }
+    }
+
+    .twitterApi {
+        grid-column: 4;
+        grid-row: 1/2;
+    }
+
+    .fb-page {
+        grid-column: 4;
+        grid-row: 2;
+        
+    }
+}   
 
 @media screen and (max-width: 1000px) {
 
@@ -143,17 +201,65 @@
         
     }
 
-    .bodyInfo {
+}
+
+@media screen and (max-width: 900px) {
+
+     /* GRID SET UP */
+#main {
+
+     .bodyInfo {
 
         display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(4,1fr);
-        grid-gap: 10px;
+        grid-template-columns: auto;
+        grid-gap: 2px;
+        grid-template-rows: auto;
+        padding: 1vw;
+        
     }
 
-    picture {
+    .picture {
 
-        grid-column: 1;
         grid-row: 1;
     }
+
+    .summary {
+        grid-column: 1;
+        grid-row: 3;
+
+        h3{
+            text-align: center;
+            padding: 2px 0;
+            font-size: 25px;
+        }
+    }
+
+    .personalData {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .nasaExperience {
+        grid-column: 1;
+        grid-row: 5;
+
+        h3{
+            text-align: center;
+            padding: 4px 0;
+            font-size: 25px;
+        }
+    }
+
+    .twitterApi {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .fb-page {
+        grid-column: 1;
+        grid-row: 7;
+        
+    }
+    
+}
 }
