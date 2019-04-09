@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { NavbarComponent } from './navbar/navbar.component';
-import { TabsCountdownComponent } from './tabs-countdown/tabs-countdown.component';
-import { CountDownComponent } from './count-down/count-down.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { TabsCountdownComponent } from './components/tabs-countdown/tabs-countdown.component';
+import { CountDownComponent } from './components/count-down/count-down.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { LiveVideoComponent } from './components/live-video/live-video.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     FooterComponent,
     NavbarComponent,
     TabsCountdownComponent,
-    HomepageComponent
+    HomepageComponent,
+    LiveVideoComponent
   ],
   imports: [
     BrowserModule,
