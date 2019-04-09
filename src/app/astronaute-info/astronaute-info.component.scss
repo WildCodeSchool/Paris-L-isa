@@ -8,7 +8,8 @@
     margin-top: 60px;
     
 
-    .bodyInfo {
+    .bodyInfo_anne_mcclain,
+    .bodyInfo_nick_hague    {
         background-color:rgba(38,38,38,0.6);
         color: #fcfcfc;
         margin: 0 auto 0 !important;
@@ -103,9 +104,66 @@
         display: none
     };
 
-    /* GRID SET UP */
+    /* GRID SET UP NICK HAGUE*/
 
-    .bodyInfo {
+    .bodyInfo_nick_hague {
+
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 20px;
+        grid-template-rows: auto;
+        padding: 1vw;
+        
+    }
+
+    .picture {
+
+        grid-column: 1;
+        grid-row: 1/2;
+        text-align: center;
+    }
+
+    .summary {
+        grid-column: 2/4;
+        grid-row: 1;
+
+        h3{
+            text-align: center;
+            padding: 2px 0;
+            font-size: 25px;
+        }
+    }
+
+    .personalData {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .nasaExperience {
+        grid-column: 2/4;
+        grid-row: 2;
+
+        h3{
+            text-align: center;
+            padding: 2px 0;
+            font-size: 25px;
+        }
+    }
+
+    .twitterApi {
+        grid-column: 4;
+        grid-row: 1/2;
+    }
+
+    .fb-page {
+        grid-column: 4;
+        grid-row: 2;
+        
+    }
+
+    /* GRID SET UP ANNE MCCLAIN*/
+
+    .bodyInfo_anne_mcclain {
 
         display: grid;
         grid-template-columns: repeat(4,1fr);
@@ -208,7 +266,8 @@
      /* GRID SET UP */
 #main {
 
-     .bodyInfo {
+     .bodyInfo_anne_mcclain,
+     .bodyInfo_nick_hague     {
 
         display: grid;
         grid-template-columns: auto;

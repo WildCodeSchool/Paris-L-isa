@@ -5,7 +5,7 @@
     <div class="tabs is-boxed">
       <ul>
         <li class="astroNick">
-          <a>
+          <a (click)="actionNick($event)">
             <span class="nameNick">Nick Hague</span>
           </a>
         </li>
@@ -23,7 +23,7 @@
         </li>
 
         <li class="astroAnne">
-          <a>
+          <a (click)="actionAnne($event)">
             <span class="nameAnne">Anne McClain</span>
           </a>
         </li>
@@ -42,10 +42,12 @@
 
         <!--  MENU BURGER -->
 
-        <li class="menuBurger">
-          
-            <button class="astronome">ASTRONAUTS</button>
-          
+        <li class="menuBurger">  
+            <a class="btn btn-navbar" id="btnMenu">
+            
+                <button class="astronome">ASTRONAUTS</button>
+
+            </a>
         </li>
 
       </ul>
@@ -54,7 +56,7 @@
   
       <!--    BODY INFO ASTRONOTES N*1 NICK HAGUE  -->
 
-    <div class='bodyInfo nick_hague'> 
+    <div *ngIf="conditionNick" class='bodyInfo_nick_hague'> 
     
         <div class="picture">
 
@@ -144,7 +146,7 @@
      <!--    BODY INFO ASTRONOTES N*4 ANNE MCCLAIN  -->
 
 
-      <div class='bodyInfo anne_mcclain'> 
+      <div *ngIf="conditionAnne" class='bodyInfo_anne_mcclain'> 
 
           <div class="picture">
 
