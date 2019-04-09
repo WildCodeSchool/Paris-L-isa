@@ -1,8 +1,6 @@
 .bodyEvent {
   width: 30vw;
-  height: 15vw;
-  border-top: 0;
-  margin: 0 auto;
+  height: 250px;
   opacity: 0.6;
   background-color: #262626;
   display: flex;
@@ -12,15 +10,11 @@
   color: #fcfcfc;
 }
 
-.notSelected {
+.backGroundTabs {
   background-color: #5b5b5b;
 }
 
-.conferences:hover .eventsTitles2{
-  color: #262626;
-}
-
-.eventsTitles {
+.eventsTitles1 {
   font-family: 'nasalization';
   color: #fcfcfc;
 }
@@ -28,10 +22,6 @@
 .eventsTitles2 {
   font-family: 'nasalization';
   color: #fcfcfc;
-}
-
-.eclipses:hover .eventsTitles{
-  color: #262626;
 }
 
 img {
@@ -51,21 +41,56 @@ li {
   box-shadow: 0 8px 16px 0px black;
 }
 
-.tabs{
+.tabsComponent{
   width : 30vw;
   margin: 0 auto 0 !important;
   opacity: 0.6;
-  border-bottom: none;
   background-color: #262626;
 }
 
-@media screen and (max-width: 414px) {
+// Media Queries for smartphone //
+
+@media screen and (min-width:320px) and (max-width: 414px) {
   .bodyEvent {
-    width: 50vh;
-    height: 50vh;
+    width: 100vw;
   }
 
-  .tabs {
-    width: 50vh;
+  .tabsComponent {
+    width: 100vw;
   }
+
+}
+
+// Media Queries for tablet //
+
+@media screen and (min-width:568px) and (max-width:812px) {
+  .bodyEvent {
+    width: 60vw;
+    height: 120px
+  }
+
+  .tabsComponent {
+    width: 60vw
+  }
+
+}
+
+// Media Queries for desktop //
+
+@media screen and (min-width: 1280px) {
+  .conferences:hover .eventsTitles2{
+    color: #262626;
+  }
+
+  .conferences:hover {
+    background-color: #fcfcfc;
+  }
+
+  .eclipses:hover {
+    background-color: #fcfcfc;
+  }
+  .eclipses:hover .eventsTitles1{
+    color: #262626;
+  }
+
 }

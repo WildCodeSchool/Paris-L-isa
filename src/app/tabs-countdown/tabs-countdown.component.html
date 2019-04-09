@@ -5,15 +5,15 @@
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 <div id="main">
-  <div class="tabs is-boxed">
+  <div class="tabsComponent is-boxed">
     <ul>
-      <li [ngClass]="{notSelected: conferences}" class="eclipses">
+      <li [ngClass]="{backGroundTabs: conferences}" class="eclipses">
         <a id="buttonEclipses" (click)="showEclipse($event)">
-          <img src="../../assets/icons/telescope1.png/" alt='icon'><span class="eventsTitles">Éclipses</span>
+          <img src="../../assets/icons/telescope1.png/" alt='icon'><span class="eventsTitles1">Éclipses</span>
         </a>
       </li>
 
-      <li [ngClass]="{notSelected: eclipses}" class="conferences">
+      <li [ngClass]="{backGroundTabs: eclipses}" class="conferences">
         <a id="buttonConferences" (click)="showConference($event)">
           <img src="../../assets/icons/rocket.png" alt='icon' class="icon2"><span class="eventsTitles2">Conférences</span>
         </a>
