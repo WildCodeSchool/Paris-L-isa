@@ -7,18 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsCountdownComponent implements OnInit {
 
-  conference = false;
+  conferences = false;
   eclipses = true;
 
   showEclipse($event) {
     $event.preventDefault();
-    this.conference = false;
+    this.conferences = false;
     this.eclipses = true;
   }
 
   showConference($event) {
     $event.preventDefault();
-    this.conference = true;
+    this.conferences = true;
     this.eclipses = false;
   }
 
