@@ -40,18 +40,21 @@
         </a>
       </li>
     </ul>
+    
+  </div>
 
+  <!--    BODY INFO ASTRONOTES N*1 NICK HAGUE  -->
 
+  <div *ngIf="conditionNick" class='bodyInfo_nick_hague'>
 
     <!--  MENU BURGER -->
 
 
 
-      <div class="select menuBurger">
-          <option>ASTRONAUTS</option>
-        <select class="astronome">
+    <div class="select menuBurger">
           
-
+        <select class="astronome">
+          <option>ASTRONAUTS</option>
           <option>Nick Hague</option>
           <option>Alexey Ovchinin</option>
           <option>Christina Koch</option>
@@ -64,13 +67,6 @@
       
       </div>
 
-    
-  </div>
-
-  <!--    BODY INFO ASTRONOTES N*1 NICK HAGUE  -->
-
-  <div *ngIf="conditionNick" class='bodyInfo_nick_hague'>
-
     <div class="picture">
 
       <img src="../../assets/profilPicture/NickHague.png" alt="Nick Hague">
@@ -79,9 +75,11 @@
 
     <div class="summary">
 
-      <h3>SUMMARY</h3>
+      <h3 *ngIf="!mobileScreen">SUMMARY</h3>
 
-      <article> Tyler N. Hague was selected by NASA as an astronaut in 2013.He was selected for a mission to the
+      <span *ngIf="mobileScreen" (click)="actionArticle()">SUMMARY</span>
+
+      <article class="articleBody" *ngIf="displaySummary"> Tyler N. Hague was selected by NASA as an astronaut in 2013.He was selected for a mission to the
         International Space Station which launched on October 11, 2018. Unfortunately, he and his crewmate Alexey
         Ovchinin, of the Russian space agency Roscosmos, were forced to abort the mission when a rocket booster
         experienced a malfunction shortly after the launch of their Soyuz MS-10. The aborted spacecraft landed safely.
@@ -103,6 +101,8 @@
 
     <div class="personalData">
 
+      <hr>
+
       <article>Born in 1975 in Belleville, Kansas, but considers Hoxie, Kansas, his hometown. He is married to Lt. Col.
         Catie Hague, U.S. Air Force. <br> Graduated from Hoxie High School, Hoxie, Kansas, in 1994. Earned a Bachelor of
         Science in Astronautical Engineering from the United States Air Force Academy in 1998. Earned a Master of
@@ -114,9 +114,11 @@
 
     <div class="nasaExperience">
 
-      <h3>NASA EXPERIENCES</h3>
+      <h3 *ngIf="!mobileScreen">NASA EXPERIENCES</h3>
 
-      <article>Hague was selected in June 2013, as one of eight members of the 21st NASA astronaut class. In August
+      <span *ngIf="mobileScreen" (click)="actionArticleExperience()">NASA EXPERIENCES</span>
+
+      <article class="articleBody" *ngIf="displayExperience">Hague was selected in June 2013, as one of eight members of the 21st NASA astronaut class. In August
         2013, he began Astronaut Candidate Training, which included scientific and technical briefings, intensive
         instruction in International Space Station systems, spacewalks, Russian Language training, Robotics,
         physiological training, T-38 flight training and water and wilderness survival training. Hague completed

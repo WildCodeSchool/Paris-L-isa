@@ -127,7 +127,7 @@
         grid-column: 2/4;
         grid-row: 1;
 
-        h3{
+        h3 {
             text-align: center;
             padding: 2px 0;
             font-size: 25px;
@@ -184,16 +184,20 @@
         grid-column: 2/4;
         grid-row: 1;
 
-        h3{
-            text-align: center;
-            padding: 2px 0;
+        h3 {
+
             font-size: 25px;
+            padding: 2px 0;
+            text-align: center;
+
         }
+
     }
 
     .personalData {
         grid-column: 1;
         grid-row: 2;
+
     }
 
     .nasaExperience {
@@ -255,7 +259,7 @@
         background-color: #262626;
         border: none;
         color: #fcfcfc;
-        font-size: 9vw;
+        font-size: 20px;
         font-family: 'nasalization';
 
         }
@@ -277,17 +281,29 @@
         padding: 1vw;
         
     }
+    .menuBurger{
+        grid-row: 1;
+    }
 
     .picture {
 
-        grid-row: 1;
+        grid-row: 2;
     }
 
     .summary {
         grid-column: 1;
         grid-row: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        h3{
+        span {
+            padding: 2px 0;
+            font-size: 25px;
+            color: #fcfcfc;
+        }
+
+        h3 {
             text-align: center;
             padding: 2px 0;
             font-size: 25px;
@@ -297,13 +313,17 @@
     .personalData {
         grid-column: 1;
         grid-row: 4;
+
+        hr {
+            color :#fcfcfc
+        }
     }
 
     .nasaExperience {
         grid-column: 1;
         grid-row: 5;
 
-        h3{
+        span {
             text-align: center;
             padding: 4px 0;
             font-size: 25px;
