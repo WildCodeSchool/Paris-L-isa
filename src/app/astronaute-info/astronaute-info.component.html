@@ -174,9 +174,11 @@
 
     <div class="summary">
 
-      <h3>SUMMARY</h3>
+      <h3 *ngIf="!mobileScreen">SUMMARY</h3>
 
-      <article>Anne C. McClain was selected by NASA in 2013. Lieutenant Colonel McClain, a Senior Army Aviator, has more
+      <span *ngIf="mobileScreen" (click)="actionArticle()">SUMMARY</span>
+
+      <article class="articleBody" *ngIf="displaySummary">Anne C. McClain was selected by NASA in 2013. Lieutenant Colonel McClain, a Senior Army Aviator, has more
         than 2,000 flight hours in 20 different aircraft. She is an OH-58D Kiowa Warrior pilot and instructor pilot, and
         a rated pilot in the C-12 Huron (King Air), UH-60 Blackhawk, and UH-72 Lakota. She is currently a part of the
         Expedition 58/59 crew that launched to the International Space Station in December 2018. </article>
@@ -196,6 +198,8 @@
 
     <div class="personalData">
 
+      <hr>
+
       <article>Born and raised in Spokane, Washington.<br> Graduated from Gonzaga Preparatory School in Spokane,
         Washington, in 1997. Earned a Bachelor of Science in Mechanical/Aeronautical Engineering from the U.S. Military
         Academy at West Point in 2002. A 2002 Marshall Scholar, earned a Master of Science degree in Aerospace
@@ -209,9 +213,11 @@
 
     <div class="nasaExperience">
 
-      <h3>NASA EXPERIENCES</h3>
+      <h3 *ngIf="!mobileScreen">NASA EXPERIENCES</h3>
 
-      <article>McClain was selected in June 2013 as one of eight members of the 21st NASA astronaut class. Her Astronaut
+      <span *ngIf="mobileScreen" (click)="actionArticleExperience()">NASA EXPERIENCES</span>
+
+      <article class="articleBody" *ngIf="displayExperience">McClain was selected in June 2013 as one of eight members of the 21st NASA astronaut class. Her Astronaut
         Candidate Training included scientific and technical briefings, intensive instruction in International Space
         Station systems, spacewalks, robotics, physiological training, T-38 flight training, and water and wilderness
         survival training. She completed astronaut candidate training in July 2015, and is now qualified for future

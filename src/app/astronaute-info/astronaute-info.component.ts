@@ -38,6 +38,7 @@ export class AstronauteInfoComponent implements OnInit {
     $event.preventDefault();
     this.conditionAnne = true;
     this.conditionNick = false;
+    
   }
 
   actionArticle() {
