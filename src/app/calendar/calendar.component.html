@@ -2,14 +2,14 @@
 <section>
 
   <div id="monthsMenu">
-    <h2>JANUARY</h2>
+    <h2>{{ monthName }} </h2>
 
     <button (click)="toogleMenu()" class="hamburger">
       <i class="fas fa-plus"></i>
     </button>
   </div>
 
-  <app-months-menu [@slideInOut]="menuState"></app-months-menu>
+  <app-months-menu [@slideInOut]="menuState" (changeMonth)="handleClick($event)" (changeMonthName)="getNewName($event)"></app-months-menu>
 
   <div id="calendarCards">
     <div class="card">

@@ -22,11 +22,14 @@ import { EventsService } from '../services/events.service';
 export class CalendarComponent implements OnInit {
   januaryEvents : any;
   menuState:string = 'out';
+  num:number;
+  monthName : string;
 
   constructor(private _events : EventsService) { }
   
   ngOnInit() {
     this.januaryEvents = this.displayEvent(0);
+    this.monthName = 'JANUARY';
   }
   
   toogleMenu() { 
@@ -35,5 +38,15 @@ export class CalendarComponent implements OnInit {
 
   displayEvent(num){
     return this._events.getEvents(num);
-  };
+  }
+
+  handleClick(month){
+    this.januaryEvents = this.displayEvent(month);
+  }
+
+  getNewName(newMonthName){
+    this.monthName = newMonthName;
+    return this.monthName;
+    console.log(this.monthName);
+  }
 }
