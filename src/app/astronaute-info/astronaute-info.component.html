@@ -1,216 +1,243 @@
-        <!--  TABS -->
+<!--  TABS -->
 
-  <div id="main">
+<div id="main">
 
-    <div class="tabs is-boxed">
-      <ul>
-        <li class="astroNick">
-          <a (click)="actionNick($event)">
-            <span class="nameNick">Nick Hague</span>
-          </a>
-        </li>
-  
-        <li class="astroAlexey">
-          <a>
-            <span class="nameAlexey">Alexey Ovchinin</span>
-          </a>
-        </li>
+  <div class="tabs is-boxed">
+    <ul>
+      <li class="astroNick">
+        <a (click)="actionNick($event)">
+          <span class="nameNick">Nick Hague</span>
+        </a>
+      </li>
 
-        <li class="astroChristina">
-          <a>
-            <span class="nameChristina">Christina Koch</span>
-          </a>
-        </li>
+      <li class="astroAlexey">
+        <a>
+          <span class="nameAlexey">Alexey Ovchinin</span>
+        </a>
+      </li>
 
-        <li class="astroAnne">
-          <a (click)="actionAnne($event)">
-            <span class="nameAnne">Anne McClain</span>
-          </a>
-        </li>
+      <li class="astroChristina">
+        <a>
+          <span class="nameChristina">Christina Koch</span>
+        </a>
+      </li>
 
-        <li class="astroOleg">
-          <a>
-            <span class="nameOleg">Oleg Kononenko</span>
-          </a>
-        </li>
+      <li class="astroAnne">
+        <a (click)="actionAnne($event)">
+          <span class="nameAnne">Anne McClain</span>
+        </a>
+      </li>
 
-        <li class="astroDavid">
-          <a>
-            <span class="nameDavid">David saint-jaques</span>
-          </a>
-        </li>
+      <li class="astroOleg">
+        <a>
+          <span class="nameOleg">Oleg Kononenko</span>
+        </a>
+      </li>
 
-        <!--  MENU BURGER -->
+      <li class="astroDavid">
+        <a>
+          <span class="nameDavid">David saint-jaques</span>
+        </a>
+      </li>
+    </ul>
 
-        <li class="menuBurger">  
-            <a class="btn btn-navbar" id="btnMenu">
-            
-                <button class="astronome">ASTRONAUTS</button>
 
-            </a>
-        </li>
 
-      </ul>
+    <!--  MENU BURGER -->
 
-    </div>
-  
-      <!--    BODY INFO ASTRONOTES N*1 NICK HAGUE  -->
 
-    <div *ngIf="conditionNick" class='bodyInfo_nick_hague'> 
+
+      <div class="select menuBurger">
+          <option>ASTRONAUTS</option>
+        <select class="astronome">
+          
+
+          <option>Nick Hague</option>
+          <option>Alexey Ovchinin</option>
+          <option>Christina Koch</option>
+          <option>Anne McClain</option>
+          <option>Oleg Kononenko</option>
+          <option>David saint-jaques</option>
+
+          
+        </select>
+      
+      </div>
+
     
-        <div class="picture">
+  </div>
 
-          <img src="../../assets/profilPicture/NickHague.png" alt="Nick Hague">
+  <!--    BODY INFO ASTRONOTES N*1 NICK HAGUE  -->
 
-        </div>
+  <div *ngIf="conditionNick" class='bodyInfo_nick_hague'>
 
-        <div class="summary">
+    <div class="picture">
 
-          <h3>SUMMARY</h3>
-
-          <article> Tyler N. Hague was selected by NASA as an astronaut in 2013.He was selected for a mission to the International Space Station which launched on October 11, 2018. Unfortunately, he and his crewmate Alexey Ovchinin, of the Russian space agency Roscosmos, were forced to abort the mission when a rocket booster experienced a malfunction shortly after the launch of their Soyuz MS-10. The aborted spacecraft landed safely. Hague is currently a part of the Expedition 59 and 60 crew that launched to the International Space Station in March 2019.</article>
-
-        </div>
-
-               <!--TWITTER TIMELINE-->
-
-        <div class="twitterApi">
-        
-            <a 
-            class="twitter-timeline" 
-            data-height="400" 
-            data-theme="light" 
-            data-link-color="#E81C4F" 
-            href="https://twitter.com/AstroHague?ref_src=twsrc%5Etfw">Tweets by AstroHague
-          </a> 
-
-        </div>
-
-
-        <div class="personalData">
-
-          <article>Born in 1975 in Belleville, Kansas, but considers Hoxie, Kansas, his hometown. He is married to Lt. Col. Catie Hague, U.S. Air Force. <br> Graduated from Hoxie High School, Hoxie, Kansas, in 1994. Earned a Bachelor of Science in Astronautical Engineering from the United States Air Force Academy in 1998. Earned a Master of Science in Aeronautical and Astronautical Engineering from the Massachusetts Institute of Technology in 2000.</article>
-
-        </div>
-
-
-        <div class="nasaExperience">
-
-          <h3>NASA EXPERIENCES</h3>
-
-          <article>Hague was selected in June 2013, as one of eight members of the 21st NASA astronaut class. In August 2013, he began Astronaut Candidate Training, which included scientific and technical briefings, intensive instruction in International Space Station systems, spacewalks, Russian Language training, Robotics, physiological training, T-38 flight training and water and wilderness survival training. Hague completed astronaut candidate training in July 2015.
-
-              Hague was the first astronaut from his class to be assigned to a mission which launched on October 11, 2018. Unfortunately, he and his crewmate Alexey Ovchinin, of the Russian space agency Roscosmos, were forced to abort the mission when a rocket booster experienced a malfunction shortly after the launch of their Soyuz MS-10. The aborted spacecraft landed safely. 
-              
-              Hague is currently a part of the Expedition 59 and 60 crew that launched to the International Space Station in March 2019.</article>
-
-        </div>
-
-                    <!--FACEBOOK TIMELINE-->
-
-        <div 
-        class="fb-page" 
-        data-href="https://www.facebook.com/astrohague" 
-        data-tabs="timeline" 
-        data-height="400" 
-        data-small-header="false" 
-        data-adapt-container-width="true" 
-        data-hide-cover="false" 
-        data-show-facepile="true">
-          <blockquote 
-          cite="https://www.facebook.com/astrohague" 
-          class="fb-xfbml-parse-ignore">
-            <a 
-            href="https://www.facebook.com/astrohague">
-            NASA Astronaut Nick Hague
-            </a>
-          </blockquote>
-        </div>
+      <img src="../../assets/profilPicture/NickHague.png" alt="Nick Hague">
 
     </div>
 
-     <!--    BODY INFO ASTRONOTES N*2 ALEXEY OUCHINI  -->
+    <div class="summary">
 
-      <div class='bodyInfo alexey_ouchini'> 
-      
-      </div>  
-  
-     <!--    BODY INFO ASTRONOTES N*3 CHRISTINA KOCH  -->
+      <h3>SUMMARY</h3>
 
+      <article> Tyler N. Hague was selected by NASA as an astronaut in 2013.He was selected for a mission to the
+        International Space Station which launched on October 11, 2018. Unfortunately, he and his crewmate Alexey
+        Ovchinin, of the Russian space agency Roscosmos, were forced to abort the mission when a rocket booster
+        experienced a malfunction shortly after the launch of their Soyuz MS-10. The aborted spacecraft landed safely.
+        Hague is currently a part of the Expedition 59 and 60 crew that launched to the International Space Station in
+        March 2019.</article>
 
-      <div class='bodyInfo christina_koch'> 
-      
-      </div> 
+    </div>
 
+    <!--TWITTER TIMELINE-->
 
-     <!--    BODY INFO ASTRONOTES N*4 ANNE MCCLAIN  -->
+    <div class="twitterApi">
 
+      <a class="twitter-timeline" data-height="400" data-theme="light" data-link-color="#E81C4F"
+        href="https://twitter.com/AstroHague?ref_src=twsrc%5Etfw">Tweets by AstroHague
+      </a>
 
-      <div *ngIf="conditionAnne" class='bodyInfo_anne_mcclain'> 
-
-          <div class="picture">
-
-              <img src="../../assets/profilPicture/mcclain.png" alt="Anne McClain">
-    
-            </div>
-    
-            <div class="summary">
-    
-              <h3>SUMMARY</h3>
-
-                  <article>Anne C. McClain was selected by NASA in 2013.  Lieutenant Colonel McClain, a Senior Army Aviator, has more than 2,000 flight hours in 20 different aircraft.  She is an OH-58D Kiowa Warrior pilot and instructor pilot, and a rated pilot in the C-12 Huron (King Air), UH-60 Blackhawk, and UH-72 Lakota. She is currently a part of the Expedition 58/59 crew that launched to the International Space Station in December 2018. </article>
-    
-            </div>
-    
-                   <!--TWITTER TIMELINE-->
-    
-            <div class="twitterApi">
-            
-                <a 
-                  class="twitter-timeline" 
-                  data-height="400" 
-                  href="https://twitter.com/AstroAnnimal?ref_src=twsrc%5Etfw">
-                  Tweets by AstroAnnimal
-                </a>
-    
-            </div>
-    
-    
-            <div class="personalData">
-    
-              <article>Born and raised in Spokane, Washington.<br> Graduated from Gonzaga Preparatory School in Spokane, Washington, in 1997. Earned a Bachelor of Science in Mechanical/Aeronautical Engineering from the U.S. Military Academy at West Point in 2002. A 2002 Marshall Scholar, earned a Master of Science degree in Aerospace Engineering from the University of Bath in Bath, England in 2004. Earned a Master of Science in International Relations from the University of Bristol in Bristol, England in 2005.
-
-              </article>
-            
-            </div>
-    
-    
-            <div class="nasaExperience">
-    
-              <h3>NASA EXPERIENCES</h3>
-    
-              <article>McClain was selected in June 2013 as one of eight members of the 21st NASA astronaut class. Her Astronaut Candidate Training included scientific and technical briefings, intensive instruction in International Space Station systems, spacewalks, robotics, physiological training, T-38 flight training, and water and wilderness survival training. She completed astronaut candidate training in July 2015, and is now qualified for future assignment.
-
-                  Anne McClain is currently a part of the Expedition 58/59 crew that launched to the International Space Station in December 2018.</article>
-    
-            </div>
-    
-      </div> 
-
-     <!--    BODY INFO ASTRONOTES N*5 OLEG KONONENKO  -->
+    </div>
 
 
-      <div class='bodyInfo oleg_°kononenko'> 
+    <div class="personalData">
 
-      </div> 
+      <article>Born in 1975 in Belleville, Kansas, but considers Hoxie, Kansas, his hometown. He is married to Lt. Col.
+        Catie Hague, U.S. Air Force. <br> Graduated from Hoxie High School, Hoxie, Kansas, in 1994. Earned a Bachelor of
+        Science in Astronautical Engineering from the United States Air Force Academy in 1998. Earned a Master of
+        Science in Aeronautical and Astronautical Engineering from the Massachusetts Institute of Technology in 2000.
+      </article>
 
-      <!--    BODY INFO ASTRONOTES N*6 DAVIS SAINT JACQUES  -->
+    </div>
 
-      <div class='bodyInfo david_saint_jacques'> 
 
-      </div> 
+    <div class="nasaExperience">
+
+      <h3>NASA EXPERIENCES</h3>
+
+      <article>Hague was selected in June 2013, as one of eight members of the 21st NASA astronaut class. In August
+        2013, he began Astronaut Candidate Training, which included scientific and technical briefings, intensive
+        instruction in International Space Station systems, spacewalks, Russian Language training, Robotics,
+        physiological training, T-38 flight training and water and wilderness survival training. Hague completed
+        astronaut candidate training in July 2015.
+
+        Hague was the first astronaut from his class to be assigned to a mission which launched on October 11, 2018.
+        Unfortunately, he and his crewmate Alexey Ovchinin, of the Russian space agency Roscosmos, were forced to abort
+        the mission when a rocket booster experienced a malfunction shortly after the launch of their Soyuz MS-10. The
+        aborted spacecraft landed safely.
+
+        Hague is currently a part of the Expedition 59 and 60 crew that launched to the International Space Station in
+        March 2019.</article>
+
+    </div>
+
+    <!--FACEBOOK TIMELINE-->
+
+    <div class="fb-page" data-href="https://www.facebook.com/astrohague" data-tabs="timeline" data-height="400"
+      data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/astrohague" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/astrohague">
+          NASA Astronaut Nick Hague
+        </a>
+      </blockquote>
+    </div>
 
   </div>
+
+  <!--    BODY INFO ASTRONOTES N*2 ALEXEY OUCHINI  -->
+
+  <div class='bodyInfo alexey_ouchini'>
+
+  </div>
+
+  <!--    BODY INFO ASTRONOTES N*3 CHRISTINA KOCH  -->
+
+
+  <div class='bodyInfo christina_koch'>
+
+  </div>
+
+
+  <!--    BODY INFO ASTRONOTES N*4 ANNE MCCLAIN  -->
+
+
+  <div *ngIf="conditionAnne" class='bodyInfo_anne_mcclain'>
+
+    <div class="picture">
+
+      <img src="../../assets/profilPicture/mcclain.png" alt="Anne McClain">
+
+    </div>
+
+    <div class="summary">
+
+      <h3>SUMMARY</h3>
+
+      <article>Anne C. McClain was selected by NASA in 2013. Lieutenant Colonel McClain, a Senior Army Aviator, has more
+        than 2,000 flight hours in 20 different aircraft. She is an OH-58D Kiowa Warrior pilot and instructor pilot, and
+        a rated pilot in the C-12 Huron (King Air), UH-60 Blackhawk, and UH-72 Lakota. She is currently a part of the
+        Expedition 58/59 crew that launched to the International Space Station in December 2018. </article>
+
+    </div>
+
+    <!--TWITTER TIMELINE-->
+
+    <div class="twitterApi">
+
+      <a class="twitter-timeline" data-height="400" href="https://twitter.com/AstroAnnimal?ref_src=twsrc%5Etfw">
+        Tweets by AstroAnnimal
+      </a>
+
+    </div>
+
+
+    <div class="personalData">
+
+      <article>Born and raised in Spokane, Washington.<br> Graduated from Gonzaga Preparatory School in Spokane,
+        Washington, in 1997. Earned a Bachelor of Science in Mechanical/Aeronautical Engineering from the U.S. Military
+        Academy at West Point in 2002. A 2002 Marshall Scholar, earned a Master of Science degree in Aerospace
+        Engineering from the University of Bath in Bath, England in 2004. Earned a Master of Science in International
+        Relations from the University of Bristol in Bristol, England in 2005.
+
+      </article>
+
+    </div>
+
+
+    <div class="nasaExperience">
+
+      <h3>NASA EXPERIENCES</h3>
+
+      <article>McClain was selected in June 2013 as one of eight members of the 21st NASA astronaut class. Her Astronaut
+        Candidate Training included scientific and technical briefings, intensive instruction in International Space
+        Station systems, spacewalks, robotics, physiological training, T-38 flight training, and water and wilderness
+        survival training. She completed astronaut candidate training in July 2015, and is now qualified for future
+        assignment.
+
+        Anne McClain is currently a part of the Expedition 58/59 crew that launched to the International Space Station
+        in December 2018.</article>
+
+    </div>
+
+  </div>
+
+  <!--    BODY INFO ASTRONOTES N*5 OLEG KONONENKO  -->
+
+
+  <div class='bodyInfo oleg_°kononenko'>
+
+  </div>
+
+  <!--    BODY INFO ASTRONOTES N*6 DAVIS SAINT JACQUES  -->
+
+  <div class='bodyInfo david_saint_jacques'>
+
+  </div>
+
+</div>
   
 
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    

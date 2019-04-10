@@ -242,23 +242,24 @@
             display: none
         };
         
-        .menuBurger{
-            display: inline !important;
-            margin: 2px auto;
-
-            .astronome {
-                background-color: #262626;
-                border: none;
-                color: #fcfcfc;
-                font-size: 9vw;
-                font-family: 'nasalization';
-
 
             }
-        }
         
-    }
+        
 
+.menuBurger{
+    display: inline !important;
+    margin: 2px auto ;
+
+    .astronome {
+        background-color: #262626;
+        border: none;
+        color: #fcfcfc;
+        font-size: 9vw;
+        font-family: 'nasalization';
+
+        }
+    }
 }
 
 @media screen and (max-width: 900px) {
