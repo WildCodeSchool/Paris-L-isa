@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TabsCountdownComponent } from './tabs-countdown/tabs-countdown.component';
 import { CountDownComponent } from './count-down/count-down.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     FooterComponent,
     NavbarComponent,
     TabsCountdownComponent,
-    HomepageComponent
+    HomepageComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
