@@ -1,31 +1,43 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { NavbarComponent } from './navbar/navbar.component';
-import { TabsCountdownComponent } from './tabs-countdown/tabs-countdown.component';
-import { CountDownComponent } from './count-down/count-down.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { TabsCountdownComponent } from './components/tabs-countdown/tabs-countdown.component';
+import { CountDownComponent } from './components/count-down/count-down.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { MonthsMenuComponent } from './components/months-menu/months-menu.component';
+import { EventsService } from './services/events.service';
+import { LiveVideoComponent } from './components/live-video/live-video.component';
+import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
+import { LiveComponent } from './pages/live/live.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TabsCountdownComponent,
     CountDownComponent,
     FooterComponent,
     NavbarComponent,
     TabsCountdownComponent,
+    ContactFormComponent,
+    AstronauteInfoComponent,
+    CalendarComponent,
     HomepageComponent,
-    ContactFormComponent
+    MonthsMenuComponent,
+    LiveVideoComponent,
+    LiveComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +45,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     AngularFontAwesomeModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
