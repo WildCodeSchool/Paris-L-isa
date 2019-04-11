@@ -12,6 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'live',
+    pathMatch: 'full',
     component: LiveVideoComponent
   }
 ];
