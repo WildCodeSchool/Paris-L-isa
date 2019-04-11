@@ -17,4 +17,64 @@
       <div class="contact">
         <h3>Send a message </h3>
 
-         
+          <form id="contact-form" [formGroup]="contactForm">
+
+            <p> 
+              <label>First Name
+                <input 
+                type="text" 
+                formControlName="itemName" 
+                id="name"
+                [(ngModel)]="itemName">
+              </label>
+              </p> 
+            <p> 
+              <label>Last Name                
+                <input 
+                type="text" 
+                formControlName="itemLastName" 
+                id="last-name"
+                [(ngModel)]="itemLastName">
+              </label>
+            </p>
+            <p> 
+            <label>Email Adress
+              <input 
+              type="text" 
+              formControlName="itemEmail" 
+              id="email"
+              [(ngModel)]="itemEmail">
+            </label>
+            </p>
+            <p> 
+            <label>Subject
+              <input 
+              type="text" 
+              formControlName="itemSubject" 
+              id="phone"
+              [(ngModel)]="itemSubject">
+            </label>
+            </p>
+            <p class="full"> 
+              <label>Message
+              <textarea 
+              type="text" 
+              formControlName="itemMessage" 
+              rows="5" 
+              id="message"
+              [(ngModel)]="itemMessage"></textarea>
+            </label>
+            </p>
+            <p class="full">
+              <button (click)="onSubmit()" (click)="clearForm()">Submit</button>
+            </p> 
+          </form>
+        </div>
+        </div>
+          
+    </div>   
+    
+  </div> 
+  
+</body>
+
