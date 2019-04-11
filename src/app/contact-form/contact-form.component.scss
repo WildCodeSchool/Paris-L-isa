@@ -1,3 +1,6 @@
+$fontFamily : 'nasalization';
+
+
 *{
     box-sizing: border-box;
 }
@@ -8,6 +11,7 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 75vh;
+    padding-bottom: 100vh;
     } 
 
 body{
@@ -15,7 +19,25 @@ body{
     line-height: 1.6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0;
-    margin: 0;
+    margin: 0; 
+}
+
+h1{
+    font-size: 2em;
+    font-family:'nasalization';
+    margin-top: 50px;
+}
+
+h2{
+    color: #eee;
+    font-size: 1.5em;
+    padding-bottom: 15px;
+}
+
+h3{
+    color: #666565;
+    font-size: 1.5em;
+    padding-bottom: 15px;
 }
 
 .container{
@@ -37,12 +59,15 @@ ul{
     
 }
 
+label{
+    color: #8a8a8a;
+}
+
 .wrapper{
     box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
-    margin-top: 200px;
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    
 }
 
 .wrapper > *{
