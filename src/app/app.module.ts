@@ -15,6 +15,8 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { MonthsMenuComponent } from './components/months-menu/months-menu.component';
 import { EventsService } from './services/events.service';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
+import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
+import { LiveComponent } from './pages/live/live.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,13 @@ import { LiveVideoComponent } from './components/live-video/live-video.component
     CountDownComponent,
     FooterComponent,
     NavbarComponent,
-    TabsCountdownComponent,
+    AstronauteInfoComponent,
     CalendarComponent,
     HomepageComponent,
     MonthsMenuComponent,
     HomepageComponent,
-    LiveVideoComponent
+    LiveVideoComponent,
+    LiveComponent
   ],
   imports: [
     BrowserModule,

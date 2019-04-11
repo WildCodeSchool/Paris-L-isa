@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { TabsCountdownComponent } from './components/tabs-countdown/tabs-countdown.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CalendarComponent } from './calendar/calendar.component';
@@ -9,11 +10,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component : HomepageComponent
+    component: HomepageComponent
   },
   {
-    path : 'agenda',
-    component : CalendarComponent
+    path: 'agenda',
+    component: CalendarComponent
   },
   {
     path: 'live',
