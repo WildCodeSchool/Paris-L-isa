@@ -1,0 +1,120 @@
+$fontFamily : 'nasalization';
+
+@mixin backgroundImg ($background) {
+
+    background-image: $background;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+section {
+    min-height: 100vh;
+    @include backgroundImg(url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1'));
+
+    h2 {
+        color:white;
+        font-family: $fontFamily;
+        padding-top: 120px;
+        font-size: 2rem;
+    }
+}
+
+#calendarCards {
+    height:auto;
+    width:100vw;
+    display: flex;
+    justify-content : center;
+    display:grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 3fr 3fr 3fr;
+    grid-gap: 15px;
+    padding-top: 50px;
+    padding-bottom:0;
+
+    #card1 {
+        @include backgroundImg(url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1'));
+        width:100%;
+    }
+
+    .card {
+        transition: 0.2s;
+        background: none;
+        height:200px;
+        perspective: 1000px;
+    }
+
+    .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        cursor:pointer;
+        margin-bottom: 20px;
+    }
+    
+    .container, .cardsBack {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+    
+    .container {
+        padding: 2px 16px;
+        display: flex;
+        flex-direction: column;
+    
+        p, h4 {
+            color:white;
+            text-align: center;
+            font-family: $fontFamily;
+        }
+    }
+    
+    .card-inner:hover {
+        transform: rotateY(180deg);
+      }
+    
+    .cardsBack {
+        transform: rotateY(180deg);
+        background-color: white;
+    
+        p, h4 {
+            color:black;
+            font-family: $fontFamily;
+        }
+    }
+}
+
+#monthsMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0;
+    color:white;
+    font-size: 30px;
+  }
+
+  .hamburger:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+   
+   
+ 

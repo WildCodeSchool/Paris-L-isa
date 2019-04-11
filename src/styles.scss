@@ -11,3 +11,12 @@
 body {
     margin: 0%;
 }
+
+@mixin backgroundM ($background) {
+
+  background-image: $background;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}

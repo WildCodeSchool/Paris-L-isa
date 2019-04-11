@@ -1,0 +1,57 @@
+@mixin backgroundM ($background) {
+
+  background-image: $background;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 12vh;
+}
+
+
+@media screen and (max-width: 1087px) {
+  .background {
+    @include backgroundM(url('../../../assets/LiveISS/moonBackground.png'));
+  }
+}
+
+.background {
+  padding-top: 12vh;
+  padding-bottom: 21vh;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  min-width: 100vw; 
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.video-container{
+  text-align: center;
+}
+
+iframe {
+  height: 500px;
+  width: 900px;
+}
+
+.bodyEvent {
+  align-items: center;
+  background-color: rgba(38, 38, 38, 0.6);
+  border-top: 0;
+  color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 20px;
+  text-align: center;
+  width: 950px;
+}
