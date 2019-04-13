@@ -56,6 +56,7 @@ ul{
     display: flex;
     align-self: flex-start;
     padding-top: 40px;
+    justify-content: center;
     
 }
 
@@ -75,7 +76,7 @@ label{
 }
 
 .company-info{
-    background: #485e74;
+    background-color: rgba(38, 38, 38, 0.6);
 }
 
 .company-info h3, .company-info ul{
