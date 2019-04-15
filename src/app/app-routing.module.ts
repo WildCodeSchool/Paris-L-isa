@@ -4,6 +4,7 @@ import { TabsCountdownComponent } from './components/tabs-countdown/tabs-countdo
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
+import { AgendaComponent } from './pages/agenda/agenda.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
   },
   {
     path : 'agenda',
-    component : CalendarComponent
+    component : AgendaComponent
   },
   {
     path: 'live',

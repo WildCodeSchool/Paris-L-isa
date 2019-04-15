@@ -15,6 +15,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { MonthsMenuComponent } from './components/months-menu/months-menu.component';
 import { EventsService } from './services/events.service';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
+import { AgendaComponent } from './pages/agenda/agenda.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LiveVideoComponent } from './components/live-video/live-video.component
     HomepageComponent,
     MonthsMenuComponent,
     HomepageComponent,
-    LiveVideoComponent
+    LiveVideoComponent,
+    AgendaComponent
   ],
   imports: [
     BrowserModule,

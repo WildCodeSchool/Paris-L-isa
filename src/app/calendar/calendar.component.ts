@@ -47,6 +47,5 @@ export class CalendarComponent implements OnInit {
   getNewName(newMonthName){
     this.monthName = newMonthName;
     return this.monthName;
-    console.log(this.monthName);
   }
 }
