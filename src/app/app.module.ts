@@ -23,6 +23,7 @@ import { EventsService } from './services/events.service';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
 import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { LiveComponent } from './pages/live/live.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LiveComponent } from './pages/live/live.component';
     HomepageComponent,
     MonthsMenuComponent,
     LiveVideoComponent,
-    LiveComponent
+    LiveComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

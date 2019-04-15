@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "nazalisation";
+  src: url('../../../assets/nasalization/nasalization-rg.ttf'),
+}
+
+input {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  font-family: 'nazalisation';
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.5)
+}
+
+@media screen and (max-width: 1087px) {
+  input {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-family: 'nazalisation';
+  }
+
+  div {
+    width: 50vw;
+  }
+}
