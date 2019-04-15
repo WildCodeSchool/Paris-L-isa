@@ -6,29 +6,30 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
-    {
-      path: '',
-      pathMatch: 'full',
-      redirectTo: 'home'
-    },
-    {
-      path: 'home',
-      component: HomepageComponent
-    },
-    {
-      path: 'agenda',
-      component: CalendarComponent
-    },
-    {
-      path: 'about',
-      component: ContactFormComponent
-    },
-    {
-      path: 'live',
-      component: LiveVideoComponent
-    },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home'
+  },
+  {
+    path: 'home',
+    component: HomepageComponent
+  },
+  {
+    path: 'agenda',
+    component: CalendarComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'live',
+    component: LiveVideoComponent
+  },
 ];
 
 @NgModule({
@@ -36,5 +37,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule{ }
+export class AppRoutingModule { }
 
