@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate} from '@angular/animations';
-import { EventsService } from '../services/events.service';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { EventsService } from '../../services/events.service';
 
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.scss'],
-  animations : [
+  animations: [
     trigger('slideInOut', [
       state('in', style({
         transform: 'translate3d(0, 0, 0)'
@@ -20,31 +20,31 @@ import { EventsService } from '../services/events.service';
   ]
 })
 export class CalendarComponent implements OnInit {
-  januaryEvents : any;
-  menuState:string = 'out';
-  num:number;
-  monthName : string;
+  januaryEvents: any;
+  menuState: string = 'out';
+  num: number;
+  monthName: string;
 
-  constructor(private _events : EventsService) { }
-  
+  constructor(private _events: EventsService) { }
+
   ngOnInit() {
     this.januaryEvents = this.displayEvent(0);
     this.monthName = 'JANUARY';
   }
-  
-  toogleMenu() { 
+
+  toogleMenu() {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
 
-  displayEvent(num){
+  displayEvent(num) {
     return this._events.getEvents(num);
   }
 
-  handleClick(month){
+  handleClick(month) {
     this.januaryEvents = this.displayEvent(month);
   }
 
-  getNewName(newMonthName){
+  getNewName(newMonthName) {
     this.monthName = newMonthName;
     return this.monthName;
   }

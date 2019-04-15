@@ -1,30 +1,40 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { TabsCountdownComponent } from './components/tabs-countdown/tabs-countdown.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { CalendarComponent } from './calendar/calendar.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
-import { AgendaComponent } from './pages/agenda/agenda.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { AgendaComponent} from './pages/agenda/agenda.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    pathMatch: 'full',
-    component : HomepageComponent
-  },
-  {
-    path : 'agenda',
-    component : AgendaComponent
-  },
-  {
-    path: 'live',
-    pathMatch: 'full',
-    component: LiveVideoComponent
-  }
+    {
+      path: '',
+      pathMatch: 'full',
+      redirectTo: 'home'
+    },
+    {
+      path: 'home',
+      component: HomepageComponent
+    },
+    {
+      path: 'agenda',
+      component: AgendaComponent
+    },
+    {
+      path: 'about',
+      component: ContactFormComponent
+    },
+    {
+      path: 'live',
+      component: LiveVideoComponent
+    },
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
+@NgModule({ imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+
+export class AppRoutingModule{ }
+
