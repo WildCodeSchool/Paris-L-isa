@@ -50,7 +50,7 @@ import { LiveComponent } from './pages/live/live.component';
     AngularFireDatabaseModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [EventsService],
   bootstrap: [AppComponent]
