@@ -28,7 +28,8 @@
             ],
             "styles": [
               "node_modules/bulma/css/bulma.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/fullcalendar/dist/fullcalendar.min.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true

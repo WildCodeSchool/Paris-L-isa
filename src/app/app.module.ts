@@ -24,6 +24,7 @@ import { LiveVideoComponent } from './components/live-video/live-video.component
 import { AgendaComponent } from './pages/agenda/agenda.component';
 import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { LiveComponent } from './pages/live/live.component';
+import { FullCalendarComponent } from './full-calendar/full-calendar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LiveComponent } from './pages/live/live.component';
     HomepageComponent,
     LiveVideoComponent,
     AgendaComponent,
-    LiveComponent
+    LiveComponent,
+    FullCalendarComponent
   ],
   imports: [
     BrowserModule,
