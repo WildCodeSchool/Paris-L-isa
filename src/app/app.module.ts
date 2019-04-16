@@ -23,8 +23,9 @@ import { EventsService } from './services/events.service';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
 import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { LiveComponent } from './pages/live/live.component';
-import { AstroComponent } from './pages/astro/astro.component';
+import { AstroComponent } from './components/astro/astro.component';
 import { AboutComponent } from './pages/about/about.component';
+import { AstropageComponent } from './pages/astropage/astropage.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AboutComponent } from './pages/about/about.component';
     LiveVideoComponent,
     LiveComponent,
     AstroComponent,
-    AboutComponent
+    AboutComponent,
+    AstropageComponent
   ],
   imports: [
     BrowserModule,
