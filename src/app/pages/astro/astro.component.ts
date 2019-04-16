@@ -11,4 +11,6 @@ export class AstroComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
 }
