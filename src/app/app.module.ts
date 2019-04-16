@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { AstroComponent } from './pages/astro/astro.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -35,6 +36,7 @@ import { LiveComponent } from './pages/live/live.component';
     AstronauteInfoComponent,
     CalendarComponent,
     HomepageComponent,
+    AstroComponent,
     MonthsMenuComponent,
     LiveVideoComponent,
     LiveComponent
