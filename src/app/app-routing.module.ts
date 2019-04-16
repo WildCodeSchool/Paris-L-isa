@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { TabsCountdownComponent } from './components/tabs-countdown/tabs-countdown.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { AstroComponent } from './pages/astro/astro.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
@@ -17,10 +16,6 @@ const routes: Routes = [
     {
       path: 'home',
       component: HomepageComponent
-    },
-    {
-      path: 'astro',
-      component: AstroComponent
     },
     {
       path: 'agenda',
