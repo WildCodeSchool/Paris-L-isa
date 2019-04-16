@@ -7,6 +7,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { AstroComponent } from './pages/astro/astro.component';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
     {
@@ -41,5 +42,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule{ }
+export class AppRoutingModule { }
 
