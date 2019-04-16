@@ -24,6 +24,7 @@ import { LiveVideoComponent } from './components/live-video/live-video.component
 import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { LiveComponent } from './pages/live/live.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     MonthsMenuComponent,
     LiveVideoComponent,
     LiveComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
