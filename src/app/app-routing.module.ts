@@ -4,6 +4,7 @@ import { AstronauteInfoComponent } from './components/astronaute-info/astronaute
 import { TabsCountdownComponent } from './components/tabs-countdown/tabs-countdown.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { AstroComponent } from './pages/astro/astro.component';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
@@ -20,6 +21,10 @@ const routes: Routes = [
     {
       path: 'agenda',
       component: CalendarComponent
+    },
+    {
+      path: 'astro',
+      component: AstroComponent
     },
     {
       path: 'about',
