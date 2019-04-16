@@ -5,8 +5,10 @@ import { TabsCountdownComponent } from './components/tabs-countdown/tabs-countdo
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AstroComponent } from './pages/astro/astro.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { AstroComponent } from './pages/astro/astro.component';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
     {
@@ -27,6 +29,10 @@ const routes: Routes = [
       component: CalendarComponent
     },
     {
+      path: 'astro',
+      component: AstroComponent
+    },
+    {
       path: 'about',
       component: ContactFormComponent
     },
@@ -41,5 +47,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule{ }
+export class AppRoutingModule { }
 
