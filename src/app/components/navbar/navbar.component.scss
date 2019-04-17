@@ -21,6 +21,16 @@ a.navbar-link {
   color: white;
 }
 
+/* SearchBar integration */
+
+#searchBar {
+  margin: auto;
+}
+
+.searchBarMobile {
+  display: none;
+}
+
 /* Mobile Version + Media Queries */
 
 .navbar-burger {
@@ -35,12 +45,12 @@ a:hover {
   .navbar {
     background-color: black;
   }
-  
+
   .navbar-menu {
     background-color: black;
   }
-}
 
 .arrow-color:after {
   border-color: white !important;
+  }
 }

@@ -23,6 +23,7 @@ import { EventsService } from './services/events.service';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
 import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { LiveComponent } from './pages/live/live.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { AstroComponent } from './components/astro/astro.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AstropageComponent } from './pages/astropage/astropage.component';
@@ -41,6 +42,7 @@ import { AstropageComponent } from './pages/astropage/astropage.component';
     MonthsMenuComponent,
     LiveVideoComponent,
     LiveComponent,
+    SearchBarComponent,
     AstroComponent,
     AboutComponent,
     AstropageComponent
