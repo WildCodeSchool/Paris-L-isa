@@ -27,6 +27,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { AstroComponent } from './components/astro/astro.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AstropageComponent } from './pages/astropage/astropage.component';
+import { ListObsComponent } from './components/list-obs/list-obs.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AstropageComponent } from './pages/astropage/astropage.component';
     SearchBarComponent,
     AstroComponent,
     AboutComponent,
-    AstropageComponent
+    AstropageComponent,
+    ListObsComponent
   ],
   imports: [
     BrowserModule,
