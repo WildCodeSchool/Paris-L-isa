@@ -13,17 +13,3 @@ input {
 input::placeholder {
   color: rgba(255,255,255,0.5)
 }
-
-@media screen and (max-width: 1087px) {
-  input {
-    background-color:rgba(45,52,65,1);
-    border: none;
-    color: white;
-    font-family: 'nazalisation';
-  }
-
-  div {
-    width: 50vw;
-    margin-left: 3vw;
-  }
-}
