@@ -27,6 +27,9 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { AstroComponent } from './components/astro/astro.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AstropageComponent } from './pages/astropage/astropage.component';
+import { ListObsComponent } from './components/list-obs/list-obs.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,8 @@ import { AstropageComponent } from './pages/astropage/astropage.component';
     SearchBarComponent,
     AstroComponent,
     AboutComponent,
-    AstropageComponent
+    AstropageComponent,
+    ListObsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,10 @@ import { AstropageComponent } from './pages/astropage/astropage.component';
     AngularFireDatabaseModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBrG5ywjbq-2E1tu0fWTH1x0oENVVQNGYY'
+    })
   ],
   providers: [EventsService],
   bootstrap: [AppComponent]

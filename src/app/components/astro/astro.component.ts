@@ -1,24 +1,20 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {} from 'googlemaps';
-
+import { Component } from '@angular/core';
+import { LeafletMapService } from 'src/app/services/leaflet-map.service';
 @Component({
+
   selector: 'app-astro',
   templateUrl: './astro.component.html',
-  styleUrls: ['./astro.component.scss']
+  styleUrls: ['./astro.component.scss'],
+
 })
-export class AstroComponent implements OnInit {
+export class AstroComponent {
 
-  constructor() { }
-  @ViewChild('map') mapElement: any;
-  map: google.maps.Map;
+  map;
+
+  constructor(public leafletMapService: LeafletMapService) {}
   ngOnInit() {
+    this.map = this.leafletMapService.initMap();
+  }
 
-    const mapProperties = {
-      center: new google.maps.LatLng(46.8639059, 2.3478985),
-      zoom: 7,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    this.map = new google.maps.Map(this.mapElement.nativeElement, mapProperties);
-    }
-
+ 
 }

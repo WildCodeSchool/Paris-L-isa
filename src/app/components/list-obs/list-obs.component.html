@@ -1,0 +1,7 @@
+<ul *ngFor="let obs of obsName; let i = index">
+   <li>
+      <button class="button" (click)="displayInfoMap(i)">
+         {{ obs }}
+      </button>
+   </li>
+</ul>

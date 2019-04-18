@@ -1,35 +1,6 @@
-$fontFamily : 'nasalization';
-
-@mixin backgroundM ($background) {
-
-    background-image: $background;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    height: 100vh;
-}
-
-
-.background {
-
-    @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
-
-}
-.mapStyle { 
+.agmStyle { 
 
     width: 100%;
     height: 800px;
     
-
-}
-
-.rognerMap {
-
-    overflow: hidden;
-    width:44%; 
-    height: 850px;
-    margin-left: 28%;
-    padding-top: 100px;
-
 }
