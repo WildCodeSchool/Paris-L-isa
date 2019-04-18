@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { LeafletMapService } from 'src/app/services/leaflet-map.service';
 @Component({
 
   selector: 'app-astro',
@@ -8,6 +8,13 @@ import { Component } from '@angular/core';
 
 })
 export class AstroComponent {
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+
+  map;
+
+  constructor(public leafletMapService: LeafletMapService) {}
+  ngOnInit() {
+    this.map = this.leafletMapService.initMap();
+  }
+
+ 
 }

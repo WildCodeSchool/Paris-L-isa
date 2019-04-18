@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LeafletMapService } from 'src/app/services/leaflet-map.service';
 
 @Component({
   selector: 'app-list-obs',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListObsComponent implements OnInit {
 
-  constructor() { }
+  map;
+  observatories: any[];
+  constructor(private leafMapService: LeafletMapService) { }
 
   ngOnInit() {
+  }
+
+  openPopup(place) {
+    
   }
 
 }
