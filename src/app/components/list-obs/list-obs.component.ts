@@ -9,14 +9,17 @@ import { LeafletMapService } from 'src/app/services/leaflet-map.service';
 export class ListObsComponent implements OnInit {
 
   map;
-  observatories: any[];
-  constructor(private leafMapService: LeafletMapService) { }
+  observatories;
+  constructor(private leafletMapService: LeafletMapService) { }
 
   ngOnInit() {
+    this.observatories = this.leafletMapService.marker;
   }
 
-  openPopup(place) {
+  displayInfoMap(i) {
     
+    this.leafletMapService.dislayInfoMap(i);
+
   }
 
 }
