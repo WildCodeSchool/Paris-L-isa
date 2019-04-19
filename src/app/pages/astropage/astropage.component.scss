@@ -28,13 +28,14 @@ $fontFamily : 'nasalization';
 .listObsStyle {
 
     padding-top: 100px;
-
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .rognerMap .astroStyle {
 
     overflow: hidden;
-    height: 850px;
+    height: 100vh;
     width: 80%;
     padding-top: 100px;
 
