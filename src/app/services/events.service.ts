@@ -125,7 +125,27 @@ export class EventsService {
         },
       ]
     },
-  ]
+  ];
+
+  eventsTest = [
+    {
+      month : '',
+      eventItems : [
+        {
+          name : '',
+          description : '',
+        },
+      ]
+    },
+  ];
+
+  receiveData(monthName, title, description, index){
+    this.eventsTest[index].month = monthName;
+    this.eventsTest[index].eventItems[0].name = title;
+    this.eventsTest[index].eventItems[0].description = description;
+    console.log(this.eventsTest);
+  }
+
 
   getEvents(index){
     return this.events[index].eventItems;

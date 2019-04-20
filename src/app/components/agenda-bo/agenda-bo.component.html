@@ -1,0 +1,28 @@
+<section id="eventForm">
+  <form [formGroup]="eventForm">
+
+    <label>
+      Name:
+      <input type="text" required formControlName="monthName" class="input" value="">
+    </label>
+
+    <div>
+      <h3>Event information</h3>
+
+      <label>
+        Event title:
+        <input type="text" required formControlName="eventTitle" class="form-control input" value="">
+      </label>
+
+      <label>
+        Event title:
+        <input type="text" required formControlName="eventDescription" class="form-control input" value="">
+      </label>
+
+    </div>
+
+
+    <button type="submit" (click)="sendEventInfos()" [disabled]="!eventForm.valid">Create new event</button>
+
+  </form>
+</section>

@@ -31,6 +31,7 @@ import { AstropageComponent } from './pages/astropage/astropage.component';
 import { ListObsComponent } from './components/list-obs/list-obs.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { AgmCoreModule } from '@agm/core';
     AstroComponent,
     AboutComponent,
     AstropageComponent,
-    ListObsComponent
+    ListObsComponent,
+    AgendaBOComponent
   ],
   imports: [
     BrowserModule,

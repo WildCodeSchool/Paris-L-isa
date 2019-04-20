@@ -9,6 +9,7 @@ import { LiveVideoComponent } from './components/live-video/live-video.component
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { AgendaComponent} from './pages/agenda/agenda.component';
 import { AboutComponent } from './pages/about/about.component';
+import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
 
 const routes: Routes = [
     {
@@ -35,6 +36,10 @@ const routes: Routes = [
     {
       path: 'live',
       component: LiveVideoComponent
+    },
+    {
+      path: 'back-office',
+      component: AgendaBOComponent
     },
 ];
 

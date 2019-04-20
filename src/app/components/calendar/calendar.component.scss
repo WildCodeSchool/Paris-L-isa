@@ -11,7 +11,11 @@ $fontFamily : 'nasalization';
 
 section {
     min-height: 100vh;
-    @include backgroundImg(url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1'));
+    background-image: url('../../../assets/calendar/galaxy.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 
     h2 {
         color:white;
