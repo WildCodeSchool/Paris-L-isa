@@ -5,19 +5,32 @@ $fontFamily : 'nasalization';
     box-sizing: border-box;
 }
 
-.semi-background{
-    background-image: url('../../../assets/about/astronaut-1664814_1920.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 75vh;
-    padding-bottom: 100vh;
-    } 
+@media screen and (max-width: 1087px) {
+  .semi-background{
+      background-image: url('../../../assets/about/astronaut-1664814_1920.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 75vh;
+      padding-bottom: 100vh;
+  } 
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    min-width: 100vw; 
+    min-height: 100vh;
+    z-index: -1;
+}
 
 body{
     color: rgba(233, 231, 231, 0.979);
     line-height: 1.6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'nasalization';
     padding: 0;
     margin: 0; 
 }
@@ -26,21 +39,23 @@ h1{
     font-size: 2em;
     font-family:'nasalization';
     margin-top: 50px;
+    color: white;
 }
 
 h2{
-    color: #eee;
+    color: white;
     font-size: 1.5em;
     padding-bottom: 15px;
 }
 
 h3{
-    color: #666565;
+    color: black;
     font-size: 1.5em;
     padding-bottom: 15px;
 }
 
 .container{
+		margin-bottom: 13vh;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
@@ -61,7 +76,7 @@ ul{
 }
 
 label{
-    color: #8a8a8a;
+    color: black;
 }
 
 .wrapper{
@@ -77,6 +92,7 @@ label{
 
 .company-info{
     background-color: rgba(38, 38, 38, 0.6);
+    color: white;
 }
 
 .company-info h3, .company-info ul{
@@ -113,8 +129,8 @@ label{
 }
 
 .contact form button{
-    background: rgb(133, 8, 8);
-    color: #eee;
+    background: red;
+    color: white;
     border: 0;
     text-transform: uppercase;
     border-radius: 5px;
@@ -122,7 +138,7 @@ label{
 }
 
 .contact form button:hover, .contact form button:focus{
-    background: #485e74;
+    background: green;
     outline: 0;
     transition: background-color 1s ease-out;
 }

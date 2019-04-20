@@ -1,0 +1,42 @@
+
+$fontFamily : 'nasalization';
+
+@mixin backgroundM ($background) {
+
+    background-image: $background;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+.astroStyle {
+
+    display: inline-block;
+    width: 50%;
+
+}
+
+
+.background {
+
+    @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
+
+}
+
+.listObsStyle {
+
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rognerMap .astroStyle {
+
+    overflow: hidden;
+    height: 100vh;
+    width: 80%;
+    padding-top: 100px;
+
+}

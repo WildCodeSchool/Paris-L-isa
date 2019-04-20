@@ -24,6 +24,13 @@ import { LiveVideoComponent } from './components/live-video/live-video.component
 import { AgendaComponent } from './pages/agenda/agenda.component';
 import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { LiveComponent } from './pages/live/live.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { AstroComponent } from './components/astro/astro.component';
+import { AboutComponent } from './pages/about/about.component';
+import { AstropageComponent } from './pages/astropage/astropage.component';
+import { ListObsComponent } from './components/list-obs/list-obs.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -40,7 +47,12 @@ import { LiveComponent } from './pages/live/live.component';
     HomepageComponent,
     LiveVideoComponent,
     AgendaComponent,
-    LiveComponent
+    LiveComponent,
+    SearchBarComponent,
+    AstroComponent,
+    AboutComponent,
+    AstropageComponent,
+    ListObsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +63,9 @@ import { LiveComponent } from './pages/live/live.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBrG5ywjbq-2E1tu0fWTH1x0oENVVQNGYY'
+    })
   ],
   providers: [EventsService],
   bootstrap: [AppComponent]

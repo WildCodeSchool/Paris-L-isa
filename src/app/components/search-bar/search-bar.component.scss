@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "nazalisation";
+  src: url('../../../assets/nasalization/nasalization-rg.ttf'),
+}
+
+input {
+  background-color:rgba(45,52,65,1);
+  border: none;
+  color: white;
+  font-family: 'nazalisation';
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.5)
+}
