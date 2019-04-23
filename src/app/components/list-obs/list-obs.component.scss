@@ -21,14 +21,30 @@ h2 {
     font-family: 'nazalisation', sans-serif;
     font-size: 2rem;
     text-align: center;
+    margin-top: 20%;
+}
+
+li {
+    padding-top: 2%;
 }
 
 li:hover {
     transition: transform .5s;
     transform: scale(1.15);
 }
+li:nth-child(18) {
+
+    margin-right: -4%;
+    margin-left: 7%;
+    width: 199px;
+
+}
 
 ul {
-    margin-top: 0;
-    padding-top: 4%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+
 }
