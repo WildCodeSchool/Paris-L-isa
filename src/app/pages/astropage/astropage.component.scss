@@ -7,8 +7,7 @@ $fontFamily : 'nasalization';
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
-    height: 100vh;
+    height: auto;
 }
 
 .astroStyle {
@@ -22,17 +21,13 @@ $fontFamily : 'nasalization';
 .background {
 
     @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
+    z-index: -1;
 
 }
 
 .listObsStyle {
 
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-    padding: 0 9%;
+    padding: 0 10vw;
 
 }
 
