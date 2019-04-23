@@ -20,6 +20,51 @@ export class EventsService {
       eventItems : [
       ]
     },
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
   ];
 
 
@@ -30,11 +75,13 @@ export class EventsService {
   
   receiveData(monthName, title, description, picture){
     let index = this.months.indexOf(monthName);
-    const eventModel = {
+    console.log(index);
+    let eventModel = {
       name: title,
       description: description,
       image: picture
     };
+    console.log(eventModel);
     this.events[index].eventItems.push(eventModel);
     console.log(this.events);
     this.saveToLocalStorage();

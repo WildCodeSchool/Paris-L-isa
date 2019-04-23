@@ -24,7 +24,6 @@ export class CalendarComponent implements OnInit {
   menuState: string = 'out';
   num: number;
   monthName: string;
-  image:string;
 
   constructor(private _events: EventsService) { }
 
@@ -38,12 +37,6 @@ export class CalendarComponent implements OnInit {
   }
 
   displayEvent(num) {
-    console.log(num);
-    console.log(this._events.events[num].eventItems);
-    let index = this._events.events[num].eventItems.length - 1;
-    console.log(index);
-    this.image = this._events.events[num].eventItems[index].image;
-    console.log(this.image);
     return this._events.getEvents(num);
   }
 

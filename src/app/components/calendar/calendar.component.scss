@@ -1,8 +1,6 @@
 $fontFamily : 'nasalization';
 
-@mixin backgroundImg ($background) {
-
-    background-image: $background;
+@mixin background () {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,10 +10,7 @@ $fontFamily : 'nasalization';
 section {
     min-height: 100vh;
     background-image: url('../../../assets/calendar/galaxy.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+    @include background();
 
     h2 {
         color:white;
@@ -28,17 +23,14 @@ section {
 #calendarCards {
     height:auto;
     width:100vw;
-    display: flex;
-    justify-content : center;
-    display:grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 3fr 3fr 3fr;
-    grid-gap: 15px;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom:0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 
     #card1 {
-        @include backgroundImg(url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F592%2F592444.jpg&f=1'));
+        @include background();
         width:100%;
     }
 
@@ -46,6 +38,7 @@ section {
         transition: 0.2s;
         background: none;
         height:200px;
+        width : 30vw;
         perspective: 1000px;
     }
 
