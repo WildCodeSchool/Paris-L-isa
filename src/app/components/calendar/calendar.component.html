@@ -9,7 +9,7 @@
     </button>
   </div>
 
-  <app-months-menu [@slideInOut]="menuState" (changeMonth)="handleClick($event)" (changeMonthName)="getNewName($event)"></app-months-menu>
+  <app-months-menu id="slideMenu" [@slideInOut]="menuState" (changeMonth)="handleClick($event)" (changeMonthName)="getNewName($event)"></app-months-menu>
 
   <div id="calendarCards">
     <div class="card">

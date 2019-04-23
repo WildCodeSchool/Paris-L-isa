@@ -12,6 +12,10 @@ section {
     background-image: url('../../../assets/calendar/galaxy.jpeg');
     @include background();
 
+    #slideMenu {
+        z-index : 2;
+    }
+
     h2 {
         color:white;
         font-family: $fontFamily;
@@ -34,20 +38,21 @@ section {
         height: 270px;
     }
 
+    /* div containing all the cards */
+
     .card {
         transition: 0.2s;
         background: none;
-        height:auto;
         perspective: 1000px;
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         justify-content: space-around;
-
+        height: fit-content;
     }
 
     .card-inner {
         position: relative;
-        height: auto;
+        height: 400px;
         text-align: center;
         transition: transform 0.8s;
         transform-style: preserve-3d;
@@ -56,8 +61,6 @@ section {
         margin: 20px;
         justify-content: center;
         width: 30vw;
-
-
     }
     
     .container, .cardsBack {
