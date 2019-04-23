@@ -30,6 +30,7 @@ import { AstropageComponent } from './pages/astropage/astropage.component';
 import { ListObsComponent } from './components/list-obs/list-obs.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { SearchBarServiceService } from './services/search-bar-service.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,10 @@ import { AgmCoreModule } from '@agm/core';
       apiKey: 'AIzaSyBrG5ywjbq-2E1tu0fWTH1x0oENVVQNGYY'
     })
   ],
-  providers: [EventsService],
+  providers: [
+    EventsService,
+    SearchBarServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

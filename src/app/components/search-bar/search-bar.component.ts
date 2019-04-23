@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchBarServiceService } from '../../services/search-bar-service.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor() { }
+  informations = [];
+
+
+  constructor(private searchBarService: SearchBarServiceService ) { }
 
   ngOnInit() {
+    this.searchBarService.getKeyWord()
+    .subscribe(data => {
+      for (let i = 0; i < 2 ; i++) {
+        this.informations[i] = data[i];
+      }
+      return this.informations;
+    });
+    console.log(this.informations);
   }
-
 }
