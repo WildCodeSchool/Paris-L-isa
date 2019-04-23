@@ -1,3 +1,33 @@
 #eventForm {
     margin-top : 50px;
+    min-height: 86vh;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+
+    form {
+        align-self: center;
+
+      label {
+
+        .labelTitle {
+            font-size: 25px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+      } 
+      
+      h3{
+          text-align: center;
+          font-size: 30px;
+          margin: 50px auto;
+      }
+      button {
+          margin-top: 20px;
+          color: black;
+      }
+   }
 }
