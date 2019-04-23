@@ -33,8 +33,21 @@ li {
   font-family: $fontFamily;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width:640px){
+  
   :host {
+    top:30vh;
+    left:auto;
+    right:0;
+    bottom:0;
+    width:100vw;
     position:scroll;
+  }
+
+  ul {
+    line-height: 2;
+    font-size:18px;
+    flex-direction: row;
+    margin-left: 0;
   }
 }
