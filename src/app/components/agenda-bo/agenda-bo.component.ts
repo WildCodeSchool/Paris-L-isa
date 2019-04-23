@@ -12,11 +12,14 @@ export class AgendaBOComponent implements OnInit {
   month;
   title;
   description;
+  picture;
 
 
 
-  constructor(private fb: FormBuilder,
-              private sendEventsService : EventsService) { }
+  constructor(
+    private fb: FormBuilder,
+    private sendEventsService : EventsService
+  ) { }
 
   ngOnInit() {
     this.initEventForm();
@@ -27,16 +30,16 @@ export class AgendaBOComponent implements OnInit {
       monthName: new FormControl('', [Validators.required]),
       eventTitle: new FormControl('', [Validators.required]),
       eventDescription: new FormControl('', [Validators.required]),
+      eventImage: new FormControl('', [Validators.required]),
     })
   }
 
   sendEventInfos(){
-    this.month = this.eventForm.get('monthName').value;
-    console.log(this.month);
-    this.title = this.eventForm.get('eventTitle').value;
-    this.description = this.eventForm.get('eventDescription').value;
-    this.sendEventsService.receiveData(this.month, this.title, this.description);
-    console.log(this.eventForm);
+    let month = this.eventForm.get('monthName').value;
+    let title = this.eventForm.get('eventTitle').value;
+    let description = this.eventForm.get('eventDescription').value;
+    let picture = this.eventForm.get('eventImage').value;
+    this.sendEventsService.receiveData(month, title, description, picture);
   }
 
 }

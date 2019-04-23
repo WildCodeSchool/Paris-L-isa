@@ -2,21 +2,40 @@
   <form [formGroup]="eventForm">
 
     <label>
-      Name:
-      <input type="text" required formControlName="monthName" class="input" value="">
+      Month of the event :
+      <input type="text" list="months" required formControlName="monthName" class="input" value="">
+        <datalist id="months">
+          <option value="January">
+          <option value="February">
+          <option value="March">
+          <option value="April">
+          <option value="May">
+          <option value="June">
+          <option value="July">
+          <option value="August">
+          <option value="September">
+          <option value="October">
+          <option value="November">
+          <option value="December">
+        </datalist>
     </label>
 
     <div>
       <h3>Event information</h3>
 
       <label>
-        Event title:
+        Event title :
         <input type="text" required formControlName="eventTitle" class="form-control input" value="">
       </label>
 
       <label>
-        Event title:
+        Event description :
         <input type="text" required formControlName="eventDescription" class="form-control input" value="">
+      </label>
+
+      <label>
+        Event image :
+        <input type="text" required formControlName="eventImage" class="form-control input" value="">
       </label>
 
     </div>
