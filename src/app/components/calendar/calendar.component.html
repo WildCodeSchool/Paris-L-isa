@@ -5,7 +5,8 @@
     <h2>{{ monthName }} </h2>
 
     <button (click)="toogleMenu()" class="hamburger">
-      <i class="fas fa-plus"></i>
+      <i class="fas fa-plus" *ngIf="menuIcon"></i>
+      <i class="fas fa-minus" *ngIf="!menuIcon"></i>
     </button>
   </div>
 

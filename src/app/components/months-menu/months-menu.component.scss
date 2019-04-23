@@ -1,3 +1,4 @@
+$fontFamily : 'nasalization';
 
 :host {
   background: #1a2580;
@@ -10,13 +11,13 @@
   width: 20%;
   min-width: 250px;
   z-index: 9999;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: $fontFamily;
   z-index : 0;
   padding-top : 8vh;
 }
  
 ul {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 3;
   font-weight: 400;
   margin-left : 25px;
@@ -29,4 +30,11 @@ ul {
 
 li {
   cursor:pointer;
+  font-family: $fontFamily;
+}
+
+@media screen and (max-width: 640px) {
+  :host {
+    position:scroll;
+  }
 }
