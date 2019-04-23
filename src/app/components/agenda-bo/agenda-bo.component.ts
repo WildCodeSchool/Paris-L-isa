@@ -32,9 +32,10 @@ export class AgendaBOComponent implements OnInit {
 
   sendEventInfos(){
     this.month = this.eventForm.get('monthName').value;
+    console.log(this.month);
     this.title = this.eventForm.get('eventTitle').value;
     this.description = this.eventForm.get('eventDescription').value;
-    this.sendEventsService.receiveData(this.month, this.title, this.description, 0);
+    this.sendEventsService.receiveData(this.month, this.title, this.description);
     console.log(this.eventForm);
   }
 
