@@ -6,21 +6,14 @@ import { SearchBarServiceService } from '../../services/search-bar-service.servi
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.scss']
 })
+
 export class SearchBarComponent implements OnInit {
 
-  informations = [];
 
 
-  constructor(private searchBarService: SearchBarServiceService ) { }
+  constructor() { }
 
   ngOnInit() {
-    this.searchBarService.getKeyWord()
-    .subscribe(data => {
-      for (let i = 0; i < 2 ; i++) {
-        this.informations[i] = data[i];
-      }
-      return this.informations;
-    });
-    console.log(this.informations);
-  }
+    
+}
 }

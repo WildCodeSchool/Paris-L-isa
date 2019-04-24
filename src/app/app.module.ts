@@ -31,6 +31,7 @@ import { ListObsComponent } from './components/list-obs/list-obs.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { SearchBarServiceService } from './services/search-bar-service.service';
+import { LogicSearchBarComponent } from './logic-search-bar/logic-search-bar.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { SearchBarServiceService } from './services/search-bar-service.service';
     AstroComponent,
     AboutComponent,
     AstropageComponent,
-    ListObsComponent
+    ListObsComponent,
+    LogicSearchBarComponent
   ],
   imports: [
     BrowserModule,

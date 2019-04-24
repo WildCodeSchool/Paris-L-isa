@@ -12,7 +12,7 @@ export class SearchBarServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getKeyWord(): Observable<IkeyWord[]> {
-    return this.http.get<IkeyWord[]>(this._url);
+  get(): Observable<[]> {
+    return this.http.get<[]>(this._url);
   }
 }
