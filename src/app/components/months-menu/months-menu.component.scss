@@ -36,12 +36,13 @@ li {
 @media screen and (max-width:640px){
   
   :host {
-    top:30vh;
+    top:28vh;
     left:auto;
     right:0;
     bottom:0;
     width:100vw;
     position:scroll;
+    padding-top: 2vh;
   }
 
   ul {

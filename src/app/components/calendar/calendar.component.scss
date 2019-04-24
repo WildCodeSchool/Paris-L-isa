@@ -18,6 +18,14 @@ section {
         padding-top: 120px;
         font-size: 2rem;
     }
+
+    /* media queries */
+
+    @media screen and (max-width: 640px) {
+        h2 {
+            padding-top: 80px;
+        }
+    }
 }
 
 /* desktop */
@@ -131,11 +139,19 @@ section {
     border: 0;
     color:white;
     font-size: 30px;
-  }
+}
 
   .hamburger:hover {
     background-color: rgba(255, 255, 255, 0.6);
-  }
+}
+
+/* media queries */
+
+.hamburger {
+    width: 60px;
+    height: 60px;
+}
+
    
    
  
