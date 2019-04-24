@@ -1,6 +1,43 @@
 .listObsClass {
 
     display: inline-block;
-    width: 50%;
+    width: 50vw;
+    padding: 0 9%;
+
+}
+
+.button {
+
+    background: rgba(10, 10, 10, .6);
+    color: #eee;
+    box-shadow: 1px 1px #333;
+    border: none;
+    font-size: 1rem;
+}
+
+
+h2 {
+    color: #eee;
+    font-family: 'nazalisation', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+li {
+    padding-top: 2vh;
+}
+
+li:hover {
+    transition: transform .5s;
+    transform: scale(1.15);
+}
+
+ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
 
 }
