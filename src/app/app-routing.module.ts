@@ -6,6 +6,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { AstropageComponent } from './pages/astropage/astropage.component';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
+import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { AboutComponent } from './pages/about/about.component';
 
@@ -34,6 +35,10 @@ const routes: Routes = [
     {
       path: 'live',
       component: LiveVideoComponent
+    },
+    {
+      path: 'planet',
+      component: PlanetPageComponent
     },
 ];
 
