@@ -46,9 +46,7 @@ section {
     /* div containing all the cards */
 
     .card {
-        transition: 0.2s;
         background: none;
-        perspective: 1000px;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
@@ -56,11 +54,8 @@ section {
     }
 
     .card-inner {
-        position: relative;
         height: 300px;
         text-align: center;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
         cursor:pointer;
         margin: 10px;
         justify-content: center;
@@ -79,35 +74,51 @@ section {
         }
     }
     
-    .container, .cardsBack {
-        position: absolute;
+    .cardsBack {
         width: 100%;
         height: 300px;
-        backface-visibility: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 900ms, visibility 900ms;
       }
     
     .container {
         padding: 2px 16px;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+
+        h4 {
+            font-size: 24px;
+        }
     
         p, h4 {
             color:white;
             text-align: center;
             font-family: $fontFamily;
+            width : 100%;
         }
     }
+
+    .card-inner:hover .container {
+        display : none;
+    }
     
-    .card-inner:hover {
-        transform: rotateY(180deg);
-      }
-    
-    .cardsBack {
-        transform: rotateY(180deg);
-        background-color: white;
+    .card-inner:hover .cardsBack {
+        display:flex;
+        align-items: center;
+        background-color: rgba(38, 38, 38, 0.6);
+        justify-content: center;
+        visibility: visible;
+        opacity : 1;
     
         p, h4 {
-            color:black;
+            color:white;
             font-family: $fontFamily;
         }
     }

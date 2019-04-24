@@ -17,7 +17,6 @@
       <div class="card-inner" *ngFor="let event of januaryEvents; let i = index">
         <div id="card1" class="container" [ngStyle]="{'background-image': 'url(' + event.image + ')'}">
           <h4><b>{{ event.name }}</b></h4>
-          <p>Small description...</p>
         </div>
         <div class="cardsBack">
           <p>{{ event.description }}</p>
