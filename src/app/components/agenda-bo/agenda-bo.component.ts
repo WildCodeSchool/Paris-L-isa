@@ -31,6 +31,7 @@ export class AgendaBOComponent implements OnInit {
       eventTitle: new FormControl('', [Validators.required]),
       eventDay: new FormControl('', [Validators.required]),
       eventDescription: new FormControl('', [Validators.required]),
+      eventPlace: new FormControl('', [Validators.required]),
       eventImage: new FormControl('', [Validators.required]),
     })
   }
@@ -40,8 +41,9 @@ export class AgendaBOComponent implements OnInit {
     let title = this.eventForm.get('eventTitle').value;
     let description = this.eventForm.get('eventDescription').value;
     let picture = this.eventForm.get('eventImage').value;
-    let day :number = this.eventForm.get('eventDay').value;
-    this.sendEventsService.receiveData(month, title, description, picture, day);
+    let day = this.eventForm.get('eventDay').value;
+    let place = this.eventForm.get('eventPlace').value;
+    this.sendEventsService.receiveData(month, title, description, picture, day, place);
   }
 
 }

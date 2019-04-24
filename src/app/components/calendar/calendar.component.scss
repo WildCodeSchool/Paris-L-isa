@@ -79,7 +79,7 @@ section {
         height: 300px;
         visibility: hidden;
         opacity: 0;
-        transition: opacity 700ms, visibility 700ms;
+        transition: opacity 1s, visibility 1s;
       }
     
     .container {
@@ -94,7 +94,7 @@ section {
         opacity: 1;
 
         h4 {
-            font-size: 24px;
+            font-size: 28px;
         }
     
         p, h4 {
@@ -102,6 +102,11 @@ section {
             text-align: center;
             font-family: $fontFamily;
             width : 100%;
+            padding-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
         }
     }
 

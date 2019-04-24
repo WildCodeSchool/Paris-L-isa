@@ -73,19 +73,18 @@ export class EventsService {
   
   constructor() { }
   
-  receiveData(monthName, title, description, picture, day){
+  receiveData(monthName, title, description, picture, day, place){
     let index = this.months.indexOf(monthName);
-    console.log(index);
     let eventModel = {
       name: title,
       day:day,
       description: description,
-      image: picture
+      image: picture,
+      place: place
     };
-    console.log(eventModel);
     this.events[index].eventItems.push(eventModel);
-    this.events[index].eventItems.sort(day);
-    console.log(this.events);
+    let eventDay = parseInt(eventModel.day, 10);
+    this.events[index].eventItems.sort(function(a, b){return a.day - b.day});
     this.saveToLocalStorage();
   }
 
