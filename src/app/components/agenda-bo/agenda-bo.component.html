@@ -29,19 +29,24 @@
       </label>
 
       <label>
+        <span class="labelTitle">Day of the event :</span>
+        <input type="text" required formControlName="eventDay" class="form-control input" value="">
+      </label>
+
+      <label>
         <span class="labelTitle">Event description :</span>
         <input type="text" required formControlName="eventDescription" class="form-control input" value="">
       </label>
 
       <label>
-        <span class="labelTitle">image :</span>
+        <span class="labelTitle">Image :</span>
         <input type="text" required formControlName="eventImage" class="form-control input" value="">
       </label>
 
     </div>
 
 
-    <button type="submit" (click)="sendEventInfos()" [disabled]="!eventForm.valid">Create new event</button>
+    <button id="submitButton" type="submit" (click)="sendEventInfos()" [disabled]="!eventForm.valid">Create new event</button>
 
   </form>
 </section>
