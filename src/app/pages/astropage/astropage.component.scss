@@ -7,8 +7,7 @@ $fontFamily : 'nasalization';
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
-    height: 100vh;
+    height: auto;
 }
 
 .astroStyle {
@@ -22,14 +21,14 @@ $fontFamily : 'nasalization';
 .background {
 
     @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
+    z-index: -1;
 
 }
 
 .listObsStyle {
 
-    padding-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 0 10vw;
+
 }
 
 .rognerMap .astroStyle {

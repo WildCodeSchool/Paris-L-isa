@@ -4,28 +4,14 @@ $fontFamily : 'nasalization';
 *{
     box-sizing: border-box;
 }
-
-@media screen and (max-width: 1087px) {
-  .semi-background{
-      background-image: url('../../../assets/about/astronaut-1664814_1920.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 75vh;
-      padding-bottom: 100vh;
-  } 
-}
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    min-width: 100vw; 
-    min-height: 100vh;
-    z-index: -1;
-}
+.semi-background{
+  background-image: url('../../../assets/about/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+	min-height: calc(100vh - 139px);
+	padding: 10px;
+} 
 
 body{
     color: rgba(233, 231, 231, 0.979);
