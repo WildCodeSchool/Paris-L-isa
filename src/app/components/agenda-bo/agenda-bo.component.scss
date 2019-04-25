@@ -1,14 +1,21 @@
 #eventForm {
-    margin-top : 50px;
+    padding: 30px;
     min-height: 86vh;
     display: flex;
     justify-content: center;
+    color: black;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: black;
+    background-image: url('../../../assets/calendar/galaxy.jpg');
+    height: 100%;
 
     form {
         align-self: center;
+        margin : 80px;
+        background-color: #b3b3b3;
+        border-radius : 30px;
+        padding: 80px;
 
       label {
 
