@@ -26,6 +26,13 @@ h2 {
 
 li {
     padding-top: 2vh;
+    width: 20vw;
+}
+
+li:nth-child(2n) {
+
+  text-align: right;
+
 }
 
 li:hover {
