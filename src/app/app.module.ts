@@ -29,6 +29,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { AstropageComponent } from './pages/astropage/astropage.component';
 import { ListObsComponent } from './components/list-obs/list-obs.component';
 
+
 import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
