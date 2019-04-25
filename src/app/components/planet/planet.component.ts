@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetComponent implements OnInit {
 
+  tabGrad = [];
+  tabUnit = [0, 10, 20, 30];
+
   constructor() { }
 
   ngOnInit() {
+    for (let i = 0; i < 31 ; i ++) {
+      this.tabGrad.push('');
+    }
   }
 
 }
