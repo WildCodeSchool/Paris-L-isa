@@ -24,16 +24,19 @@ export class CalendarComponent implements OnInit {
   menuState: string = 'out';
   num: number;
   monthName: string;
+  menuIcon:boolean;
 
   constructor(private _events: EventsService) { }
 
   ngOnInit() {
     this.januaryEvents = this.displayEvent(0);
     this.monthName = 'JANUARY';
+    this.menuIcon = true;
   }
 
   toogleMenu() {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
+    this.menuIcon = !this.menuIcon;
   }
 
   displayEvent(num) {
@@ -47,6 +50,5 @@ export class CalendarComponent implements OnInit {
   getNewName(newMonthName) {
     this.monthName = newMonthName;
     return this.monthName;
-    console.log(this.monthName);
   }
 }
