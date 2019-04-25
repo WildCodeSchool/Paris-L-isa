@@ -3,21 +3,28 @@
 
     <label>
       <span class="labelTitle">Month of the event :</span>
-      <input type="text" list="months" required formControlName="monthName" class="input" value="">
-        <datalist id="months">
-          <option value="January">
-          <option value="February">
-          <option value="March">
-          <option value="April">
-          <option value="May">
-          <option value="June">
-          <option value="July">
-          <option value="August">
-          <option value="September">
-          <option value="October">
-          <option value="November">
-          <option value="December">
-        </datalist>
+      <input 
+      type="text"
+      list="months"
+      required
+      formControlName="monthName"
+      class="input"
+      value=""
+      >
+      <datalist id="months">
+        <option value="January">
+        <option value="February">
+        <option value="March">
+        <option value="April">
+        <option value="May">
+        <option value="June">
+        <option value="July">
+        <option value="August">
+        <option value="September">
+        <option value="October">
+        <option value="November">
+        <option value="December">
+      </datalist>
     </label>
 
     <div>
@@ -25,33 +32,70 @@
 
       <label>
         <span class="labelTitle">Event title :</span>
-        <input type="text" required formControlName="eventTitle" class="form-control input" value="">
+        <input 
+        type="text"
+        required
+        formControlName="eventTitle"
+        class="form-control input"
+        value=""
+        >
       </label>
 
       <label>
         <span class="labelTitle">Day of the event :</span>
-        <input type="text" required formControlName="eventDay" class="form-control input" value="">
+        <input 
+        type="text"
+        required
+        formControlName="eventDay"
+        class="form-control input"
+        value=""
+        >
       </label>
 
       <label>
         <span class="labelTitle">Event description :</span>
-        <input type="text" required formControlName="eventDescription" class="form-control input" value="">
+        <input
+        type="text"
+        required
+        formControlName="eventDescription"
+        class="form-control input"
+        value=""
+        >
       </label>
 
       <label>
         <span class="labelTitle">Image :</span>
-        <input type="text" required formControlName="eventImage" class="form-control input" value="">
+        <input 
+        type="text"
+        required 
+        formControlName="eventImage" 
+        class="form-control input" 
+        value=""
+        >
       </label>
 
       <label>
         <span class="labelTitle">Place of the event :</span>
-        <input type="text" required formControlName="eventPlace" class="form-control input" value="">
+        <input 
+        type="text" 
+        required 
+        formControlName="eventPlace" 
+        class="form-control input" 
+        value=""
+        >
       </label>
 
     </div>
 
 
-    <button id="submitButton" type="submit" (click)="sendEventInfos()" [disabled]="!eventForm.valid">Create new event</button>
+    <button 
+    id="submitButton" 
+    type="submit" 
+    (click)="sendEventInfos()" 
+    [disabled]="!eventForm.valid"
+    >
+    Create new event
+    </button>
 
   </form>
 </section>
