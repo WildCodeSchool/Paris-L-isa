@@ -15,6 +15,7 @@ export class MonthsMenuComponent implements OnInit {
   @Output() changeMonthName = new EventEmitter();
   newMonth: number;
 
+
   constructor(private _eventsService : EventsService) { }
 
   ngOnInit() {
@@ -24,13 +25,11 @@ export class MonthsMenuComponent implements OnInit {
     this.month = this.months[index];
     this.newMonth = this.months.indexOf(this.month);
     this.changeMonth.emit(this.newMonth);
-    console.log(this.newMonth);
   }
 
   getMonthName(month){
     this.month = month;
     this.changeMonthName.emit(this.month);
-    console.log(this.month);
   }
 
 }
