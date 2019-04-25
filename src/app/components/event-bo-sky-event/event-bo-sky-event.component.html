@@ -1,0 +1,39 @@
+<div class="main">
+
+    <form (ngSubmit)="myForm.valid && onSubmit(form)" #myForm='ngForm'>
+
+        <div>
+          <label for="user-form">Title</label>
+          <input
+           name="user-form"
+           type="text" 
+           [(ngModel)]="formApp.user" 
+           #user='ngModel'  
+           required 
+           maxlength="25" 
+           minlength="4">
+        </div>
+    
+        <div *ngIf="myForm.submitted && user.errors">
+            <span *ngIf="user.errors.required">Le champ est requis</span>
+            <span *ngIf="user.errors.minlength">La quantité minimum doit être supérieur à 4</span>
+            <span *ngIf="user.errors.maxlength">La quantité maximale doit être inférieure à 25</span>
+        </div>
+        
+        <div>
+          <label for="email-form">Email</label>
+          <input 
+          name="email-form" 
+          type="text" 
+          [(ngModel)]="formApp.email" 
+          required email
+          #mail="ngModel" 
+          >
+        </div>
+    
+        
+        <button type="submit">Sauvegarder</button>
+    
+      </form>
+
+</div>
