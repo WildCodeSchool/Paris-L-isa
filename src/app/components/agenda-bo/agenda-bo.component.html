@@ -25,6 +25,9 @@
         <option value="November">
         <option value="December">
       </datalist>
+      <div class="errorMsg" *ngIf="(eventForm.get('monthName').touched && eventForm.get('monthName').invalid) && eventForm.get('monthName').errors['required']">
+        Month is a required field.
+      </div>
     </label>
 
     <div>
@@ -38,7 +41,11 @@
         formControlName="eventTitle"
         class="form-control input"
         value=""
+        [ngClass]="{'is-invalid': eventForm.get('eventTitle').invalid && eventForm.get('eventTitle').touched}"
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventTitle').touched && eventForm.get('eventTitle').invalid) && eventForm.get('eventTitle').errors['required']">
+            Event title is a required field.
+        </div>
       </label>
 
       <label>
@@ -50,6 +57,9 @@
         class="form-control input"
         value=""
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventDay').touched || eventForm.get('eventDay').dirty) && eventForm.get('eventDay').errors['required']">
+          Event day is a required field.
+      </div>
       </label>
 
       <label>
@@ -61,6 +71,9 @@
         class="form-control input"
         value=""
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventDescription').touched || eventForm.get('eventDescription').dirty) && eventForm.get('eventDescription').errors['required']">
+          Event description is a required field.
+        </div>
       </label>
 
       <label>
@@ -72,6 +85,9 @@
         class="form-control input" 
         value=""
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventImage').touched || eventForm.get('eventImage').dirty) && eventForm.get('eventImage').errors['required']">
+          Event picture is a required field.
+        </div>
       </label>
 
       <label>
@@ -83,6 +99,9 @@
         class="form-control input" 
         value=""
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventPlace').touched || eventForm.get('eventPlace').dirty) && eventForm.get('eventPlace').errors['required']">
+          A place is required.
+        </div>
       </label>
 
     </div>
