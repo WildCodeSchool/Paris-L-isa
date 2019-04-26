@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { EventsService } from '../../services/events.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-calendar',
@@ -20,31 +22,33 @@ import { EventsService } from '../../services/events.service';
   ]
 })
 export class CalendarComponent implements OnInit {
-  januaryEvents: any;
+  januaryEvents: Observable<any>;
   menuState: string = 'out';
   num: number;
   monthName: string;
   menuIcon:boolean;
 
-  constructor(private _events: EventsService) { }
+  constructor(private _events: EventsService, private db : AngularFirestore) { 
+    this.januaryEvents = db.collection('events').valueChanges();
+  }
 
   ngOnInit() {
-    this.januaryEvents = this.displayEvent(0);
-    this.monthName = 'JANUARY';
-    this.menuIcon = true;
+    // this.januaryEvents = this.displayEvent(0);
+    // this.monthName = 'JANUARY';
+    // this.menuIcon = true;
   }
 
-  toogleMenu() {
-    this.menuState = this.menuState === 'out' ? 'in' : 'out';
-    this.menuIcon = !this.menuIcon;
-  }
+  // toogleMenu() {
+  //   this.menuState = this.menuState === 'out' ? 'in' : 'out';
+  //   this.menuIcon = !this.menuIcon;
+  // }
 
-  displayEvent(num) {
-    return this._events.getEvents(num);
-  }
+  // displayEvent(num) {
+  //   return this._events.getEvents(num);
+  // }
 
   handleClick(month) {
-    this.januaryEvents = this.displayEvent(month);
+    // this.januaryEvents = this.displayEvent(month);
   }
 
   getNewName(newMonthName) {

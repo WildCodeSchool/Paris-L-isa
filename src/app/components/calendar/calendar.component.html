@@ -17,7 +17,7 @@
   (changeMonthName)="getNewName($event)"
   ></app-months-menu>
 
-  <div id="calendarCards">
+  <!-- <div id="calendarCards">
     <div class="card">
       <div 
       class="card-inner" 
@@ -37,6 +37,12 @@
         </div>
       </div>
     </div> 
-  </div>
+  </div> -->
+
+  <ul>
+    <li class="text" *ngFor="let item of januaryEvents | async">
+      {{item.eventImage}}
+    </li>
+   </ul>
 
 </section>
