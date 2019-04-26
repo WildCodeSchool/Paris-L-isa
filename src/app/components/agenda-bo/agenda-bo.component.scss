@@ -1,14 +1,21 @@
 #eventForm {
-    margin-top : 50px;
-    min-height: 86vh;
-    display: flex;
-    justify-content: center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url('../../../assets/calendar/galaxy.jpg');
     color: black;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    min-height: 86vh;
+    padding: 30px;
 
     form {
         align-self: center;
+        background-color: #b3b3b3;
+        border-radius : 30px;
+        margin : 80px;
+        padding: 80px;
 
       label {
 
@@ -20,16 +27,17 @@
         }
       } 
       
-      h3{
-          text-align: center;
-          font-size: 30px;
-          margin: 50px auto;
+      h3 {
+        font-size: 30px;
+        margin: 50px auto;
+        text-align: center;
       }
+
       button {
-          margin-top: 20px;
-          width: 20vw;
-          font-size: 24px;
-          align-self: center;
+        align-self: center;
+        margin-top: 20px;
+        font-size: 24px;
+        width: 20vw;
       }
    }
 }

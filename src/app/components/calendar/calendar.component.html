@@ -10,12 +10,24 @@
     </button>
   </div>
 
-  <app-months-menu id="slideMenu" [@slideInOut]="menuState" (changeMonth)="handleClick($event)" (changeMonthName)="getNewName($event)"></app-months-menu>
+  <app-months-menu 
+  id="slideMenu" 
+  [@slideInOut]="menuState" 
+  (changeMonth)="handleClick($event)" 
+  (changeMonthName)="getNewName($event)"
+  ></app-months-menu>
 
   <div id="calendarCards">
     <div class="card">
-      <div class="card-inner" *ngFor="let event of januaryEvents; let i = index">
-        <div id="card1" class="container" [ngStyle]="{'background-image': 'url(' + event.image + ')'}">
+      <div 
+      class="card-inner" 
+      *ngFor="let event of januaryEvents; let i = index"
+      >
+        <div 
+        id="card1" 
+        class="container" 
+        [ngStyle]="{'background-image': 'url(' + event.image + ')'}"
+        >
           <h4><b>{{ event.name }}</b></h4>
           <p>{{ event.day + ' ' + monthName + ' 2019' }}</p>
           <p>{{ event.place }}</p>
