@@ -32,6 +32,8 @@ import { ListObsComponent } from './components/list-obs/list-obs.component';
 
 
 import { AgmCoreModule } from '@agm/core';
+import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
+import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
 
 @NgModule({
@@ -55,6 +57,8 @@ import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
     AboutComponent,
     AstropageComponent,
     ListObsComponent,
+    PlanetPageComponent,
+    PlanetComponent,
     AgendaBOComponent
   ],
   imports: [
