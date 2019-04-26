@@ -8,15 +8,15 @@ $fontFamily : 'nasalization';
 }
 
 section {
-    min-height: 100vh;
-    background-image: url('../../../assets/calendar/galaxy.jpeg');
     @include background();
+    background-image: url('../../../assets/calendar/agendaBackground.png');
+    min-height: 100vh;
 
     h2 {
         color:white;
         font-family: $fontFamily;
-        padding-top: 120px;
         font-size: 2rem;
+        padding-top: 120px;
     }
 
     /* media queries */
@@ -31,12 +31,12 @@ section {
 /* desktop */
 
 #calendarCards {
-    min-height:100vh;
-    width:100vw;
-    padding-top: 40px;
-    padding-bottom:0;
     display: flex;
     justify-content: center;
+    min-height:100vh;
+    padding-bottom:0;
+    padding-top: 40px;
+    width:100vw;
 
     #card1 {
         @include background();
@@ -49,18 +49,20 @@ section {
         background: none;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
         height: fit-content;
+        justify-content: space-around;
     }
 
     .card-inner {
-        height: 300px;
-        text-align: center;
         cursor:pointer;
-        margin: 10px;
+        height: 300px;
         justify-content: center;
+        margin: 10px;
+        text-align: center;
         width: 30vw;
     }
+
+    /* media queries cards layout */
 
     @media screen and (max-width: 850px) {
         .card-inner {
@@ -75,24 +77,24 @@ section {
     }
     
     .cardsBack {
-        width: 100%;
         height: 300px;
-        visibility: hidden;
         opacity: 0;
         transition: opacity 1s, visibility 1s;
+        visibility: hidden;
+        width: 100%;
       }
     
     .container {
-        padding: 2px 16px;
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
         height: 300px;
-        visibility: visible;
+        justify-content: center;
         opacity: 1;
         overflow: hidden;
+        padding: 2px 16px;
+        visibility: visible;
+        width: 100%;
 
         h4 {
             font-size: 28px;
@@ -100,10 +102,11 @@ section {
     
         p, h4 {
             color:white;
-            text-align: center;
             font-family: $fontFamily;
-            width : 100%;
             padding-bottom: 15px;
+            text-align: center;
+            width : 100%;
+            
         }
 
         p {
@@ -116,12 +119,12 @@ section {
     }
     
     .card-inner:hover .cardsBack {
-        display:flex;
         align-items: center;
         background-color: rgba(38, 38, 38, 0.6);
+        display:flex;
         justify-content: center;
-        visibility: visible;
         opacity : 1;
+        visibility: visible;
     
         p, h4 {
             color:white;
@@ -137,25 +140,25 @@ section {
 }
 
 #monthsMenu {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .hamburger {
-    display: block;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    outline: none;
     background-color: transparent;
     border-radius: 50%;
     border: 0;
     color:white;
+    cursor: pointer;
+    display: block;
     font-size: 30px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    outline: none;
+    width: 80px;
 }
 
   .hamburger:hover {
@@ -165,8 +168,8 @@ section {
 /* media queries */
 
 .hamburger {
-    width: 60px;
     height: 60px;
+    width: 60px;
 }
 
    

@@ -2,32 +2,31 @@ $fontFamily : 'nasalization';
 
 :host {
   background: #1a2580;
-  color: #fff;
-  position: fixed;
-  left: auto;
-  top: 0;
-  right: 0;
   bottom: 0;
-  width: 20%;
-  min-width: 250px;
-  z-index: 9999;
+  color: #fff;
   font-family: $fontFamily;
-  z-index : 0;
-  padding-top : 8vh;
+  left: auto;
   margin-top: 52px;
+  min-width: 250px;
   overflow: scroll;
+  padding-top : 8vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 20%;
+  z-index : 0;
 }
  
 ul {
-  font-size: 20px;
-  line-height: 3;
-  font-weight: 400;
-  margin-left : 25px;
-  margin-top: 0;
-  list-style: none;
   display:flex;
   flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
   justify-content: center;
+  line-height: 3;
+  list-style: none;
+  margin-left : 25px;
+  margin-top: 0;
 }
 
 li {
@@ -38,19 +37,19 @@ li {
 @media screen and (max-width:640px){
   
   :host {
-    top:28vh;
-    left:auto;
-    right:0;
     bottom:0;
-    width:100vw;
+    left:auto;
     position:scroll;
     padding-top: 2vh;
+    right:0;
+    top:28vh;
+    width:100vw;
   }
 
   ul {
-    line-height: 2;
     font-size:18px;
     flex-direction: row;
+    line-height: 2;
     margin-left: 0;
   }
 }
