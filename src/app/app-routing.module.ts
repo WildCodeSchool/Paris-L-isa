@@ -10,6 +10,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { AgendaComponent} from './pages/agenda/agenda.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
+import { HomePageEventBoComponent } from './pages/home-page-event-bo/home-page-event-bo.component';
 
 const routes: Routes = [
     {
@@ -41,6 +42,10 @@ const routes: Routes = [
       path: 'back-office',
       component: AgendaBOComponent
     },
+    {
+      path: 'back-office-event',
+      component: HomePageEventBoComponent
+    }
 ];
 
 @NgModule({ imports: [RouterModule.forRoot(routes)],

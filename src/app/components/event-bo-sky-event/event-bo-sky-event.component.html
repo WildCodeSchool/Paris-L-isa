@@ -1,39 +1,83 @@
+
 <div class="main">
 
-    <form (ngSubmit)="myForm.valid && onSubmit(form)" #myForm='ngForm'>
+  <h1>Sky Event</h1>
 
-        <div>
-          <label for="user-form">Title</label>
-          <input
-           name="user-form"
-           type="text" 
-           [(ngModel)]="formApp.user" 
-           #user='ngModel'  
-           required 
-           maxlength="25" 
-           minlength="4">
-        </div>
-    
-        <div *ngIf="myForm.submitted && user.errors">
-            <span *ngIf="user.errors.required">Le champ est requis</span>
-            <span *ngIf="user.errors.minlength">La quantité minimum doit être supérieur à 4</span>
-            <span *ngIf="user.errors.maxlength">La quantité maximale doit être inférieure à 25</span>
-        </div>
+    <form (ngSubmit)="myForm.valid && onSubmit(form)" #myForm='ngForm'>
+      
+      <div>
+
+        <label for="title">Title</label>
+        <input 
+        class="form-control"
+        #titleText='ngModel'
+        name="title-skyEvent"
+        type="text" 
+        id="title"
+        [(ngModel)]="skyEvent.title"
+        maxlength="20"
+        required>
         
-        <div>
-          <label for="email-form">Email</label>
-          <input 
-          name="email-form" 
-          type="text" 
-          [(ngModel)]="formApp.email" 
-          required email
-          #mail="ngModel" 
-          >
-        </div>
-    
+      </div>
+
+      <div *ngIf="myForm.submitted && titleText.errors">
+
+        <span *ngIf="titleText.errors.required">This field is required</span>
+        <span *ngIf="titleText.errors.maxlength">20 characters maximum</span>
+
+      </div>
+
+      <div>
+               
+        <label for="date">Date</label>
+        <input 
+        class="form-control"
+        #dateText='ngModel'
+        type="date" 
+        id="date"
+        [(ngModel)]="skyEvent.date"
+        name="date-skyEvent"
+        required>
         
-        <button type="submit">Sauvegarder</button>
-    
-      </form>
+      </div>
+
+      <div *ngIf="myForm.submitted && dateText.errors">
+
+          <span *ngIf="dateText.errors.required">A date is required</span>
+        
+      </div>
+
+      <div>
+        
+        <label for="description">Description</label>
+        <input 
+        class="form-control"
+        #descriptionText='ngModel'
+        type="text" 
+        id="description"
+        [(ngModel)]="skyEvent.description"
+        maxlength="80"
+        name="description-skyEvent"
+        required>
+        
+      </div>
+
+      <div *ngIf="myForm.submitted && descriptionText.errors">
+
+        <span $ngIf="descriptionText.errors.required">this field is required</span>
+        <span $ngIf="descriptionText.errors.maxlength">80 characters maximum</span>
+
+      </div>
+
+
+      <div class="button">
+
+        <button 
+        type="submit"
+        >Promote</button>
+
+      </div>
+
+    </form>
 
 </div>
