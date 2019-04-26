@@ -58,6 +58,7 @@
         class="form-control input"
         value=""
         [ngClass]="{'is-invalid': eventForm.get('eventDay').invalid && eventForm.get('eventDay').touched}"
+
         >
         <div class="errorMsg" *ngIf="(eventForm.get('eventDay').touched || eventForm.get('eventDay').dirty) && eventForm.get('eventDay').errors['required']">
           Event day is a required field.
