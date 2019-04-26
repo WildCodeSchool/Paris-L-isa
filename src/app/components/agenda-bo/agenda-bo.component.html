@@ -10,6 +10,7 @@
       formControlName="monthName"
       class="input"
       value=""
+      [ngClass]="{'is-invalid': eventForm.get('monthName').invalid && eventForm.get('monthName').touched}"
       >
       <datalist id="months">
         <option value="January">
@@ -56,6 +57,7 @@
         formControlName="eventDay"
         class="form-control input"
         value=""
+        [ngClass]="{'is-invalid': eventForm.get('eventDay').invalid && eventForm.get('eventDay').touched}"
         >
         <div class="errorMsg" *ngIf="(eventForm.get('eventDay').touched || eventForm.get('eventDay').dirty) && eventForm.get('eventDay').errors['required']">
           Event day is a required field.
@@ -70,6 +72,7 @@
         formControlName="eventDescription"
         class="form-control input"
         value=""
+        [ngClass]="{'is-invalid': eventForm.get('eventDescription').invalid && eventForm.get('eventDescription').touched}"
         >
         <div class="errorMsg" *ngIf="(eventForm.get('eventDescription').touched || eventForm.get('eventDescription').dirty) && eventForm.get('eventDescription').errors['required']">
           Event description is a required field.
@@ -84,6 +87,7 @@
         formControlName="eventImage" 
         class="form-control input" 
         value=""
+        [ngClass]="{'is-invalid': eventForm.get('eventImage').invalid && eventForm.get('eventImage').touched}"
         >
         <div class="errorMsg" *ngIf="(eventForm.get('eventImage').touched || eventForm.get('eventImage').dirty) && eventForm.get('eventImage').errors['required']">
           Event picture is a required field.
@@ -98,6 +102,7 @@
         formControlName="eventPlace" 
         class="form-control input" 
         value=""
+        [ngClass]="{'is-invalid': eventForm.get('eventPlace').invalid && eventForm.get('eventPlace').touched}"
         >
         <div class="errorMsg" *ngIf="(eventForm.get('eventPlace').touched || eventForm.get('eventPlace').dirty) && eventForm.get('eventPlace').errors['required']">
           A place is required.
