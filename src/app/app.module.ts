@@ -31,7 +31,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { AstropageComponent } from './pages/astropage/astropage.component';
 import { ListObsComponent } from './components/list-obs/list-obs.component';
 
+
 import { AgmCoreModule } from '@agm/core';
+import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
+import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
 import { HomePageEventBoComponent } from './pages/home-page-event-bo/home-page-event-bo.component';
 import { EventBoSkyEventComponent } from './components/event-bo-sky-event/event-bo-sky-event.component';
@@ -61,7 +64,9 @@ import { EventBoConferenceComponent } from './components/event-bo-conference/eve
     AgendaBOComponent,
     HomePageEventBoComponent,
     EventBoSkyEventComponent,
-    EventBoConferenceComponent
+    EventBoConferenceComponent,
+    PlanetPageComponent,
+    PlanetComponent,
   ],
   imports: [
     BrowserModule,

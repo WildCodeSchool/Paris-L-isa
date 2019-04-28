@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeEventService } from 'src/app/services/home-event.service';
 
 @Component({
   selector: 'app-tabs-countdown',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsCountdownComponent implements OnInit {
 
+  eventList = [];
   conferences = false;
   eclipses = true;
 
@@ -22,9 +24,13 @@ export class TabsCountdownComponent implements OnInit {
     this.eclipses = false;
   }
 
-  constructor() { }
+  
+
+  constructor(private service: HomeEventService) { }
 
   ngOnInit() {
+    this.eventList = this.service.tableEventSky;
+    console.log(this.eventList);
   }
-
+  
 }

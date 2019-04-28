@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HomeEventService } from '../../services/home-event.service';
 import { SkyEvent } from '../../class/SkyEvent'
+import { Services } from '@angular/core/src/view';
 
 
 @Component({
@@ -14,16 +15,14 @@ export class EventBoSkyEventComponent implements OnInit {
 
   skyEvent: SkyEvent = new SkyEvent();
 
-  constructor() { }
+  constructor(private service: HomeEventService) { }
 
   ngOnInit() {
   }
 
 /* Creation of skyEvent objet*/
 onSubmit () {
-  console.log(this.skyEvent);
+  this.service.formTohome(this.skyEvent);
 }
-
-
 
 }
