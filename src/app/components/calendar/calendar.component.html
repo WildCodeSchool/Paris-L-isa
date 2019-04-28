@@ -17,32 +17,25 @@
   (changeMonthName)="getNewName($event)"
   ></app-months-menu>
 
-  <!-- <div id="calendarCards">
+  <div id="calendarCards">
     <div class="card">
       <div 
       class="card-inner" 
-      *ngFor="let event of januaryEvents; let i = index"
       >
         <div 
         id="card1" 
         class="container" 
-        [ngStyle]="{'background-image': 'url(' + event.image + ')'}"
+        *ngFor="let event of events"
         >
-          <h4><b>{{ event.name }}</b></h4>
-          <p>{{ event.day + ' ' + monthName + ' 2019' }}</p>
-          <p>{{ event.place }}</p>
+          <h4><b>{{event.eventTitle}}</b></h4>
+          <p></p>
+          <p></p>
         </div>
         <div class="cardsBack">
-          <p>{{ event.description }}</p>
+          <p></p>
         </div>
       </div>
     </div> 
-  </div> -->
-
-  <ul>
-    <li class="text" *ngFor="let item of januaryEvents | async">
-      {{item.eventImage}}
-    </li>
-   </ul>
+  </div>
 
 </section>

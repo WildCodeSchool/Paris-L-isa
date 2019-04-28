@@ -3,6 +3,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { EventsService } from '../../services/events.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { Monthevents } from '../../monthevents.model';
+import { ArrayType } from '@angular/compiler';
 
 @Component({
   selector: 'app-calendar',
@@ -22,37 +24,44 @@ import { Observable } from 'rxjs';
   ]
 })
 export class CalendarComponent implements OnInit {
-  januaryEvents: Observable<any>;
+  events: Monthevents[];
   menuState: string = 'out';
   num: number;
   monthName: string;
   menuIcon:boolean;
 
   constructor(private _events: EventsService, private db : AngularFirestore) { 
-    this.januaryEvents = db.collection('events').valueChanges();
   }
 
   ngOnInit() {
-    // this.januaryEvents = this.displayEvent(0);
-    // this.monthName = 'JANUARY';
-    // this.menuIcon = true;
-  }
+    this.monthName = 'JANUARY';
+    this.menuIcon = true;
+    this._events.getEvents().subscribe(data => {
+      this.events = data.map(e => {
+        return {
+          id : e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Monthevents;
+    })
+  })
+  console.log(this.events);
+}
 
-  // toogleMenu() {
-  //   this.menuState = this.menuState === 'out' ? 'in' : 'out';
-  //   this.menuIcon = !this.menuIcon;
-  // }
+  /* Side menu functions */
 
-  // displayEvent(num) {
-  //   return this._events.getEvents(num);
-  // }
-
-  handleClick(month) {
-    // this.januaryEvents = this.displayEvent(month);
+  toogleMenu() {
+    this.menuState = this.menuState === 'out' ? 'in' : 'out';
+    this.menuIcon = !this.menuIcon;
   }
 
   getNewName(newMonthName) {
     this.monthName = newMonthName;
     return this.monthName;
+  }
+
+  /* events cards functions */
+
+  handleClick(month) {
+    console.log(this.events);
   }
 }
