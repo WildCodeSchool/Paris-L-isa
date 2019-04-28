@@ -21,18 +21,18 @@
     <div class="card">
       <div 
       class="card-inner" 
+      *ngFor="let event of events"
       >
         <div 
         id="card1" 
         class="container" 
-        *ngFor="let event of events"
         >
-          <h4><b>{{event.eventTitle}}</b></h4>
-          <p></p>
-          <p></p>
+          <h4><b>{{ event.eventTitle }}</b></h4>
+          <p>{{ event.eventDay + ' ' + event.monthName + ' 2019' }}</p>
+          <p>{{ event.eventPlace }}</p>
         </div>
         <div class="cardsBack">
-          <p></p>
+          <p>{{ event.eventDescription }}</p>
         </div>
       </div>
     </div> 
