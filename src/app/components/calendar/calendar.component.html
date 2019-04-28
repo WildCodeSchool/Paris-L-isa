@@ -26,6 +26,7 @@
         <div 
         id="card1" 
         class="container" 
+        [ngStyle]="{'background-image': 'url(' + event.eventImage + ')'}"
         >
           <h4><b>{{ event.eventTitle }}</b></h4>
           <p>{{ event.eventDay + ' ' + event.monthName + ' 2019' }}</p>

@@ -28,6 +28,7 @@ export class CalendarComponent implements OnInit {
   num: number;
   monthName: string;
   month:Observable<any>;
+  monthEvents: unknown;
   menuIcon:boolean;
 
   constructor(private _events: EventsService, private db : AngularFirestore) { 
