@@ -4,7 +4,6 @@ import { EventsService } from '../../services/events.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Monthevents } from '../../monthevents.model';
-import { ArrayType } from '@angular/compiler';
 
 @Component({
   selector: 'app-calendar',
@@ -28,6 +27,7 @@ export class CalendarComponent implements OnInit {
   menuState: string = 'out';
   num: number;
   monthName: string;
+  month:Observable<any>;
   menuIcon:boolean;
 
   constructor(private _events: EventsService, private db : AngularFirestore) { 
@@ -42,7 +42,7 @@ export class CalendarComponent implements OnInit {
           id : e.payload.doc.id,
           ...e.payload.doc.data()
         } as Monthevents;
-    })
+    });
   })
   console.log(this.events);
 }
@@ -63,5 +63,13 @@ export class CalendarComponent implements OnInit {
 
   handleClick(month) {
     console.log(this.events);
+  }
+
+  displayEvents(num) {
+    if (this.monthName === this.events[num].monthName) {
+      /* Create an empty array and push events[num] + display this new array's datas
+      + interact with handleClick function */
+    }
+
   }
 }
