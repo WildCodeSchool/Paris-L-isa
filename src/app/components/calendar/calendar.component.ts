@@ -68,7 +68,8 @@ export class CalendarComponent implements OnInit {
   displayEvents(num) {
     if (this.monthName === this.events[num].monthName) {
       /* Create an empty array and push events[num] + display this new array's datas
-      + interact with handleClick function */
+      + interact with handleClick function 
+      Or redo database and imbricate classes id ng project ? */
     }
 
   }
