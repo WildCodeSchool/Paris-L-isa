@@ -61,14 +61,8 @@ export class CalendarComponent implements OnInit {
   getNewName(newMonthName) {
     this.monthName = newMonthName;
     console.log(this.monthName);
-    return this.monthName;
-  }
-
-  /* managing click */
-
-  handleClick(month) {
-    console.log(month);
     this.displayEvents();
+    return this.monthName;
   }
 
   /* function to display cards according to current month name */
@@ -77,10 +71,11 @@ export class CalendarComponent implements OnInit {
     this.eventsToDisplay = [];
     
     for (let i = 0; i < this.events.length; i++) {
-      if (this.monthName === this.events[i].monthName) {        
+      if (this.monthName === this.events[i].monthName) {     
         this.eventsToDisplay.push(this.events[i]);
       }
-    }       
+    }  
+    console.log(this.eventsToDisplay);
   }
 
 }

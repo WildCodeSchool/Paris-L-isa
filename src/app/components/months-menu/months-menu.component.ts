@@ -11,7 +11,6 @@ export class MonthsMenuComponent implements OnInit {
   months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   month :string;
 
-  @Output() changeMonth = new EventEmitter();
   @Output() changeMonthName = new EventEmitter();
   newMonth: number;
 
@@ -19,12 +18,6 @@ export class MonthsMenuComponent implements OnInit {
   constructor(private _eventsService : EventsService) { }
 
   ngOnInit() {
-  }
-
-  getMonthEvents(index) {
-    this.month = this.months[index];
-    this.newMonth = this.months.indexOf(this.month);
-    this.changeMonth.emit(this.newMonth);
   }
 
   getMonthName(month){
