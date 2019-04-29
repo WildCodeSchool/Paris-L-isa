@@ -5,18 +5,32 @@
     <h2>{{ monthName }} </h2>
 
     <button (click)="toogleMenu()" class="hamburger">
-      <i class="fas fa-plus"></i>
+      <i class="fas fa-plus" *ngIf="menuIcon"></i>
+      <i class="fas fa-minus" *ngIf="!menuIcon"></i>
     </button>
   </div>
 
-  <app-months-menu [@slideInOut]="menuState" (changeMonth)="handleClick($event)" (changeMonthName)="getNewName($event)"></app-months-menu>
+  <app-months-menu 
+  id="slideMenu" 
+  [@slideInOut]="menuState" 
+  (changeMonth)="handleClick($event)" 
+  (changeMonthName)="getNewName($event)"
+  ></app-months-menu>
 
   <div id="calendarCards">
     <div class="card">
-      <div class="card-inner" *ngFor="let event of januaryEvents; let i = index">
-        <div id="card1" class="container">
+      <div 
+      class="card-inner" 
+      *ngFor="let event of januaryEvents; let i = index"
+      >
+        <div 
+        id="card1" 
+        class="container" 
+        [ngStyle]="{'background-image': 'url(' + event.image + ')'}"
+        >
           <h4><b>{{ event.name }}</b></h4>
-          <p>Small description...</p>
+          <p>{{ event.day + ' ' + monthName + ' 2019' }}</p>
+          <p>{{ event.place }}</p>
         </div>
         <div class="cardsBack">
           <p>{{ event.description }}</p>

@@ -1,7 +1,6 @@
 <h2>OBSERVATORIES</h2>
-<br>
-<ul *ngFor="let obs of obsName; let i = index">
-   <li>
+<ul>
+   <li *ngFor="let obs of obsName; let i = index">
       <button class="button" (click)="displayInfoMap(i)">
          {{ obs }}
       </button>

@@ -21,6 +21,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { MonthsMenuComponent } from './components/months-menu/months-menu.component';
 import { EventsService } from './services/events.service';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
+import { AgendaComponent } from './pages/agenda/agenda.component';
 import { AstronauteInfoComponent } from './components/astronaute-info/astronaute-info.component';
 import { LiveComponent } from './pages/live/live.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
@@ -29,8 +30,12 @@ import { AboutComponent } from './pages/about/about.component';
 import { AstropageComponent } from './pages/astropage/astropage.component';
 import { ListObsComponent } from './components/list-obs/list-obs.component';
 
+
 import { AgmCoreModule } from '@agm/core';
 import { SearchBarServiceService } from './services/search-bar-service.service';
+import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
+import { PlanetComponent } from './components/planet/planet.component';
+import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
 
 @NgModule({
   declarations: [
@@ -44,13 +49,18 @@ import { SearchBarServiceService } from './services/search-bar-service.service';
     CalendarComponent,
     HomepageComponent,
     MonthsMenuComponent,
+    HomepageComponent,
     LiveVideoComponent,
+    AgendaComponent,
     LiveComponent,
     SearchBarComponent,
     AstroComponent,
     AboutComponent,
     AstropageComponent,
-    ListObsComponent
+    ListObsComponent,
+    PlanetPageComponent,
+    PlanetComponent,
+    AgendaBOComponent
   ],
   imports: [
     BrowserModule,

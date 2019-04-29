@@ -6,8 +6,11 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { AstropageComponent } from './pages/astropage/astropage.component';
 import { LiveVideoComponent } from './components/live-video/live-video.component';
+import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { AgendaComponent} from './pages/agenda/agenda.component';
 import { AboutComponent } from './pages/about/about.component';
+import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
 
 const routes: Routes = [
     {
@@ -21,7 +24,7 @@ const routes: Routes = [
     },
     {
       path: 'agenda',
-      component: CalendarComponent
+      component: AgendaComponent
     },
     {
       path: 'astro',
@@ -35,10 +38,16 @@ const routes: Routes = [
       path: 'live',
       component: LiveVideoComponent
     },
+    {
+      path: 'planet',
+      component: PlanetPageComponent},
+    {
+      path: 'back-office',
+      component: AgendaBOComponent
+    },
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
+@NgModule({ imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 

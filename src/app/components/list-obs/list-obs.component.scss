@@ -1,7 +1,7 @@
 .listObsClass {
 
     display: inline-block;
-    width: 50%;
+    width: 50vw;
     padding: 0 9%;
 
 }
@@ -12,7 +12,7 @@
     color: #eee;
     box-shadow: 1px 1px #333;
     border: none;
-
+    font-size: 1rem;
 }
 
 
@@ -21,6 +21,11 @@ h2 {
     font-family: 'nazalisation', sans-serif;
     font-size: 2rem;
     text-align: center;
+    margin-top: 10vh;
+}
+
+li {
+    padding-top: 2vh;
 }
 
 li:hover {
@@ -29,6 +34,10 @@ li:hover {
 }
 
 ul {
-    margin-top: 0;
-    padding-top: 4%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+
 }

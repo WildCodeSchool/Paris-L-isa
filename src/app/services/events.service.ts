@@ -4,132 +4,95 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EventsService {
-  events = [
+  events =  localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [
     {
-      monthName : 'January',
+      month : '',
       eventItems : [
-        {
-          name : 'Event title 1',
-          description : 'Event about comets and other funny facts about the universe',
-        },
-        {
-          name : 'Event title 2',
-          description : 'Event about planets and other funny facts about the universe',
-        }
       ]
     },
     {
-    month : 'February',
-    eventItems : [
-        {
-          name : 'February Event 1',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
-      ]
-    },
-    {
-      month : 'March',
+      month : '',
       eventItems : [
-        {
-          name : 'March Event 1',
-          description : 'Event about BLACK HOLES',
-        },
-        {
-          name : 'March Event 2',
-          description : 'Are we alone ?',
-        },
       ]
     },
     {
-      month : 'April',
+      month : '',
       eventItems : [
-        {
-          name : 'April Event',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
       ]
     },
     {
-      month : 'May',
+      month : '',
       eventItems : [
-        {
-          name : 'May Event',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
       ]
     },
     {
-      month : 'June',
+      month : '',
       eventItems : [
-        {
-          name : 'June Event 1',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
-        {
-          name : 'June Event 2',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
       ]
     },
     {
-      month : 'July',
+      month : '',
       eventItems : [
-        {
-          name : 'July Event 1',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
       ]
     },
     {
-      month : 'August',
+      month : '',
       eventItems : [
-        {
-          name : 'Event ',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
       ]
     },
     {
-      month : 'September',
+      month : '',
       eventItems : [
-        {
-          name : 'Event',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
       ]
     },
     {
-      month : 'October',
+      month : '',
       eventItems : [
-        {
-          name : 'Event',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
       ]
     },
     {
-      month : 'November',
+      month : '',
       eventItems : [
-        {
-          name : 'Event',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
       ]
     },
     {
-      month : 'December',
+      month : '',
       eventItems : [
-        {
-          name : 'Last Event of the year !',
-          description : 'Test - Event about planets and other funny facts about the universe',
-        },
       ]
     },
-  ]
+    {
+      month : '',
+      eventItems : [
+      ]
+    },
+  ];
+
+
+  months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+  
+  constructor() { }
+  
+  receiveData(monthName, title, description, picture, day, place){
+    let index = this.months.indexOf(monthName);
+    let eventModel = {
+      name: title,
+      day:day,
+      description: description,
+      image: picture,
+      place: place
+    };
+    this.events[index].eventItems.push(eventModel);
+    let eventDay = parseInt(eventModel.day, 10);
+    this.events[index].eventItems.sort(function(a, b){return a.day - b.day});
+    this.saveToLocalStorage();
+  }
 
   getEvents(index){
     return this.events[index].eventItems;
   }
 
-  constructor() { }
+  saveToLocalStorage() {
+    localStorage.setItem('events', JSON.stringify(this.events));
+  }
 }

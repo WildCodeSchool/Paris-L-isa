@@ -1,0 +1,43 @@
+#eventForm {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../../assets/calendar/galaxy.jpg');
+    color: black;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    min-height: 86vh;
+    padding: 30px;
+
+    form {
+        align-self: center;
+        background-color: #b3b3b3;
+        border-radius : 30px;
+        margin : 80px;
+        padding: 80px;
+
+      label {
+
+        .labelTitle {
+            font-size: 25px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+      } 
+      
+      h3 {
+        font-size: 30px;
+        margin: 50px auto;
+        text-align: center;
+      }
+
+      button {
+        align-self: center;
+        margin-top: 20px;
+        font-size: 24px;
+        width: 20vw;
+      }
+   }
+}
