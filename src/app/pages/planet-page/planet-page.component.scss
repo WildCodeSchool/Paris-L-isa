@@ -1,0 +1,25 @@
+$fontFamily : 'nasalization';
+
+@mixin backgroundM () {
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+video#bgvid {
+
+    @include backgroundM();
+    margin-bottom: -.5%;
+
+}
+
+.planetStyle {
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 96vh;
+
+}

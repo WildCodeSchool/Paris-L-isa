@@ -30,7 +30,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { AstropageComponent } from './pages/astropage/astropage.component';
 import { ListObsComponent } from './components/list-obs/list-obs.component';
 
+
 import { AgmCoreModule } from '@agm/core';
+import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
+import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
@@ -55,6 +58,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AboutComponent,
     AstropageComponent,
     ListObsComponent,
+    PlanetPageComponent,
+    PlanetComponent,
     AgendaBOComponent
   ],
   imports: [
