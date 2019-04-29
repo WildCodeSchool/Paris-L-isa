@@ -11,8 +11,19 @@ export const environment = {
     projectId: "reactivform",
     storageBucket: "reactivform.appspot.com",
     messagingSenderId: "310552610788"
+  },
+
+  calendarDb : {
+    apiKey: "AIzaSyBC-RdzOQ7VeEUL0PdhCiNsVQFbHclx7g4",
+    authDomain: "no-name-calendar.firebaseapp.com",
+    databaseURL: "https://no-name-calendar.firebaseio.com",
+    projectId: "no-name-calendar",
+    storageBucket: "no-name-calendar.appspot.com",
+    messagingSenderId: "521021339725"
   }
 };
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file

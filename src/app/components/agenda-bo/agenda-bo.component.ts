@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { EventsService } from 'src/app/services/events.service';
 
 @Component({
@@ -9,12 +9,6 @@ import { EventsService } from 'src/app/services/events.service';
 })
 export class AgendaBOComponent implements OnInit {
   eventForm : FormGroup;
-  month;
-  title;
-  description;
-  picture;
-
-
 
   constructor(
     private fb: FormBuilder,
@@ -29,7 +23,7 @@ export class AgendaBOComponent implements OnInit {
     this.eventForm = this.fb.group({
       monthName: new FormControl('', [Validators.required]),
       eventTitle: new FormControl('', [Validators.required]),
-      eventDay: new FormControl('', [Validators.required]),
+      eventDay: new FormControl(Number, [Validators.required]),
       eventDescription: new FormControl('', [Validators.required]),
       eventPlace: new FormControl('', [Validators.required]),
       eventImage: new FormControl('', [Validators.required]),
@@ -37,13 +31,8 @@ export class AgendaBOComponent implements OnInit {
   }
 
   sendEventInfos(){
-    let month = this.eventForm.get('monthName').value;
-    let title = this.eventForm.get('eventTitle').value;
-    let description = this.eventForm.get('eventDescription').value;
-    let picture = this.eventForm.get('eventImage').value;
-    let day = this.eventForm.get('eventDay').value;
-    let place = this.eventForm.get('eventPlace').value;
-    this.sendEventsService.receiveData(month, title, description, picture, day, place);
+    this.sendEventsService.addEvents(this.eventForm.value);
+    this.eventForm.reset(this.eventForm);
   }
 
 }
