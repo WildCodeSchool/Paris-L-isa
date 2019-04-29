@@ -51,18 +51,17 @@
 
       <label>
         <span class="labelTitle">Day of the event :</span>
-        <input 
+        <input
         type="number"
-        required
         formControlName="eventDay"
         class="form-control input"
+        maxlength="2"
         value=""
         [ngClass]="{'is-invalid': eventForm.get('eventDay').invalid && eventForm.get('eventDay').touched}"
-
         >
-        <div class="errorMsg" *ngIf="(eventForm.get('eventDay').touched || eventForm.get('eventDay').dirty) && eventForm.get('eventDay').errors['required']">
+        <div class="errorMsg" *ngIf="(eventForm.get('eventDay').touched && eventForm.get('eventDay').invalid) && eventForm.get('eventDay').errors['required']">
           Event day is a required field.
-      </div>
+        </div>
       </label>
 
       <label>
@@ -75,7 +74,7 @@
         value=""
         [ngClass]="{'is-invalid': eventForm.get('eventDescription').invalid && eventForm.get('eventDescription').touched}"
         >
-        <div class="errorMsg" *ngIf="(eventForm.get('eventDescription').touched || eventForm.get('eventDescription').dirty) && eventForm.get('eventDescription').errors['required']">
+        <div class="errorMsg" *ngIf="(eventForm.get('eventDescription').touched && eventForm.get('eventDescription').invalid) && eventForm.get('eventDescription').errors['required']">
           Event description is a required field.
         </div>
       </label>
@@ -90,7 +89,7 @@
         value=""
         [ngClass]="{'is-invalid': eventForm.get('eventImage').invalid && eventForm.get('eventImage').touched}"
         >
-        <div class="errorMsg" *ngIf="(eventForm.get('eventImage').touched || eventForm.get('eventImage').dirty) && eventForm.get('eventImage').errors['required']">
+        <div class="errorMsg" *ngIf="(eventForm.get('eventImage').touched && eventForm.get('eventImage').invalid) && eventForm.get('eventImage').errors['required']">
           Event picture is a required field.
         </div>
       </label>
@@ -105,7 +104,7 @@
         value=""
         [ngClass]="{'is-invalid': eventForm.get('eventPlace').invalid && eventForm.get('eventPlace').touched}"
         >
-        <div class="errorMsg" *ngIf="(eventForm.get('eventPlace').touched || eventForm.get('eventPlace').dirty) && eventForm.get('eventPlace').errors['required']">
+        <div class="errorMsg" *ngIf="(eventForm.get('eventPlace').touched && eventForm.get('eventPlace').invalid) && eventForm.get('eventPlace').errors['required']">
           A place is required.
         </div>
       </label>
