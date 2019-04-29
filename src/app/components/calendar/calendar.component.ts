@@ -27,7 +27,8 @@ export class CalendarComponent implements OnInit {
   menuState: string = 'out';
   num: number;
   monthName: string;
-  month:Observable<any>;
+  eventsToDisplay: Monthevents[];
+  month:string;
   monthEvents: unknown;
   menuIcon:boolean;
 
@@ -35,7 +36,7 @@ export class CalendarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.monthName = 'JANUARY';
+    this.monthName = 'January';
     this.menuIcon = true;
     this._events.getEvents().subscribe(data => {
       this.events = data.map(e => {
@@ -43,9 +44,12 @@ export class CalendarComponent implements OnInit {
           id : e.payload.doc.id,
           ...e.payload.doc.data()
         } as Monthevents;
-    });
-  })
-  console.log(this.events);
+      });
+      this.month = this.events[0].monthName;
+      console.log(this.month);
+      this.displayEvents(0);
+    })
+    console.log(this.events);
 }
 
   /* Side menu functions */
@@ -67,11 +71,23 @@ export class CalendarComponent implements OnInit {
   }
 
   displayEvents(num) {
-    if (this.monthName === this.events[num].monthName) {
+    this.eventsToDisplay = [];
+    console.log(this.events.length);
+    
+    for (let i = 0; i < this.events.length; i++) {
+      console.log(this.monthName);
+      
+      if (this.monthName === this.events[i].monthName) {
+        console.log('allo', this.eventsToDisplay);
+        
+        this.eventsToDisplay.push(this.events[i]);
+      }
+    }
+    console.log(this.eventsToDisplay);
+    
       /* Create an empty array and push events[num] + display this new array's datas
       + interact with handleClick function 
       Or redo database and imbricate classes id ng project ? */
-    }
 
   }
 }
