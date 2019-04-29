@@ -1,12 +1,18 @@
 <div class="control has-icons-left">
-  <input class="input is-small" type="text" placeholder="Search">
+  <input
+    class="input is-small"
+    type="text"
+    placeholder="Search"
+    [(ngModel)]="searchText">
 
   <span class="icon is-small is-left">
     <i class="fas fa-search"></i>
   </span>
 </div>
 
-<!-- <div *ngFor="let info of informations">
-  <p>Le nom: {{info.name}}</p>
-  <p>L'article: {{ info.article }}</p>
-</div> -->
+<div *ngFor="let info of informations | filter : searchText">
+    <p>{{info.name}}</p>
+    <p>{{info.title}}</p>
+    <p>{{info.article}}</p>
+</div>
+

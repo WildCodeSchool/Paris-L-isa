@@ -8,13 +8,15 @@ import { IkeyWord } from '../components/search-bar/key-word';
 })
 export class SearchBarServiceService {
 
-// tslint:disable-next-line: variable-name
-  private _url = '../assets/searchBar-json/apiSearchBar.json';
+  searchOption = [];
+  public keyWords: IkeyWord[];
+
+  private url = '../assets/searchBar-json/apiSearchBar.json';
 
   constructor(private http: HttpClient) { }
 
   getKeyWord(): Observable<IkeyWord[]> {
-    return this.http.get<IkeyWord[]>(this._url);
+    return this.http.get<IkeyWord[]>(this.url);
   }
 
 }

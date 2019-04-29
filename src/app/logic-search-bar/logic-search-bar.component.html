@@ -1,8 +1,3 @@
-<!-- 
-  ng for 
-  ng if 
--->
-
-<div *ngFor="let info of informations">
+<div *ngFor="let info of informations | filter : searchText">
   <p>{{info.name}}</p>
 </div>

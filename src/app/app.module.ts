@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule} from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,7 +64,8 @@ import { LogicSearchBarComponent } from './logic-search-bar/logic-search-bar.com
     PlanetPageComponent,
     PlanetComponent,
     AgendaBOComponent,
-    LogicSearchBarComponent
+    LogicSearchBarComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -72,6 +75,7 @@ import { LogicSearchBarComponent } from './logic-search-bar/logic-search-bar.com
     AngularFireDatabaseModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBrG5ywjbq-2E1tu0fWTH1x0oENVVQNGYY'
