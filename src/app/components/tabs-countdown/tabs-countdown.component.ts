@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeEventService } from 'src/app/services/home-event.service';
+import { Pipe } from '@angular/core';
 
 @Component({
   selector: 'app-tabs-countdown',

@@ -30,7 +30,7 @@
           class="eventsTitles2">
           Conférences
         </span>
-        
+
         </a>
       </li>
     </ul>
@@ -38,12 +38,13 @@
 
   <div *ngIf="eclipses" class='bodyEvent'>
 
-    <app-count-down></app-count-down>
-
-    <div *ngFor="let event of eventList">
+    <div *ngFor="let event of eventList" class='eventBody'>
       <h1>{{event.title}}</h1>
-      <p>{{event.date}}</p>
-      <p>{{event.description}}</p>
+
+      <app-count-down class="app-count"></app-count-down>
+
+      <p class='eventDate'>{{event.date | date:"mediumDate"}}</p>
+      <p class='description'>{{event.description}}</p>
     </div>
 
   </div>
