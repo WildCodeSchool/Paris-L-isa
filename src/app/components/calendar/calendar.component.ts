@@ -45,49 +45,42 @@ export class CalendarComponent implements OnInit {
           ...e.payload.doc.data()
         } as Monthevents;
       });
-      this.month = this.events[0].monthName;
-      console.log(this.month);
-      this.displayEvents(0);
+      this.displayEvents();
     })
-    console.log(this.events);
 }
 
-  /* Side menu functions */
+  /* Side menu function */
 
   toogleMenu() {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
     this.menuIcon = !this.menuIcon;
   }
 
+  /* Getting clicked month name */
+
   getNewName(newMonthName) {
     this.monthName = newMonthName;
+    console.log(this.monthName);
     return this.monthName;
   }
 
-  /* events cards functions */
+  /* managing click */
 
   handleClick(month) {
-    console.log(this.events);
+    console.log(month);
+    this.displayEvents();
   }
 
-  displayEvents(num) {
+  /* function to display cards according to current month name */
+
+  displayEvents() {
     this.eventsToDisplay = [];
-    console.log(this.events.length);
     
     for (let i = 0; i < this.events.length; i++) {
-      console.log(this.monthName);
-      
-      if (this.monthName === this.events[i].monthName) {
-        console.log('allo', this.eventsToDisplay);
-        
+      if (this.monthName === this.events[i].monthName) {        
         this.eventsToDisplay.push(this.events[i]);
       }
-    }
-    console.log(this.eventsToDisplay);
-    
-      /* Create an empty array and push events[num] + display this new array's datas
-      + interact with handleClick function 
-      Or redo database and imbricate classes id ng project ? */
-
+    }       
   }
+
 }

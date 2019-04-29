@@ -8,7 +8,7 @@ import { EventsService } from 'src/app/services/events.service';
 })
 export class MonthsMenuComponent implements OnInit {
 
-  months = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'];
+  months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   month :string;
 
   @Output() changeMonth = new EventEmitter();
