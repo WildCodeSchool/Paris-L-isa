@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { EventsService } from 'src/app/services/events.service';
+import { eventDayValidator} from '../../validators/eventday.validator';
 
 @Component({
   selector: 'app-agenda-bo',
