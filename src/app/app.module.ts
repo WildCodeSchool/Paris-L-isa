@@ -36,6 +36,7 @@ import { SearchBarServiceService } from './services/search-bar-service.service';
 import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
+import { LogicSearchBarComponent } from './logic-search-bar/logic-search-bar.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
     ListObsComponent,
     PlanetPageComponent,
     PlanetComponent,
-    AgendaBOComponent
+    AgendaBOComponent,
+    LogicSearchBarComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { IkeyWord } from '../components/search-bar/key-word';
   providedIn: 'root'
 })
 export class SearchBarServiceService {
+
 // tslint:disable-next-line: variable-name
   private _url = '../assets/searchBar-json/apiSearchBar.json';
 
@@ -15,4 +16,5 @@ export class SearchBarServiceService {
   getKeyWord(): Observable<IkeyWord[]> {
     return this.http.get<IkeyWord[]>(this._url);
   }
+
 }
