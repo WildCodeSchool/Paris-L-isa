@@ -9,8 +9,9 @@ $fontFamily : 'nasalization';
 
 section {
     @include background();
-    background-image: url('../../../assets/calendar/galaxy.jpeg');
+    background-image: url('../../../assets/calendar/agendaBackground.png');
     min-height: 100vh;
+    overflow: hidden;
 
     h2 {
         color:white;
@@ -32,7 +33,8 @@ section {
 
 #calendarCards {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
     min-height:100vh;
     padding-bottom:0;
     padding-top: 40px;
@@ -45,21 +47,13 @@ section {
 
     /* div containing all the cards */
 
-    .card {
-        background: none;
-        display: flex;
-        flex-flow: row wrap;
-        height: fit-content;
-        justify-content: space-around;
-    }
-
     .card-inner {
         cursor:pointer;
         height: 300px;
         justify-content: center;
-        margin: 10px;
         text-align: center;
         width: 30vw;
+        margin : 10px;
     }
 
     /* media queries cards layout */
@@ -67,17 +61,19 @@ section {
     @media screen and (max-width: 850px) {
         .card-inner {
             width:40vw;
+            margin : 10px;
         }
     }
 
     @media screen and (max-width: 640px) {
         .card-inner {
             width:300px;
+            margin : 10px;
         }
     }
     
     .cardsBack {
-        height: 300px;
+        height: 100%;
         opacity: 0;
         transition: opacity 1s, visibility 1s;
         visibility: hidden;

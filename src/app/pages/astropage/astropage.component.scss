@@ -20,7 +20,7 @@ $fontFamily : 'nasalization';
 
 .background {
 
-    @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
+    @include backgroundM(url('../../../assets/astro/astroBackground.jpg'));
     z-index: -1;
 
 }

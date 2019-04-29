@@ -26,19 +26,22 @@ export class AstronauteInfoComponent implements OnInit {
       this.displaySummary = false;
       this.displayExperience = false;
       }
+      this.loadScriptsTwitter();
   }
 
   actionNick($event) {
   $event.preventDefault();
   this.conditionNick = true;
   this.conditionAnne = false;
+  this.loadScriptsTwitter();
   };
 
   actionAnne($event){
     $event.preventDefault();
     this.conditionAnne = true;
     this.conditionNick = false;
-    
+    this.loadScriptsTwitter();
+
   }
 
   actionArticle() {
@@ -50,6 +53,18 @@ export class AstronauteInfoComponent implements OnInit {
     this.displayExperience = !this.displayExperience;
   }
 
+  loadScriptsTwitter() {
+    const dynamicScripts = ['https://platform.twitter.com/widgets.js'];
+    for (let i = 0; i < dynamicScripts.length; i++) {
+      const node = document.createElement('script');
+      node.src = dynamicScripts[i];
+      node.type = 'text/javascript';
+      node.async = false;
+      node.charset = 'utf-8';
+      document.getElementsByTagName('head')[0].appendChild(node);
+    }
+  }
+  
 }
 
 

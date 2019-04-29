@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { EventsService } from '../../services/events.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Monthevents } from '../../monthevents.model';
 
 @Component({
   selector: 'app-calendar',
@@ -20,35 +22,59 @@ import { EventsService } from '../../services/events.service';
   ]
 })
 export class CalendarComponent implements OnInit {
-  januaryEvents: any;
+  events: Monthevents[];
   menuState: string = 'out';
   num: number;
   monthName: string;
+  eventsToDisplay: Monthevents[];
+  month:string;
+  monthEvents: unknown;
   menuIcon:boolean;
 
-  constructor(private _events: EventsService) { }
+  constructor(private _events: EventsService, private db : AngularFirestore) { 
+  }
 
   ngOnInit() {
-    this.januaryEvents = this.displayEvent(0);
-    this.monthName = 'JANUARY';
+    this.monthName = 'January';
     this.menuIcon = true;
-  }
+    this._events.getEvents().subscribe(data => {
+      this.events = data.map(e => {
+        return {
+          id : e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Monthevents;
+      });
+      this.displayEvents();
+    })
+}
+
+  /* Side menu function */
 
   toogleMenu() {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
     this.menuIcon = !this.menuIcon;
   }
 
-  displayEvent(num) {
-    return this._events.getEvents(num);
-  }
-
-  handleClick(month) {
-    this.januaryEvents = this.displayEvent(month);
-  }
+  /* Getting clicked month name */
 
   getNewName(newMonthName) {
     this.monthName = newMonthName;
+    this.displayEvents();
     return this.monthName;
   }
+
+  /* function to display cards according to current month name */
+
+  displayEvents() {
+    this.eventsToDisplay = [];
+    
+    for (let i = 0; i < this.events.length; i++) {
+      if (this.monthName === this.events[i].monthName) { 
+        console.log(typeof this.events[i].eventDay);
+        this.eventsToDisplay.push(this.events[i]);
+      }
+    }
+    this.eventsToDisplay.sort(function(a, b){return a.eventDay - b.eventDay});
+  }
+
 }
