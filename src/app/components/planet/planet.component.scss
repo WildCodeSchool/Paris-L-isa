@@ -1,8 +1,8 @@
 .colUnit {
 
   width: 3vw;
-  height: 52vh;
-  margin-top: -31%;
+  min-height: 100%;
+  margin-top: -30%;
   color: whitesmoke;
   margin-left: 48%;
   align-items: center;
@@ -36,8 +36,9 @@ hr {
 
   width: 2vw;
   grid-column: 2;
-  grid-row: 2/span 3;
+  grid-row: 2 / span 3;
   margin: 0.5rem 0;
+  color: #ddd;
 
 }
 
@@ -50,6 +51,20 @@ hr:nth-child(1), hr:nth-child(11), hr:nth-child(21), hr:nth-child(31) {
 hr:nth-child(6), hr:nth-child(16), hr:nth-child(26) {
 
   width:3.5vw;
+
+}
+
+.properties {
+
+  grid-column: 5;
+  grid-row: 2;
+  color: #ddd;
+
+}
+
+.properties ul li {
+
+  margin-left: 3%;
 
 }
 
@@ -68,3 +83,15 @@ hr:nth-child(6), hr:nth-child(16), hr:nth-child(26) {
 
 }
 
+span {
+
+  line-height: 2rem;
+
+}
+
+.tabsHistSci {
+
+  grid-column: 4;
+  grid-row: 4 / span 2;
+
+}

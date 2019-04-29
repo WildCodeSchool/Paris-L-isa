@@ -35,6 +35,7 @@ import { AgmCoreModule } from '@agm/core';
 import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
+import { TabsHistoryScienceComponent } from './components/tabs-history-science/tabs-history-science.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
     ListObsComponent,
     PlanetPageComponent,
     PlanetComponent,
-    AgendaBOComponent
+    AgendaBOComponent,
+    TabsHistoryScienceComponent
   ],
   imports: [
     BrowserModule,
