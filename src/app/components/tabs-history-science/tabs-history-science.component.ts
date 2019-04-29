@@ -10,15 +10,15 @@ export class TabsHistoryScienceComponent implements OnInit {
   history = false;
   sciences = true;
 
-  showEclipse($event) {
-    $event.preventDefault();
+  showHistory($event) {
+
     this.history = false;
     this.sciences = true;
     console.log('Eclipse')
   }
 
-  showConference($event) {
-    $event.preventDefault();
+  showSciences($event) {
+
     this.history = true;
     this.sciences = false;
     console.log('Conference')

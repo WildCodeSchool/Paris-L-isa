@@ -9,18 +9,16 @@
     <ul>
       <li [ngClass]="{backGroundTabs: history}" 
           class="sciences" 
-          (click)="showEclipse($event)"
       >
-        <a id="buttonsciences">
+        <a id="buttonsciences" (click)="showHistory($event)">
           <img src="../../assets/icons/telescope1.png/" alt='icon'><span class="eventsTitles1">History</span>
         </a>
       </li>
 
       <li [ngClass]="{backGroundTabs: sciences}" 
           class="history" 
-          (click)="showConference($event)"
       >
-        <a id="buttonhistory">
+        <a id="buttonhistory" (click)="showSciences($event)">
           <img src="../../assets/icons/rocket.png" alt='icon' class="icon2"><span class="eventsTitles2">Sciences</span>
         </a>
       </li>
