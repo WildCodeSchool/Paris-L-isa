@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { EventsService } from 'src/app/services/events.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { EventsService } from 'src/app/services/events.service';
   templateUrl: './months-menu.component.html',
   styleUrls: ['./months-menu.component.scss'],
 })
-export class MonthsMenuComponent implements OnInit {
+export class MonthsMenuComponent {
 
   months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   month :string;
@@ -14,11 +14,7 @@ export class MonthsMenuComponent implements OnInit {
   @Output() changeMonthName = new EventEmitter();
   newMonth: number;
 
-
   constructor(private _eventsService : EventsService) { }
-
-  ngOnInit() {
-  }
 
   getMonthName(month){
     this.month = month;

@@ -9,12 +9,6 @@ import { EventsService } from 'src/app/services/events.service';
 })
 export class AgendaBOComponent implements OnInit {
   eventForm : FormGroup;
-  month;
-  title;
-  description;
-  picture;
-
-
 
   constructor(
     private fb: FormBuilder,
@@ -29,7 +23,7 @@ export class AgendaBOComponent implements OnInit {
     this.eventForm = this.fb.group({
       monthName: new FormControl('', [Validators.required]),
       eventTitle: new FormControl('', [Validators.required]),
-      eventDay: new FormControl('', [Validators.required]),
+      eventDay: new FormControl(Number, [Validators.required]),
       eventDescription: new FormControl('', [Validators.required]),
       eventPlace: new FormControl('', [Validators.required]),
       eventImage: new FormControl('', [Validators.required]),
@@ -38,6 +32,7 @@ export class AgendaBOComponent implements OnInit {
 
   sendEventInfos(){
     this.sendEventsService.addEvents(this.eventForm.value);
+    this.eventForm.reset(this.eventForm);
   }
 
 }

@@ -1,5 +1,5 @@
 export class Monthevents {
-    eventDay: string;
+    eventDay: number;
     eventDescription: string;
     eventImage: string;
     eventPlace: string;

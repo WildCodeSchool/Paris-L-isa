@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { EventsService } from '../../services/events.service';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 import { Monthevents } from '../../monthevents.model';
 
 @Component({
@@ -60,7 +59,6 @@ export class CalendarComponent implements OnInit {
 
   getNewName(newMonthName) {
     this.monthName = newMonthName;
-    console.log(this.monthName);
     this.displayEvents();
     return this.monthName;
   }
@@ -71,11 +69,12 @@ export class CalendarComponent implements OnInit {
     this.eventsToDisplay = [];
     
     for (let i = 0; i < this.events.length; i++) {
-      if (this.monthName === this.events[i].monthName) {     
+      if (this.monthName === this.events[i].monthName) { 
+        console.log(typeof this.events[i].eventDay);
         this.eventsToDisplay.push(this.events[i]);
       }
-    }  
-    console.log(this.eventsToDisplay);
+    }
+    this.eventsToDisplay.sort(function(a, b){return a.eventDay - b.eventDay});
   }
 
 }
