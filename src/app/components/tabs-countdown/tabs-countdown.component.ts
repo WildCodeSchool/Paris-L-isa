@@ -30,7 +30,6 @@ export class TabsCountdownComponent implements OnInit {
 
   ngOnInit() {
     this.eventList = this.service.tableEventSky;
-    console.log(this.eventList);
   }
   
 }

@@ -9,13 +9,28 @@
     <ul>
       <li [ngClass]="{backGroundTabs: conferences}" class="eclipses">
         <a id="buttonEclipses" (click)="showEclipse($event)">
-          <img src="../../assets/icons/telescope1.png/" alt='icon'><span class="eventsTitles1">Éclipses</span>
-        </a>
+          
+          <img 
+          src="../../assets/icons/telescope1.png/" 
+          alt='icon'><span 
+          class="eventsTitles1">
+          Éclipses
+        </span>
+        
+      </a>
       </li>
 
       <li [ngClass]="{backGroundTabs: eclipses}" class="conferences">
         <a id="buttonConferences" (click)="showConference($event)">
-          <img src="../../assets/icons/rocket.png" alt='icon' class="icon2"><span class="eventsTitles2">Conférences</span>
+          
+          <img 
+          src="../../assets/icons/rocket.png" 
+          alt='icon' 
+          class="icon2"><span 
+          class="eventsTitles2">
+          Conférences
+        </span>
+        
         </a>
       </li>
     </ul>

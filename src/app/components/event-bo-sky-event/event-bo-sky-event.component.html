@@ -30,10 +30,11 @@
       <div>
                
         <label for="date">Date</label>
+        <label>  ex: Jan 5, 2021 15:37:25 </label>
         <input 
         class="form-control"
         #dateText='ngModel'
-        type="date" 
+        type="text" 
         id="date"
         [(ngModel)]="skyEvent.date"
         name="date-skyEvent"
