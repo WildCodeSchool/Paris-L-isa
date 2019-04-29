@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { EventsService } from '../../services/events.service';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Monthevents } from '../../monthevents.model';
+import { Monthevents } from '../../classes/monthevents.model';
 
 @Component({
   selector: 'app-calendar',
