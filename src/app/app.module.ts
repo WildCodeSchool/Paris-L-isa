@@ -11,7 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from '@angular/fire'; /* A tester avec la db de page contact en plus */
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -39,6 +39,7 @@ import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
 import { LogicSearchBarComponent } from './logic-search-bar/logic-search-bar.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -71,8 +72,9 @@ import { LogicSearchBarComponent } from './logic-search-bar/logic-search-bar.com
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.calendarDb),
     AngularFireDatabaseModule,
+    AngularFirestoreModule,
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
@@ -83,7 +85,8 @@ import { LogicSearchBarComponent } from './logic-search-bar/logic-search-bar.com
   ],
   providers: [
     EventsService,
-    SearchBarServiceService
+    SearchBarServiceService,
+    AngularFirestoreModule
   ],
   bootstrap: [AppComponent]
 })

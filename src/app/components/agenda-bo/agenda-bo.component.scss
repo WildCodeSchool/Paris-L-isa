@@ -14,8 +14,10 @@
         align-self: center;
         background-color: #b3b3b3;
         border-radius : 30px;
+        height : fit-content;
         margin : 80px;
         padding: 80px;
+        width: 80vw;
 
       label {
 
@@ -24,6 +26,14 @@
         }
         input {
             margin-bottom: 10px;
+        }
+
+        .is-invalid {
+          box-shadow : 0px 0px 2px 2px #ff4d4d;
+        }
+
+        .errorMsg {
+          color : red;
         }
       } 
       
