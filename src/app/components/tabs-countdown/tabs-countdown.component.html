@@ -24,8 +24,13 @@
   <div *ngIf="eclipses" class='bodyEvent'>
 
     <app-count-down></app-count-down>
-    <p>{{eventList.title}}</p>
-    
+
+    <div *ngFor="let event of eventList">
+      <h1>{{event.title}}</h1>
+      <p>{{event.date}}</p>
+      <p>{{event.description}}</p>
+    </div>
+
   </div>
 
   <div *ngIf="conferences" class='bodyEvent'>

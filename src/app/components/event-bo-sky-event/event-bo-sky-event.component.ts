@@ -23,6 +23,7 @@ export class EventBoSkyEventComponent implements OnInit {
 /* Creation of skyEvent objet*/
 onSubmit () {
   this.service.formTohome(this.skyEvent);
+  console.log(this.skyEvent);
 }
 
 }
