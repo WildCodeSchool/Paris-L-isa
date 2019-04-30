@@ -11,6 +11,8 @@ $fontFamily : 'nasalization';
 .blackBackground {
 
     background-color: black;
+    height: auto;
+    width: 100vw;
     height: 100vh;
 
 }
@@ -24,14 +26,13 @@ video.bgvid {
 
 video#video1 {
 
-    margin-top: -18vh;
 
 }
 
 video#video2 {
 
     width: 100vw;
-    margin-top: -18vh;
+
 
 }
 
@@ -39,13 +40,13 @@ video#video3 {
 
     width: 50vw;
     margin-left: 25vw;
-    margin-top: 15vh;
+
 
 }
 
 video#video4 {
 
-    margin-top: -18vh;
+
 
 }
 
