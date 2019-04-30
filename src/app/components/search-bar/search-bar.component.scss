@@ -13,3 +13,40 @@ input {
 input::placeholder {
   color: rgba(255,255,255,0.5)
 }
+
+.resultSearch {
+  background-color: #262626;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  color: #fcfcfc;
+  text-align: justify;
+  padding: 10px;
+
+  a {
+    color: #fcfcfc;
+    font-weight: bold;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Search bar position. Z-index is use to tap in search bar.
+
+.searchBar {
+  position: fixed;
+  margin: 2vh 0 0 15vw;
+  z-index: 30;
+}
+
+// search bar position media queries
+
+@media (max-width: 920px) {
+  .searchBar {
+    margin: 8.5vh 0 0 3vw;
+    width: 93vw;
+
+  }
+}
