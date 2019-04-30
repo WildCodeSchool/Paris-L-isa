@@ -32,3 +32,20 @@ input::placeholder {
     }
   }
 }
+
+// Search bar position
+
+.searchBar {
+  position: fixed;
+  margin: 2vh 0 0 15vw;
+  z-index: 30;
+}
+
+// search bar position media queries
+
+@media (max-width: 920px) {
+  .searchBar {
+    margin: 8.5vh 0 0 3vw;
+    width: 93vw;
+  }
+}

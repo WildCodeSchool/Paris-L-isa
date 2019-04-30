@@ -8,9 +8,6 @@ import { IkeyWord } from '../components/search-bar/key-word';
 })
 export class SearchBarServiceService {
 
-  searchOption = [];
-  public keyWords: IkeyWord[];
-
   private url = '../assets/searchBar-json/apiSearchBar.json';
 
   constructor(private http: HttpClient) { }

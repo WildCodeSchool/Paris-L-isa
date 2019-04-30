@@ -1,16 +1,18 @@
-<div class="control has-icons-left">
-  <input
-    class="input is-small"
-    type="text"
-    placeholder="Search"
-    [(ngModel)]="searchText">
+<div class="searchBar">
+  <div class="control has-icons-left">
+    <input
+      class="input is-small"
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="searchText">
 
-  <span class="icon is-small is-left">
-    <i class="fas fa-search"></i>
-  </span>
-</div>
+    <span class="icon is-small is-left">
+      <i class="fas fa-search"></i>
+    </span>
+  </div>
 
-<div class='resultSearch' *ngFor="let info of informations | filter : searchText">
-    <a [routerLink]=info.link>{{info.name}}</a>
+  <div class='resultSearch' *ngFor="let info of informations | filter : searchText">
+      <a [routerLink]=info.link>{{info.name}}</a>
+  </div>
 </div>
 

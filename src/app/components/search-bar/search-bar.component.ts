@@ -9,7 +9,6 @@ import { SearchBarServiceService } from '../../services/search-bar-service.servi
 
 export class SearchBarComponent implements OnInit {
 
-  searchText;
   informations = [];
 
   constructor(private searchBarService: SearchBarServiceService ) { }
