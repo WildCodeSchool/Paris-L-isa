@@ -1,6 +1,21 @@
 $fontFamily : 'nasalization';
 
-@mixin backgroundM ($background) {
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    min-width: 100vw; 
+    min-height: 100vh;
+    z-index: -1;
+  }
+  
+  .video-container{
+    text-align: center;
+  }
+
+/* @mixin backgroundM ($background) {
 
     background-image: $background;
     background-position: center;
@@ -15,7 +30,7 @@ $fontFamily : 'nasalization';
 
     @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
 
-}
+} */
 
 .tabs {
     display : flex;
