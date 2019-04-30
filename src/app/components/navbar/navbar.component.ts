@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { PlanetService } from 'src/app/services/planet.service';
+import { HostListener, Inject } from "@angular/core";
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,8 @@ import { PlanetService } from 'src/app/services/planet.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  changeColor: boolean;
+
 
   @ViewChild('navBurger') navBurger: ElementRef;
   @ViewChild('navMenu') navMenu: ElementRef;
@@ -24,6 +27,17 @@ export class NavbarComponent {
 
   }
 
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (number < 25) {
+      this.changeColor = false;
+      
+    } else {
+      this.changeColor = true;
+    }
+  }
 }
 
 
