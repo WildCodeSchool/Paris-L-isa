@@ -15,22 +15,6 @@ $fontFamily : 'nasalization';
     text-align: center;
   }
 
-/* @mixin backgroundM ($background) {
-
-    background-image: $background;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    height: 100vh;
-}
-
-
-.background {
-
-    @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
-
-} */
 
 .tabs {
     display : flex;
@@ -45,4 +29,5 @@ $fontFamily : 'nasalization';
     font-size: 3rem;
     text-align: center;
     padding-top: 16vh;
+    padding-bottom: 5vh;
 }
