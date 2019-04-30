@@ -4,6 +4,10 @@ nav {
   width: 100vw;
   background:rgba(255,255,255,0.1);
   padding: 1vh;
+
+  &.changeColor {
+    background-color: black;
+  }
 }
 
 .navbar {
