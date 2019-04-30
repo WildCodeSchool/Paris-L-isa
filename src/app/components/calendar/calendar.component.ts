@@ -3,6 +3,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { EventsService } from '../../services/events.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Monthevents } from '../../classes/monthevents.model';
+import { ConferenceEventService } from 'src/app/services/conference-event.service';
 
 @Component({
   selector: 'app-calendar',
@@ -31,7 +32,7 @@ export class CalendarComponent implements OnInit {
   monthEvents: unknown;
   menuIcon:boolean;
 
-  constructor(private _events: EventsService, private db : AngularFirestore) { 
+  constructor(private _events: EventsService, private db : AngularFirestore, private confEvent: ConferenceEventService) { 
   }
 
   ngOnInit() {
@@ -75,6 +76,8 @@ export class CalendarComponent implements OnInit {
       }
     }
     this.eventsToDisplay.sort(function(a, b){return a.eventDay - b.eventDay});
+
+    this.confEvent.getCalendarTable(this.events);
   }
 
 }

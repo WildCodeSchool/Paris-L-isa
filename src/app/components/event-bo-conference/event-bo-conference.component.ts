@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Monthevents } from '../../classes/monthevents.model';
+
 
 @Component({
   selector: 'app-event-bo-conference',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-bo-conference.component.scss']
 })
 export class EventBoConferenceComponent implements OnInit {
+
+  events: Monthevents[];
+
 
   constructor() { }
 
