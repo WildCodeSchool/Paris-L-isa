@@ -57,7 +57,7 @@
         type="text" 
         id="description"
         [(ngModel)]="skyEvent.description"
-        maxlength="80"
+        maxlength="160"
         name="description-skyEvent"
         required>
         
@@ -66,7 +66,7 @@
       <div *ngIf="myForm.submitted && descriptionText.errors">
 
         <span *ngIf="descriptionText.errors.required">this field is required</span>
-        <span *ngIf="descriptionText.errors.maxlength">80 characters maximum</span>
+        <span *ngIf="descriptionText.errors.maxlength">160 characters maximum</span>
 
       </div>
 

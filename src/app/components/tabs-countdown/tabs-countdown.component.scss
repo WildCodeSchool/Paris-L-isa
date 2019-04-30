@@ -24,18 +24,18 @@
         font-size: 50px;
         text-align: center;
       }
-      .app-count{
+      .app-count {
         grid-row: 2;
         grid-column: 1/5;
         text-align: center;
       }
 
-      .description{
+      .description {
         grid-row: 3;
         grid-column: 1/5;
-        overflow: hidden;
-        
+        white-space: pre-line;
       }
+
       .eventDate {
         grid-row: 1;
         grid-column: 4;
