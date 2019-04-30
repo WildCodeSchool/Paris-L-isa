@@ -24,7 +24,7 @@
 					Planets
 				</a>
 
-				<div class="navbar-dropdown">
+				<div class="navbar-dropdown" [ngClass]="{changeColor: changeColor}">
 					<a routerLink='planet' class="navbar-item" (click)="changePlanetInfo(0)">
 						Saturn
 					</a>
