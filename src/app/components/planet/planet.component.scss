@@ -77,7 +77,7 @@ hr:nth-child(6), hr:nth-child(16), hr:nth-child(26) {
 
 }
 
-.properties ul li {
+.properties ul div {
 
   margin-left: 3%;
 
@@ -111,7 +111,7 @@ hr:nth-child(6), hr:nth-child(16), hr:nth-child(26) {
 
 }
 
-.sideBarPlanet li:hover {
+.sideBarPlanet p:hover {
 
   cursor: pointer;
   color: #333;

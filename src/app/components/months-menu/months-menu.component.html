@@ -2,7 +2,6 @@
   <ul *ngFor="let month of months; let i = index">
     <li 
     [innerHTML]='month' 
-    (click)="getMonthEvents(i)" 
     (click)="getMonthName(month)"
     ></li>
   </ul>
