@@ -16,5 +16,23 @@
     "title":"",
     "article":"",
     "link":"planet"
+  },
+  {
+    "name": "Observatories",
+    "title":"",
+    "article":"",
+    "link":"astro"
+  },
+  {
+    "name": "Agenda",
+    "title":"January, February, March, April, May, June, July, August, September, October, November, December",
+    "article":"",
+    "link":"agenda"
+  },
+  {
+    "name": "Contact",
+    "title":"mail, message",
+    "article":"",
+    "link":"about"
   }
 ]
