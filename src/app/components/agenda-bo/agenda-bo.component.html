@@ -10,6 +10,7 @@
       formControlName="monthName"
       class="input"
       value=""
+      [ngClass]="{'is-invalid': eventForm.get('monthName').invalid && eventForm.get('monthName').touched}"
       >
       <datalist id="months">
         <option value="January">
@@ -25,6 +26,9 @@
         <option value="November">
         <option value="December">
       </datalist>
+      <div class="errorMsg" *ngIf="(eventForm.get('monthName').touched && eventForm.get('monthName').invalid) && eventForm.get('monthName').errors['required']">
+        Month is a required field.
+      </div>
     </label>
 
     <div>
@@ -38,18 +42,31 @@
         formControlName="eventTitle"
         class="form-control input"
         value=""
+        [ngClass]="{'is-invalid': eventForm.get('eventTitle').invalid && eventForm.get('eventTitle').touched}"
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventTitle').touched && eventForm.get('eventTitle').invalid) && eventForm.get('eventTitle').errors['required']">
+            Event title is a required field.
+        </div>
       </label>
 
       <label>
         <span class="labelTitle">Day of the event :</span>
-        <input 
-        type="text"
+        <input
+        type="number"
         required
         formControlName="eventDay"
-        class="form-control input"
+        min=1
+        max=31
         value=""
+        class="form-control input"
+        [ngClass]="{'is-invalid': eventForm.get('eventDay').touched && eventForm.get('eventDay').invalid}"
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventDay').touched && eventForm.get('eventDay').invalid) && eventForm.get('eventDay').errors['required']">
+          A day is required.
+        </div>
+        <div class="errorMsg" *ngIf="eventForm.get('eventDay').touched && eventForm.get('eventDay').invalid && (eventForm.get('eventDay').errors['min'] || eventForm.get('eventDay').errors['max'])">
+          Day must be between 1 and 31.
+        </div>
       </label>
 
       <label>
@@ -60,7 +77,11 @@
         formControlName="eventDescription"
         class="form-control input"
         value=""
+        [ngClass]="{'is-invalid': eventForm.get('eventDescription').invalid && eventForm.get('eventDescription').touched}"
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventDescription').touched && eventForm.get('eventDescription').invalid) && eventForm.get('eventDescription').errors['required']">
+          Event description is a required field.
+        </div>
       </label>
 
       <label>
@@ -71,7 +92,11 @@
         formControlName="eventImage" 
         class="form-control input" 
         value=""
+        [ngClass]="{'is-invalid': eventForm.get('eventImage').invalid && eventForm.get('eventImage').touched}"
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventImage').touched && eventForm.get('eventImage').invalid) && eventForm.get('eventImage').errors['required']">
+          Event picture is a required field.
+        </div>
       </label>
 
       <label>
@@ -82,7 +107,11 @@
         formControlName="eventPlace" 
         class="form-control input" 
         value=""
+        [ngClass]="{'is-invalid': eventForm.get('eventPlace').invalid && eventForm.get('eventPlace').touched}"
         >
+        <div class="errorMsg" *ngIf="(eventForm.get('eventPlace').touched && eventForm.get('eventPlace').invalid) && eventForm.get('eventPlace').errors['required']">
+          A place is required.
+        </div>
       </label>
 
     </div>

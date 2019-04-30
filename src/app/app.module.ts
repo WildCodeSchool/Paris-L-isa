@@ -9,7 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from '@angular/fire'; /* A tester avec la db de page contact en plus */
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -35,6 +35,7 @@ import { AgmCoreModule } from '@agm/core';
 import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -65,8 +66,9 @@ import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.calendarDb),
     AngularFireDatabaseModule,
+    AngularFirestoreModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -74,7 +76,7 @@ import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
       apiKey: 'AIzaSyBrG5ywjbq-2E1tu0fWTH1x0oENVVQNGYY'
     })
   ],
-  providers: [EventsService],
+  providers: [EventsService, AngularFirestoreModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
