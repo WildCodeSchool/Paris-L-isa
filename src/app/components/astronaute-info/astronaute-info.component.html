@@ -40,7 +40,7 @@
         </a>
       </li>
     </ul>
-    
+
   </div>
 
   <!--    BODY INFO ASTRONOTES N*1 NICK HAGUE  -->
@@ -52,19 +52,13 @@
 
 
     <div class="select menuBurger">
-          
-        <select class="astronome">
-          <option>ASTRONAUTS</option>
-          <option>Nick Hague</option>
-          <option>Alexey Ovchinin</option>
-          <option>Christina Koch</option>
-          <option>Anne McClain</option>
-          <option>Oleg Kononenko</option>
-          <option>David saint-jaques</option>
 
-          
+        <select [formControl]="selectedAstroControl" [compareWith]="compareAstro" class="astronome">
+          <option *ngFor="let astro of astronauts" [ngValue]="astro">
+            {{ astro.name }}
+          </option>
         </select>
-      
+
       </div>
 
     <div class="picture">
@@ -233,8 +227,7 @@
   </div>
 
 </div>
-  
+
 
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-    
