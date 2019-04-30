@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { PlanetService } from 'src/app/services/planet.service';
 
 @Component({
@@ -6,14 +6,21 @@ import { PlanetService } from 'src/app/services/planet.service';
   templateUrl: './planet-page.component.html',
   styleUrls: ['./planet-page.component.scss']
 })
-export class PlanetPageComponent implements OnInit {
+export class PlanetPageComponent implements OnInit, DoCheck {
 
-  videoUrl: any;
-
+  currentIndexVideo;
   constructor(private planetVideoService: PlanetService) { }
 
   ngOnInit() {
-    this.planetVideoService.currentIndex
+    this.currentIndexVideo = this.planetVideoService.currentIndex;
+  }
+
+  ngDoCheck() {
+
+    if (this.currentIndexVideo != this.planetVideoService.currentIndex) {
+      this.currentIndexVideo = this.planetVideoService.currentIndex;
+    }
+
   }
 
 }

@@ -7,10 +7,45 @@ $fontFamily : 'nasalization';
     background-size: cover;
     height: auto;
 }
-video#bgvid {
+
+.blackBackground {
+
+    background-color: black;
+    height: 100vh;
+
+}
+
+video.bgvid {
 
     @include backgroundM();
     margin-bottom: -.5%;
+
+}
+
+video#video1 {
+
+    margin-top: -18vh;
+
+}
+
+video#video2 {
+
+    width: 100vw;
+    margin-top: -18vh;
+
+}
+
+video#video3 {
+
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 15vh;
+
+}
+
+video#video4 {
+
+    margin-top: -18vh;
 
 }
 
