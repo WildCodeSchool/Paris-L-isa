@@ -21,7 +21,7 @@ export class PlanetComponent implements OnInit {
   }
 
   changePlanetInfo(i) { 
-
+    
     this.currentIndex = i;
 
   }

@@ -32,17 +32,37 @@
     <div class="properties">
       <ul>
         <h3>Composition Chimique</h3>
-        <li>Most Abondant 96,5% H</li>
-        <li>Few quantity 3,5% He</li>
-        <li>Traces CH<sub>4</sub>, C<sub>2</sub>H<sub>6</sub>, NH<sub>3</sub>, C<sub>2</sub>H<sub>2</sub>, PH<sub>3</sub></li>
-        <li>Nuages NH<sub>3</sub>, NH<sub>4</sub>SH, H<sub>2</sub>O</li>
+          <div *ngIf="currentIndex == 0">
+            <p>Most Abondant 96,5% H</p>
+            <p>Few quantity 3,5% He</p>
+            <p>Traces CH<sub>4</sub>, C<sub>2</sub>H<sub>6</sub>, NH<sub>3</sub>, C<sub>2</sub>H<sub>2</sub>, PH<sub>3</sub></p>
+            <p>Nuages NH<sub>3</sub>, NH<sub>4</sub>SH, H<sub>2</sub>O</p>
+          </div>
+          <div *ngIf="currentIndex == 1">
+            <p>Most abondant 84% H</p>
+            <p>Medium quantity 12% He</p>
+            <p>Few quantity 1,5% CH<sub>4</sub></p>
+            <p>Traces C<sub>2</sub>H<sub>6</sub>, NH<sub>3</sub>, C<sub>2</sub>H<sub>2</sub></p>
+          </div>
+          <div *ngIf="currentIndex == 2">
+            <p>Most abondant 96,5% CO<sub>2</sub></p>
+            <p>Few quantity 3,5% N<sub>2</sub></p>
+            <p>Traces SO<sub>2</sub>, Ar, CO, H<sub>2</sub>O, Ne, He</p>
+          </div>
+          <div *ngIf="currentIndex == 3">
+            <p>Most abondant 78,1% N<sub>2</sub></p>
+            <p>Vital quantity 20,9% O<sub>2</sub></p>
+            <p>Traces CH<sub>4</sub>, Ar, CO<sub>2</sub>Ne, He, H<sub>2</sub>O</p>
+          </div>
         <br>
         <h3>Données Physiques</h3>
-        <li>Diamètre (km) : 120 660</li>
-        <li>Diamètre (/Terre) : 9,46</li>
-        <li>Densité : 0,69</li>
-        <li>Masse (/Terre) : 95,2</li>
-        <li>Rotation sidérale : 10 h 39 mn</li>
+        <li>
+          <p>Diamètre (km) : 120 660</p>
+          <p>Diamètre (/Terre) : 9,46</p>
+          <p>Densité : 0,69</p>
+          <p>Masse (/Terre) : 95,2</p>
+          <p>Rotation sidérale : 10 h 39 mn</p>
+        </li>
       </ul>
     </div>
 </div>
