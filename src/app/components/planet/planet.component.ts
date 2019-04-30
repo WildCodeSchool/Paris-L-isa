@@ -9,6 +9,8 @@ export class PlanetComponent implements OnInit {
 
   tabGrad = [];
   tabUnit = [0, 10, 20, 30];
+  planetName = ['Saturn', 'Neptune', 'Venus', 'Earth']
+  currentIndex = 0;
 
   constructor() { }
 
@@ -18,4 +20,9 @@ export class PlanetComponent implements OnInit {
     }
   }
 
+  changePlanetInfo(i) { 
+
+    this.currentIndex = i;
+
+  }
 }

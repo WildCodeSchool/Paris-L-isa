@@ -100,6 +100,7 @@ hr:nth-child(6), hr:nth-child(16), hr:nth-child(26) {
 
 .sideBarPlanet {
 
+  height: 100%;
   grid-column: 3;
   grid-row: 2 / span 2;
   display: flex;
@@ -107,6 +108,13 @@ hr:nth-child(6), hr:nth-child(16), hr:nth-child(26) {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: space-between;
+
+}
+
+.sideBarPlanet li:hover {
+
+  cursor: pointer;
+  color: #333;
 
 }
 

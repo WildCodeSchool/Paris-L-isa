@@ -1,6 +1,8 @@
 <div class="rectangleSwitchPlanet">
     <div class="row1">
-        <h2>SATURN</h2>
+          <h2>
+            {{ planetName[currentIndex] | uppercase }}
+          </h2>
     </div>
 
     <ul class="colUnit">
@@ -14,12 +16,14 @@
       <hr *ngFor="let graduation of tabGrad">
     </div>
 
-    <ul class="sideBarPlanet">
-      <li>Saturn</li>
-      <li>Neptune</li>
-      <li>Venus</li>
-      <li>Earth</li>
-    </ul>
+    <div class="sideBarPlanet">
+      <p *ngFor="let planet of planetName; let j = index" 
+          href="" 
+          (click)="changePlanetInfo(j)"
+      >
+        {{ planet }}
+      </p>
+    </div>
 
     <div class="tabsHistSci">
       <app-tabs-history-science></app-tabs-history-science>
