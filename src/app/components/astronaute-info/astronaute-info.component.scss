@@ -1,8 +1,8 @@
-
+@import "../../../colors.scss";
 
 #main {
    
-    color: #fcfcfc;
+    color: $clear-grey;
     font-family: 'nasalization';
     margin-top: 60px;
     
@@ -10,7 +10,7 @@
     .bodyInfo_anne_mcclain,
     .bodyInfo_nick_hague    {
         background-color:rgba(38,38,38,0.6);
-        color: #fcfcfc;
+        color: $clear-grey;
         margin: 0 auto 0 !important;
         width: 79vw;
         
@@ -48,27 +48,27 @@
             };
 
         .nameNick {
-             color: #fcfcfc
+             color: $clear-grey
             };
 
         .nameAlexey { 
-            color: #fcfcfc
+            color: $clear-grey
         };
 
         .nameChristina { 
-            color: #fcfcfc
+            color: $clear-grey
         };
 
         .nameAnne {
-             color: #fcfcfc
+             color: $clear-grey
             };
 
         .nameOleg {
-             color: #fcfcfc
+             color: $clear-grey
             };
 
         .nameDavid {
-             color: #fcfcfc
+             color: $clear-grey
             };
 
         /*   HOVER   */
@@ -257,7 +257,7 @@
     .astronome {
         background-color: #262626;
         border: none;
-        color: #fcfcfc;
+        color: $clear-grey;
         font-size: 20px;
         font-family: 'nasalization';
 
@@ -298,7 +298,7 @@
         span {
             padding: 2px 0;
             font-size: 25px;
-            color: #fcfcfc;
+            color: $clear-grey;
         }
 
         h3 {
@@ -313,7 +313,7 @@
         grid-row: 4;
 
         hr {
-            color :#fcfcfc
+            color :$clear-grey;
         }
     }
 

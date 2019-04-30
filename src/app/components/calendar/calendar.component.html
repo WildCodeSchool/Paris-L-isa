@@ -1,4 +1,3 @@
-
 <section>
 
   <div id="monthsMenu">
@@ -12,31 +11,27 @@
 
   <app-months-menu 
   id="slideMenu" 
-  [@slideInOut]="menuState" 
-  (changeMonth)="handleClick($event)" 
+  [@slideInOut]="menuState"
   (changeMonthName)="getNewName($event)"
   ></app-months-menu>
 
   <div id="calendarCards">
-    <div class="card">
+    <div class="card-inner"
+    *ngFor="let event of eventsToDisplay"
+    >
       <div 
-      class="card-inner" 
-      *ngFor="let event of januaryEvents; let i = index"
+      id="card1"
+      class="container" 
+      [ngStyle]="{'background-image': 'url(' + event.eventImage + ')'}"
       >
-        <div 
-        id="card1" 
-        class="container" 
-        [ngStyle]="{'background-image': 'url(' + event.image + ')'}"
-        >
-          <h4><b>{{ event.name }}</b></h4>
-          <p>{{ event.day + ' ' + monthName + ' 2019' }}</p>
-          <p>{{ event.place }}</p>
-        </div>
-        <div class="cardsBack">
-          <p>{{ event.description }}</p>
-        </div>
+        <h4><b>{{ event.eventTitle }}</b></h4>
+        <p>{{ event.eventDay + ' ' + event.monthName + ' 2019' }}</p>
+        <p>{{ event.eventPlace }}</p>
       </div>
-    </div> 
+      <div class="cardsBack">
+        <p>{{ event.eventDescription }}</p>
+      </div>
+    </div>
   </div>
 
 </section>
