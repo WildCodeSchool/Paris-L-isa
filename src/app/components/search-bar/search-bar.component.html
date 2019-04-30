@@ -11,7 +11,7 @@
 </div>
 
 <div *ngFor="let info of informations | filter : searchText">
-    <p>{{info.name}}</p>
+    <a [routerLink]=info.link>{{info.name}}</a>
 
     <p>{{info.title}}</p>
 
