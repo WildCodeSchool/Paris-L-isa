@@ -10,11 +10,7 @@
   </span>
 </div>
 
-<div *ngFor="let info of informations | filter : searchText">
+<div class='resultSearch' *ngFor="let info of informations | filter : searchText">
     <a [routerLink]=info.link>{{info.name}}</a>
-
-    <p>{{info.title}}</p>
-
-    <p>{{info.article}}</p>
 </div>
 

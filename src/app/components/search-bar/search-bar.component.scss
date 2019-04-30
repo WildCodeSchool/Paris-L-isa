@@ -13,3 +13,22 @@ input {
 input::placeholder {
   color: rgba(255,255,255,0.5)
 }
+
+.resultSearch {
+  background-color: #262626;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  color: #fcfcfc;
+  text-align: justify;
+  padding: 10px;
+
+  a {
+    color: #fcfcfc;
+    font-weight: bold;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

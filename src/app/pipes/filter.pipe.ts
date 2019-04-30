@@ -13,13 +13,16 @@ export class FilterPipe implements PipeTransform {
     searchText = searchText.toLowerCase();
 
     return items.filter(it => {
+
       if (it.name.toLowerCase().includes(searchText)) {
         return it.name;
+      }
 
-      } else if (it.title.toLowerCase().includes(searchText)) {
+      if (it.title.toLowerCase().includes(searchText)) {
         return it.title;
+      }
 
-      } else if (it.article.toLowerCase().includes(searchText)) {
+      if (it.article.toLowerCase().includes(searchText)) {
         return it.article;
       }
 
