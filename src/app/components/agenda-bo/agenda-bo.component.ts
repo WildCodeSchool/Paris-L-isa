@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { EventsService } from 'src/app/services/events.service';
+import { eventDayValidator} from '../../validators/eventday.validator';
 
 @Component({
   selector: 'app-agenda-bo',
@@ -23,7 +24,7 @@ export class AgendaBOComponent implements OnInit {
     this.eventForm = this.fb.group({
       monthName: new FormControl('', [Validators.required]),
       eventTitle: new FormControl('', [Validators.required]),
-      eventDay: new FormControl(Number, [Validators.required]),
+      eventDay: new FormControl('', [Validators.required, Validators.min(1), Validators.max(31)]),
       eventDescription: new FormControl('', [Validators.required]),
       eventPlace: new FormControl('', [Validators.required]),
       eventImage: new FormControl('', [Validators.required]),
