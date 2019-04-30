@@ -33,7 +33,7 @@ input::placeholder {
   }
 }
 
-// Search bar position
+// Search bar position. Z-index is use to tap in search bar.
 
 .searchBar {
   position: fixed;
@@ -47,5 +47,6 @@ input::placeholder {
   .searchBar {
     margin: 8.5vh 0 0 3vw;
     width: 93vw;
+
   }
 }
