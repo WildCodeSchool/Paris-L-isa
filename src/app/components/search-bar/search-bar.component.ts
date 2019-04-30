@@ -10,30 +10,14 @@ import { SearchBarServiceService } from '../../services/search-bar-service.servi
 export class SearchBarComponent implements OnInit {
 
   searchText;
-  items: string[];
   informations = [];
 
-  constructor(private searchBarService: SearchBarServiceService ) {this.initializeInfos(); }
+  constructor(private searchBarService: SearchBarServiceService ) { }
 
   ngOnInit() {
     this.searchBarService.getKeyWord()
     .subscribe(data => this.informations = data);
-    console.log(this.informations);
   }
 
-  initializeInfos() {
-    this.items = this.informations;
-  }
 
-  getInfos(ev: any) {
-    this.initializeInfos();
-
-    const val = ev.target.value;
-
-    if (val && val.trim() !== '') {
-      this.items = this.items.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      });
-    }
-  }
 }
