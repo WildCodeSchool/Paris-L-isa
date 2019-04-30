@@ -12,7 +12,7 @@
   </div>
 
   <div class='resultSearch' *ngFor="let info of informations | filter : searchText">
-      <a [routerLink]=info.link>{{info.name}}</a>
+      <a [routerLink]=info.link (click)='resetInput()'>{{info.name}}</a>
   </div>
 </div>
 

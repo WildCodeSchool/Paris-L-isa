@@ -10,12 +10,17 @@ import { SearchBarServiceService } from '../../services/search-bar-service.servi
 export class SearchBarComponent implements OnInit {
 
   informations = [];
+  searchText: string;
 
   constructor(private searchBarService: SearchBarServiceService ) { }
 
   ngOnInit() {
     this.searchBarService.getKeyWord()
     .subscribe(data => this.informations = data);
+  }
+
+  resetInput() {
+    this.searchText = '';
   }
 
 
