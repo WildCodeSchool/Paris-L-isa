@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanetService } from 'src/app/services/planet.service';
 
 @Component({
   selector: 'app-planet-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetPageComponent implements OnInit {
 
-  constructor() { }
+  videoUrl: any;
+
+  constructor(private planetVideoService: PlanetService) { }
 
   ngOnInit() {
+    this.planetVideoService.currentIndex
   }
 
 }
