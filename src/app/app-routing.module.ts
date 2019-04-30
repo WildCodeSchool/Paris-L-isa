@@ -41,7 +41,8 @@ const routes: Routes = [
     },
     {
       path: 'planet',
-      component: PlanetPageComponent},
+      component: PlanetPageComponent
+    },
     {
       path: 'back-office',
       component: AgendaBOComponent

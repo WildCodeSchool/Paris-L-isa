@@ -51,11 +51,16 @@
 
   <div *ngIf="conferences" class='bodyEvent'>
 
-      <app-count-down></app-count-down>
+      <div *ngFor = 'let event of eventConf'>
 
-      <h2>Conferences</h2>
+        <p>{{ event.eventTitle }}</p>
+        <app-count-down></app-count-down>
 
-      <p >This event is CONFERENCES.</p>
+        <p>{{ event.eventDay }}</p>
+        <p>{{ event.monthName }}</p>
+        <p>{{ event.eventDescription }}</p>
+
+      </div>
 
   </div>
 

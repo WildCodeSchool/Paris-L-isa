@@ -1,0 +1,14 @@
+<div class="main">
+
+    <div class="cardConference" *ngFor="let item of events, let i = index">
+
+        <div class="card">
+            <div class="card-content">
+                <p>{{ item.eventTitle }}</p>
+                <p>{{ item.eventDay }} {{item.monthName}}</p>
+                <button (click)='promoteConf(i)'>Promote</button>
+            </div>
+        </div>
+    </div>
+
+</div>

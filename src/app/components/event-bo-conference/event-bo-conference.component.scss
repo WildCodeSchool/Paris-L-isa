@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .cardConference { 
+
+        .card {
+            width: 120px;
+            height: 160px;
+        }
+    }
+}

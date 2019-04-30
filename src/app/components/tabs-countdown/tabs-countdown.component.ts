@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeEventService } from 'src/app/services/home-event.service';
 import { Pipe } from '@angular/core';
+import { Monthevents } from '../../classes/monthevents.model';
 
 @Component({
   selector: 'app-tabs-countdown',
@@ -9,6 +10,7 @@ import { Pipe } from '@angular/core';
 })
 export class TabsCountdownComponent implements OnInit {
 
+  eventConf = [] ;
   eventList = [];
   conferences = false;
   eclipses = true;
@@ -31,6 +33,14 @@ export class TabsCountdownComponent implements OnInit {
 
   ngOnInit() {
     this.eventList = this.service.tableEventSky;
+    this.service.sendToConf().subscribe(data => {
+      this.eventConf = data.map(e => {
+        return {
+          id : e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Monthevents;
+      });
+      console.log(this.eventConf);
+    })
   }
-  
 }
