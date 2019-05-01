@@ -39,7 +39,7 @@
   <div *ngIf="eclipses" class='bodyEvent'>
 
     <div *ngFor="let event of eventList" class='eventBody'>
-      <h1>{{event.title}}</h1>
+      <p class="eventTitle">{{event.title}}</p>
 
       <app-count-down class="app-count"></app-count-down>
 
@@ -51,14 +51,14 @@
 
   <div *ngIf="conferences" class='bodyEvent'>
 
-      <div *ngFor = 'let event of eventConf'>
+      <div *ngFor='let event of eventConf'>
 
-        <p>{{ event.eventTitle }}</p>
+        <p class="eventTitle">{{ event.eventTitle }}</p>
         <app-count-down></app-count-down>
 
-        <p>{{ event.eventDay }}</p>
-        <p>{{ event.monthName }}</p>
-        <p>{{ event.eventDescription }}</p>
+        <p class='eventDate'>{{ event.eventDay }}</p>
+        <p class='eventDate'>{{ event.monthName }}</p>
+        <p class='description'>{{ event.eventDescription }}</p>
 
       </div>
 
