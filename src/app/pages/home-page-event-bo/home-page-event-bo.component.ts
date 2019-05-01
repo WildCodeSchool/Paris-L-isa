@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageEventBoComponent implements OnInit {
 
+  switchButtonConf=false;
+  switchButtonSky=true;
+
   constructor() { }
 
   ngOnInit() {
   }
+  onSwitchConf() {
+    this.switchButtonConf= !this.switchButtonConf;
+    this.switchButtonSky= !this.switchButtonSky;
+  }
 
+  onSwitchSky() {
+    this.switchButtonConf= !this.switchButtonConf;
+    this.switchButtonSky= !this.switchButtonSky;
+  }
 }

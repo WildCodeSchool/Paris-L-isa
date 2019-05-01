@@ -1,7 +1,7 @@
 
 <div class="main">
 
-  <h1>Sky Event</h1>
+  <p>Sky Event</p>
 
     <form (ngSubmit)="myForm.valid && onSubmit(form)" #myForm='ngForm'>
       
@@ -52,7 +52,7 @@
         
         <label for="description">Description</label>
         <input 
-        class="form-control"
+        class="form-control descriptionForm"
         #descriptionText='ngModel'
         type="text" 
         id="description"
@@ -70,14 +70,9 @@
 
       </div>
 
-
-      <div class="button">
-
-        <button 
-        type="submit"
-        >Promote</button>
-
-      </div>
+      <button 
+      type="submit"
+      >Promote</button>
 
     </form>
 

@@ -1,11 +1,38 @@
+@import "../../../colors.scss";
+
 .main {
-    padding-top: 70px;
-    min-height: 100vh;
+    background-image: url('../../../assets/eventSkyConf/space-stars-event.jpg');
+    background-size: cover;
+    color: white;
     display: flex;
     flex-direction: column;
+    font-Family : 'nasalization';
+    min-height: 100vh;
+    padding-top: 70px;
 
     .header {
+        margin-top:40px;
         text-align: center;
+
+        .title {
+            color: $clear-grey;
+            font-size: 50px;
+        }
+
+        .buttonSwitch {
+
+            button{
+            background-color: rgba(28,38,38,0.6);
+            border-radius: 15px;
+            color: $clear-grey;
+            font-size:15px;
+            height:6vh;
+            margin-right:10px;
+            margin-top:20px;
+            outline: none !important;
+            width: 9vw;
+            }
+        }
     }
 
 }

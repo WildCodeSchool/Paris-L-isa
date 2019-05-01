@@ -1,13 +1,44 @@
+@import '../../../colors.scss';
+
 .main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 
-    .cardConference { 
-
-        .card {
-            width: 120px;
-            height: 160px;
-        }
+    .confTitle {
+        font-size: 50px;
+        margin-bottom: 50px;
+        margin-top:80px;
+        text-align: center;
     }
+    
+    .cardContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 50px;
+
+        .cardConference { 
+
+            .card {
+                background-color: rgba(192,192,192,0.8);
+                border-radius: 15px;
+                color: $clear-grey;
+                height: 180px;
+                margin: 10px;
+                width: 150px;
+
+                button {
+                    padding:5px;
+                    outline: none !important;
+                }
+
+                .itemTitle {
+                    font-size: 20px;
+                }
+
+                .itemDate {
+                    align-self: center;
+                    font-size: 14px;
+                }
+            }
+        }
+    }    
 }

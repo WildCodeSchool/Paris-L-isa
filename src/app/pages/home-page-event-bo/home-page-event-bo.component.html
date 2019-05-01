@@ -4,27 +4,27 @@
 
     <div class="title">
 
-      <h1>Main Event to promote</h1>
+      <p>Main Event to promote</p>
 
     </div>
 
-    <div class="buttonSwith">
+    <div class="buttonSwitch">
 
-      <button>Conference</button>
-      <button>Sky Event</button>
+      <button (click)='onSwitchConf()' [disabled]='switchButtonConf'>Conference</button>
+      <button (click)='onSwitchSky()' [disabled]='switchButtonSky'>Sky Event</button>
 
     </div>
 
   </div>
 
 
-  <div class="conference">
+  <div class="conference" *ngIf='switchButtonConf'>
 
     <app-event-bo-conference></app-event-bo-conference>
 
   </div>
 
-  <div class="skyevent">
+  <div class="skyevent" *ngIf='switchButtonSky'>
 
     <app-event-bo-sky-event></app-event-bo-sky-event>
 
