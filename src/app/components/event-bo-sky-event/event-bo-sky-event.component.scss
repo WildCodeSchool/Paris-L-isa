@@ -13,17 +13,23 @@
         background-color: rgba(192,192,192,0.8);
         padding: 15px;
         border-radius: 15px;
+        display: flex;
+        flex-direction: column;
 
-        label {
-            font-size:25px;
-        }
+        .divTitle {
+            align-self: center;
 
-        input {
-            width: 200px;
-            height: 22px;
-            margin-left: 10px;
+            label {
+                font-size:25px;
+                margin-right: 80px;
+            }
+
+            input {
+                width: 200px;
+                height: 22px;
+                margin-left: 10px;
+            }
         }
-        
         .descriptionForm {
             height: 50px;
         }

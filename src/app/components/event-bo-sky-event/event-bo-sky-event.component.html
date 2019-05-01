@@ -5,7 +5,7 @@
 
     <form (ngSubmit)="myForm.valid && onSubmit(form)" #myForm='ngForm'>
       
-      <div>
+      <div class="divTitle">
 
         <label for="title">Title</label>
         <input 
@@ -30,7 +30,6 @@
       <div>
                
         <label for="date">Date</label>
-        <label>  ex: Jan 5, 2021 15:37:25 </label>
         <input 
         class="form-control"
         #dateText='ngModel'
@@ -41,6 +40,8 @@
         required>
         
       </div>
+
+      <label>  ex: Jan 5, 2021 15:37:25 </label>
 
       <div *ngIf="myForm.submitted && dateText.errors">
 
