@@ -1,0 +1,55 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<div id="main">
+  <div class="tabsComponent is-boxed">
+    <ul>
+      <li [ngClass]="{backGroundTabs: history}" 
+          class="sciences" 
+      >
+        <a id="buttonsciences" (click)="showHistory($event)">
+          <img src="../../assets/icons/telescope1.png/" alt='icon'><span class="eventsTitles1">History</span>
+        </a>
+      </li>
+
+      <li [ngClass]="{backGroundTabs: sciences}" 
+          class="history" 
+      >
+        <a id="buttonhistory" (click)="showSciences($event)">
+          <img src="../../assets/icons/rocket.png" alt='icon' class="icon2"><span class="eventsTitles2">Sciences</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="sciences" class='bodyEvent'>
+
+      <h2>History</h2>
+
+      <p>
+        Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus. Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp. Maelium non oderit? Cum duobus ducibus de imperio in Italia est decertatum, Pyrrho et Hannibale; ab altero propter probitatem eius non nimis alienos animos habemus, alterum propter crudelitatem semper haec civitas oderit.
+        Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus. Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp. Maelium non oderit? Cum duobus ducibus de imperio in Italia est decertatum, Pyrrho et Hannibale; ab altero propter probitatem eius non nimis alienos animos habemus, alterum propter crudelitatem semper haec civitas oderit.
+        Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus. Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp. Maelium non oderit? Cum duobus ducibus de imperio in Italia est decertatum, Pyrrho et Hannibale; ab altero propter probitatem eius non nimis alienos animos habemus, alterum propter crudelitatem semper haec civitas oderit.
+
+      </p>
+
+  </div>
+
+  <div *ngIf="history" class='bodyEvent'>
+
+      <h2>Sciences</h2>
+
+      <p>
+        Et quia Montius inter dilancinantium manus spiritum efflaturus Epigonum et Eusebium nec professionem nec dignitatem ostendens aliquotiens increpabat, qui sint hi magna quaerebatur industria, et nequid intepesceret, Epigonus e Lycia philosophus ducitur et Eusebius ab Emissa Pittacas cognomento, concitatus orator, cum quaestor non hos sed tribunos fabricarum insimulasset promittentes armorum si novas res agitari conperissent.
+        Et quia Montius inter dilancinantium manus spiritum efflaturus Epigonum et Eusebium nec professionem nec dignitatem ostendens aliquotiens increpabat, qui sint hi magna quaerebatur industria, et nequid intepesceret, Epigonus e Lycia philosophus ducitur et Eusebius ab Emissa Pittacas cognomento, concitatus orator, cum quaestor non hos sed tribunos fabricarum insimulasset promittentes armorum si novas res agitari conperissent.
+
+      </p>
+
+  </div>
+
+</div>
+
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>

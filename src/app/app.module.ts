@@ -41,6 +41,7 @@ import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
 import { HomePageEventBoComponent } from './pages/home-page-event-bo/home-page-event-bo.component';
 import { EventBoSkyEventComponent } from './components/event-bo-sky-event/event-bo-sky-event.component';
 import { EventBoConferenceComponent } from './components/event-bo-conference/event-bo-conference.component';
+import { TabsHistoryScienceComponent } from './components/tabs-history-science/tabs-history-science.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
@@ -71,6 +72,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     PlanetPageComponent,
     PlanetComponent,
     AgendaBOComponent,
+    TabsHistoryScienceComponent,
     FilterPipe
   ],
   imports: [
