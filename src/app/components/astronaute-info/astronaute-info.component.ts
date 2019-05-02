@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { GetAstrosService } from 'src/app/services/get-astros.service';
 
 
@@ -18,11 +18,8 @@ export class AstronauteInfoComponent implements OnInit {
   displaySummary = true;
   displayExperience = true;
 
-  selectedAstroControl = new FormControl();
-
   astronauts = [];
   astro;
-
 
   constructor(public getAstroService: GetAstrosService) { }
 
@@ -37,6 +34,7 @@ export class AstronauteInfoComponent implements OnInit {
       this.displayExperience = false;
       }
     this.loadScriptsTwitter();
+
   }
 
   actionNick($event) {
@@ -51,8 +49,6 @@ export class AstronauteInfoComponent implements OnInit {
     this.conditionAnne = true;
     this.conditionNick = false;
     this.loadScriptsTwitter();
-    console.log('marche');
-
   }
 
   actionArticle() {
@@ -78,21 +74,16 @@ export class AstronauteInfoComponent implements OnInit {
 
   changeAstro(astro) {
     if (astro.name === 'Nick Hague') {
-      astro = 'Nick Hague' ? console.log('mthfckr') : console.log('bernichouchou');
       this.conditionNick = true;
       this.conditionAnne = false;
       this.loadScriptsTwitter();
 
     } else if (astro.name === 'Anne McClain') {
-      astro = 'Anne McClain' ? console.log('Masther HUUUUU') : console.log('bernichouchou');
       this.conditionAnne = true;
       this.conditionNick = false;
       this.loadScriptsTwitter();
 
-    } else {
-      return this.astronauts[0].name = 'Astronauts';
     }
-
   }
 
 }

@@ -51,8 +51,18 @@
 
     <div class="select menuBurger">
 
-        <select [(ngModel)]="astro" (ngModelChange)="changeAstro(astro)" class="astronome" name="astro">
-          <option *ngFor="let currentAstro of astronauts" [ngValue]="currentAstro">{{ currentAstro.name }}</option>
+
+        <select
+          [(ngModel)]="astro"
+          (ngModelChange)="changeAstro(astro)"
+          class="astronome"
+          name="astro">
+            <option
+              *ngFor="let currentAstro of astronauts"
+              [ngValue]="currentAstro"
+              selected>
+                {{ currentAstro.name }}
+            </option>
         </select>
     </div>
 
