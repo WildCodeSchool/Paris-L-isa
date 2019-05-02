@@ -1,5 +1,13 @@
 $fontFamily : 'nasalization';
 
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
 @mixin backgroundM () {
 
     background-position: center;
@@ -14,6 +22,24 @@ $fontFamily : 'nasalization';
     height: auto;
     width: 100vw;
     height: 100vh;
+
+}
+
+.backgroundPlanet {
+
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+
+}
+
+div.bgdiv {
+
+    background-color: red;
+    width : 20vw;
+    height: 650px;
 
 }
 
@@ -69,5 +95,16 @@ video#video4 {
     right: 0;
     width: 100vw;
     height: 96vh;
+
+}
+
+
+@media screen and (max-width: 918px) {
+
+    .backgroundPlanet {
+
+        height: 88vh;
+        
+    }
 
 }

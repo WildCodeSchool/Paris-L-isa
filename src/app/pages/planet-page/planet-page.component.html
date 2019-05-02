@@ -1,28 +1,62 @@
 <app-planet class="planetStyle"></app-planet>
-<div class="blackBackground" *ngIf="currentIndexVideo == 0">
+<div class="blackBackground" 
+    *ngIf="currentIndexVideo == 0 && booleanVideoScreenSize == false">
+
     <video id="video1" autoplay loop poster="../../../assets/planetVideo/Saturn9053.mp4" class="bgvid">
         <source src="../../../assets/planetVideo/Saturn9053.webm" type="video/webm">
         <source src="../../../assets/planetVideo/Saturn9053.mp4" type="video/mp4">
     </video>
+
 </div>
 
-<div class="blackBackground" *ngIf="currentIndexVideo == 1">
+<div [style.background]="'url('+backgroundPlanetTab[0]+')'" 
+     *ngIf="booleanVideoScreenSize != false && currentIndexVideo == 0" 
+     class="backgroundPlanet">
+</div>
+
+<div class="blackBackground" 
+    *ngIf="currentIndexVideo == 1 && booleanVideoScreenSize == false">
+
     <video id="video2" autoplay loop poster="../../../assets/planetVideo/Neptune398.mp4" class="bgvid">
         <source src="../../../assets/planetVideo/Neptune398.webm" type="video/webm">
         <source src="../../../assets/planetVideo/Neptune398.mp4" type="video/mp4">
     </video>
+
 </div>
 
-<div class="blackBackground" *ngIf="currentIndexVideo == 2">
+<div [style.background]="'url('+backgroundPlanetTab[1]+')'" 
+    *ngIf="booleanVideoScreenSize != false && currentIndexVideo == 1" 
+    class="backgroundPlanet">
+</div>
+
+
+<div class="blackBackground" 
+    *ngIf="currentIndexVideo == 2 && booleanVideoScreenSize == false">
+
     <video id="video3" autoplay [muted]="true" loop poster="../../../assets/planetVideo/Venus1.mp4" class="bgvid">
         <source src="../../../assets/planetVideo/Venus1.webm" type="video/webm">
         <source src="../../../assets/planetVideo/Venus1.mp4" type="video/mp4">
     </video>
+
 </div>
 
-<div class="blackBackground" *ngIf="currentIndexVideo == 3">
+<div [style.background]="'url('+backgroundPlanetTab[2]+')'" 
+    *ngIf="booleanVideoScreenSize != false && currentIndexVideo == 2" 
+    class="backgroundPlanet">
+</div>
+
+
+<div class="blackBackground" 
+    *ngIf="currentIndexVideo == 3 && booleanVideoScreenSize == false">
+
     <video id="video4" autoplay loop poster="../../../assets/planetVideo/Earth2045.mp4" class="bgvid">
         <source src="../../../assets/planetVideo/Earth2045.webm" type="video/webm">
         <source src="../../../assets/planetVideo/Earth2045.mp4" type="video/mp4">
     </video>
+
+</div>
+
+<div [style.background]="'url('+backgroundPlanetTab[3]+')'" 
+    *ngIf="booleanVideoScreenSize != false && currentIndexVideo == 3" 
+    class="backgroundPlanet">
 </div>

@@ -25,10 +25,6 @@
       </p>
     </div>
 
-    <div class="tabsHistSci">
-      <app-tabs-history-science></app-tabs-history-science>
-    </div>
-
     <div class="properties">
       <ul>
         <h3>Composition Chimique</h3>
@@ -54,7 +50,9 @@
             <p>Vital quantity 20,9% O<sub>2</sub></p>
             <p>Traces CH<sub>4</sub>, Ar, CO<sub>2</sub>Ne, He, H<sub>2</sub>O</p>
           </div>
-        <br>
+      </ul>
+
+      <ul>
         <h3>Données Physiques</h3>
         <div *ngIf="currentIndex == 0">
           <p>Diamètre (km) : 120 660</p>
@@ -86,4 +84,9 @@
         </div>
       </ul>
     </div>
+
+    <div class="tabsHistSci">
+      <app-tabs-history-science></app-tabs-history-science>
+    </div>
+
 </div>
