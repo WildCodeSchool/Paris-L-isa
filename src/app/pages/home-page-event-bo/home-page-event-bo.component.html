@@ -1,0 +1,57 @@
+<div class="main">
+
+  <div class="header">
+
+    <div class="title">
+
+      <p>Main Event to promote</p>
+
+    </div>
+
+    <div class="buttonSwitch">
+
+      <button (click)='onSwitchConf()' [disabled]='switchButtonConf'>Conference</button>
+      <button (click)='onSwitchSky()' [disabled]='switchButtonSky'>Sky Event</button>
+
+    </div>
+
+  </div>
+
+
+  <div class="conference" *ngIf='switchButtonConf'>
+
+    <app-event-bo-conference></app-event-bo-conference>
+
+  </div>
+
+  <div class="skyevent" *ngIf='switchButtonSky'>
+
+    <app-event-bo-sky-event></app-event-bo-sky-event>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+

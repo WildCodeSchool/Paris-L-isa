@@ -9,13 +9,28 @@
     <ul>
       <li [ngClass]="{backGroundTabs: conferences}" class="eclipses">
         <a id="buttonEclipses" (click)="showEclipse($event)">
-          <img src="../../assets/icons/telescope1.png/" alt='icon'><span class="eventsTitles1">Éclipses</span>
-        </a>
+          
+          <img 
+          src="../../assets/icons/telescope1.png/" 
+          alt='icon'><span 
+          class="eventsTitles1">
+          Éclipses
+        </span>
+        
+      </a>
       </li>
 
       <li [ngClass]="{backGroundTabs: eclipses}" class="conferences">
         <a id="buttonConferences" (click)="showConference($event)">
-          <img src="../../assets/icons/rocket.png" alt='icon' class="icon2"><span class="eventsTitles2">Conférences</span>
+          
+          <img 
+          src="../../assets/icons/rocket.png" 
+          alt='icon' 
+          class="icon2"><span 
+          class="eventsTitles2">
+          Conférences
+        </span>
+
         </a>
       </li>
     </ul>
@@ -23,24 +38,31 @@
 
   <div *ngIf="eclipses" class='bodyEvent'>
 
-    <app-count-down></app-count-down>
+    <div *ngFor="let event of eventList" class='eventBody'>
+      <p class="eventTitle">{{event.title}}</p>
 
-      <h2>Eclipses</h2>
+      <app-count-down class="app-count"></app-count-down>
 
-      <p >This event is ECLIPSES.</p>
+      <p class='eventDate'>{{event.date | date:"mediumDate"}}</p>
+      <p class='description'>{{event.description}}</p>
+    </div>
 
   </div>
 
   <div *ngIf="conferences" class='bodyEvent'>
 
-      <app-count-down></app-count-down>
+      <div *ngFor='let event of eventConf' class='eventBody'>
 
-      <h2>Conferences</h2>
+        <p class="eventTitle">{{ event.eventTitle }}</p>
+        <app-count-down class="app-count"></app-count-down>
 
-      <p >This event is CONFERENCES.</p>
-      
-    </div>
-    
-  </div>  
+        <p class='eventDate'>{{ event.eventDay }}{{ event.monthName }}</p>
+        <p class='description'>{{ event.eventDescription }}</p>
+
+      </div>
+
+  </div>
+
+</div>
 
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>

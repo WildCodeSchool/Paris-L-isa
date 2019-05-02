@@ -1,0 +1,77 @@
+.main {
+    margin-top: 80px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+        margin-bottom: 50px;
+        font-size: 50px;
+    }
+
+    form {
+        background-color: rgba(192,192,192,0.8);
+        padding: 15px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+
+        .divTitle {
+            align-self: center;
+            margin-bottom: 15px;
+
+            label {
+                font-size:25px;
+                margin-right: 80px;
+            }
+
+            input {
+                width: 200px;
+                height: 22px;
+                margin-left: 27px;
+            }
+        }
+
+        .divDate {
+
+            label {
+                font-size:25px;
+                margin-right: 80px;
+            }
+
+            input {
+                width: 200px;
+                height: 22px;
+                margin-left: 20px;
+            }
+        }
+
+        .exDate {
+            position: relative;
+            left: 158px;
+            margin-bottom: 15px;
+
+        }
+        
+        .divDescription {
+            margin-bottom: 15px;
+
+            label {
+                font-size:25px;
+                margin-right: 10px;
+            }
+
+            input {
+                width: 200px;
+                height: 22px;
+                margin-left: 1px;
+            }
+        
+        }
+        button {
+            width : 30%;
+            position: relative;
+            left:128px;
+        }
+    }
+}

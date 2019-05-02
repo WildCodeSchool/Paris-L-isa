@@ -15,22 +15,27 @@ $fontFamily : 'nasalization';
     text-align: center;
   }
 
-/* @mixin backgroundM ($background) {
+  @mixin backgroundM ($background) {
 
     background-image: $background;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    height: 100vh;
-}
+    padding-top: 12vh;
+  }
+  
+  
+  @media screen and (max-width: 1087px) {
+    .background {
+      @include backgroundM(url('../../../assets/home/homeBackgroundAstronaut.jpg'));
+      padding-bottom: 5vh;
+    }
 
-
-.background {
-
-    @include backgroundM(url('https://i.postimg.cc/KjBM7XwG/astronaut-1784245.jpg'));
-
-} */
+    #myVideo {
+      display : none;
+    }
+  }
 
 .tabs {
     display : flex;

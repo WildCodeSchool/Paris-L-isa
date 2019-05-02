@@ -6,3 +6,12 @@ $fontCountDown : 'Aldrich', sans-serif;
    
     color: #fcfcfc;
 }
+
+@media screen and (min-width:320px) and (max-width: 414px) {
+
+    .layout {
+        font-size: 10vw;
+
+    }
+
+}
