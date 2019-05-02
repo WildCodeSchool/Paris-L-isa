@@ -1,0 +1,80 @@
+
+<div class="main">
+
+  <p>Sky Event</p>
+
+    <form (ngSubmit)="myForm.valid && onSubmit(form)" #myForm='ngForm'>
+      
+      <div class="divTitle">
+
+        <label for="title">Title</label>
+        <input 
+        class="form-control"
+        #titleText='ngModel'
+        name="title-skyEvent"
+        type="text" 
+        id="title"
+        [(ngModel)]="skyEvent.title"
+        maxlength="20"
+        required>
+        
+      </div>
+
+      <div *ngIf="myForm.submitted && titleText.errors">
+
+        <span *ngIf="titleText.errors.required">This field is required</span>
+        <span *ngIf="titleText.errors.maxlength">20 characters maximum</span>
+
+      </div>
+
+      <div class="divDate">
+               
+        <label for="date">Date</label>
+        <input 
+        class="form-control"
+        #dateText='ngModel'
+        type="text" 
+        id="date"
+        [(ngModel)]="skyEvent.date"
+        name="date-skyEvent"
+        required>
+        
+      </div>
+
+        <label class="exDate">  ex: Jan 5, 2021 15:37:25 </label>
+
+      <div *ngIf="myForm.submitted && dateText.errors">
+
+          <span *ngIf="dateText.errors.required">A date is required</span>
+        
+      </div>
+
+      <div class="divDescription">
+        
+        <label for="description">Description</label>
+        <input 
+        class="form-control descriptionForm"
+        #descriptionText='ngModel'
+        type="text" 
+        id="description"
+        [(ngModel)]="skyEvent.description"
+        maxlength="160"
+        name="description-skyEvent"
+        required>
+        
+      </div>
+
+      <div *ngIf="myForm.submitted && descriptionText.errors">
+
+        <span *ngIf="descriptionText.errors.required">this field is required</span>
+        <span *ngIf="descriptionText.errors.maxlength">160 characters maximum</span>
+
+      </div>
+
+      <button 
+      type="submit"
+      >Promote</button>
+
+    </form>
+
+</div>

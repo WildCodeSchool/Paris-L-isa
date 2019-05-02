@@ -38,6 +38,9 @@ import { SearchBarServiceService } from './services/search-bar-service.service';
 import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
+import { HomePageEventBoComponent } from './pages/home-page-event-bo/home-page-event-bo.component';
+import { EventBoSkyEventComponent } from './components/event-bo-sky-event/event-bo-sky-event.component';
+import { EventBoConferenceComponent } from './components/event-bo-conference/event-bo-conference.component';
 import { TabsHistoryScienceComponent } from './components/tabs-history-science/tabs-history-science.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
@@ -62,6 +65,10 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AboutComponent,
     AstropageComponent,
     ListObsComponent,
+    AgendaBOComponent,
+    HomePageEventBoComponent,
+    EventBoSkyEventComponent,
+    EventBoConferenceComponent,
     PlanetPageComponent,
     PlanetComponent,
     AgendaBOComponent,
@@ -81,7 +88,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBrG5ywjbq-2E1tu0fWTH1x0oENVVQNGYY'
-    })
+    }),
+    FormsModule
   ],
   providers: [
     EventsService,
