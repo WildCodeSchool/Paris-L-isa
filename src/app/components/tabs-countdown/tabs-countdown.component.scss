@@ -8,72 +8,129 @@
   align-items: center;
   flex-direction: column;
   color: #fcfcfc;
-  margin-bottom: 220px;
+  margin-bottom: 250px;
 }
 
-.backGroundTabs {
-  background-color: #5b5b5b;
-}
-
-.eventsTitles1 {
-  font-family: 'nasalization';
-  color: #fcfcfc;
-}
-
-.eventsTitles2 {
-  font-family: 'nasalization';
-  color: #fcfcfc;
-}
-
-img {
-  margin-right: 10%;
-}
-
-li {
-  width: 50%;
-}
 
 #main {
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-}
 
-#main:hover {
-  box-shadow: 0 8px 16px 0px black;
-}
+    font-family: 'nasalization';
 
-.tabsComponent{
-  width : 30vw;
-  margin: 0 auto 0 !important;
-  opacity: 0.6;
-  background-color: #262626;
-}
+  .bodyEvent {
+    width: 30vw;
+    height: 220px;
+    opacity: 0.6;
+    background-color: #262626;
+    color: #fcfcfc;
+
+    .eventBody {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 2px;
+      grid-template-rows: auto;
+
+      .eventTitle {
+        grid-row: 1;
+        grid-column: 1/5;
+        font-size: 50px;
+        text-align: center;
+        padding: 14px;
+      }
+      .app-count {
+        grid-row: 2;
+        grid-column: 1/5;
+        text-align: center;
+      }
+
+      .description {
+        grid-row: 3;
+        grid-column: 1/5;
+        white-space: pre-line;
+        text-align: center;
+      }
+
+      .eventDate {
+        grid-row: 1;
+        grid-column: 4;
+      }
+    
+    }
+
+  }
+
+  .backGroundTabs {
+    background-color: #5b5b5b;
+  }
+
+  .eventsTitles1 {
+    font-family: 'nasalization';
+    color: #fcfcfc;
+  }
+
+  .eventsTitles2 {
+    font-family: 'nasalization';
+    color: #fcfcfc;
+  }
+
+  img {
+    margin-right: 10%;
+  }
+
+  li {
+    width: 50%;
+  }
+
+  #main {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+
+  #main:hover {
+    box-shadow: 0 8px 16px 0px black;
+  }
+
+  .tabsComponent{
+    width : 30vw;
+    margin: 0 auto 0 !important;
+    opacity: 0.6;
+    background-color: #262626;
+  }
+
+}  
 
 // Media Queries for smartphone //
 
 @media screen and (min-width:320px) and (max-width: 414px) {
+ #main {
+  width: 100%;
   .bodyEvent {
-    width: 100vw;
+    width: 100%;
+
+    .description {
+      text-align: center;
+    }
   }
 
   .tabsComponent {
-    width: 100vw;
+    width: 100%;
   }
-
+}
 }
 
 // Media Queries for tablet //
 
 @media screen and (min-width:568px) and (max-width:812px) {
-  .bodyEvent {
-    width: 60vw;
-    height: 120px
-  }
+  #main {
+  
+    .bodyEvent {
+      width: 60vw;
+      height: 120px
+    }
 
-  .tabsComponent {
-    width: 60vw
+    .tabsComponent {
+      width: 60vw
+    }
   }
-
 }
 
 // Media Queries for desktop //
