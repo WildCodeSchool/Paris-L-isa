@@ -45,20 +45,18 @@
 
   <!--    BODY INFO ASTRONOTES N*1 NICK HAGUE  -->
 
-  <div *ngIf="conditionNick" class='bodyInfo_nick_hague'>
+
 
     <!--  MENU BURGER -->
-
-
 
     <div class="select menuBurger">
 
         <select [(ngModel)]="astro" (ngModelChange)="changeAstro(astro)" class="astronome" name="astro">
           <option *ngFor="let currentAstro of astronauts" [ngValue]="currentAstro">{{ currentAstro.name }}</option>
         </select>
+    </div>
 
-      </div>
-
+  <div *ngIf="conditionNick" class='bodyInfo_nick_hague'>
     <div class="picture">
 
       <img src="../../assets/profilPicture/NickHague.png" alt="Nick Hague">

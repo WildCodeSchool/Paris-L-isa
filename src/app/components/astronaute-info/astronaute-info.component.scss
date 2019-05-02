@@ -1,343 +1,314 @@
 @import "../../../colors.scss";
 
 #main {
-   
+  color: $clear-grey;
+  font-family: "nasalization";
+  margin-top: 60px;
+
+  .bodyInfo_anne_mcclain,
+  .bodyInfo_nick_hague {
+    background-color: rgba(38, 38, 38, 0.6);
     color: $clear-grey;
-    font-family: 'nasalization';
-    margin-top: 60px;
-    
+    margin: 0 auto 0 !important;
+    width: 79vw;
+  }
 
-    .bodyInfo_anne_mcclain,
-    .bodyInfo_nick_hague    {
-        background-color:rgba(38,38,38,0.6);
-        color: $clear-grey;
-        margin: 0 auto 0 !important;
-        width: 79vw;
-        
+  .tabs {
+    border-bottom: none;
+    background-color: #262626;
+    margin: 0 auto 0 !important;
+    opacity: 0.6;
+    width: 79vw;
+
+    .astroNick {
+      width: 20%;
     }
 
-
-    .tabs{
-        border-bottom: none;
-        background-color: #262626;
-        margin: 0 auto 0 !important;
-        opacity: 0.6;
-        width : 79vw;
-
-        .astroNick { 
-            width: 20%
-        };
-
-        .astroAlexey {
-            width: 20%
-        };
-
-        .astroChristina {
-             width: 20%
-            };
-        .astroAnne { 
-            width: 20%
-        };
-
-        .astroOleg {
-             width: 20%
-            };
-
-        .astroDavid {
-             width: 20%
-            };
-
-        .nameNick {
-             color: $clear-grey
-            };
-
-        .nameAlexey { 
-            color: $clear-grey
-        };
-
-        .nameChristina { 
-            color: $clear-grey
-        };
-
-        .nameAnne {
-             color: $clear-grey
-            };
-
-        .nameOleg {
-             color: $clear-grey
-            };
-
-        .nameDavid {
-             color: $clear-grey
-            };
-
-        /*   HOVER   */
-
-        .astroNick:hover .nameNick {
-            color: #262626
-        };
-
-        .astroAlexey:hover .nameAlexey {
-            color: #262626
-        };
-
-        .astroChristina:hover .nameChristina {
-            color: #262626
-        };
-
-        .astroAnne:hover .nameAnne {
-            color: #262626
-        };
-
-        .astroOleg:hover .nameOleg {
-            color: #262626
-        };
-
-        .astroDavid:hover .nameDavid {
-            color: #262626
-        };
-
+    .astroAlexey {
+      width: 20%;
     }
 
-    .menuBurger {
-        display: none
-    };
-
-    /* GRID SET UP NICK HAGUE*/
-
-    .bodyInfo_nick_hague {
-
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-gap: 20px;
-        grid-template-rows: auto;
-        padding: 1vw;
-        
+    .astroChristina {
+      width: 20%;
+    }
+    .astroAnne {
+      width: 20%;
     }
 
-    .picture {
-
-        grid-column: 1;
-        grid-row: 1/2;
-        text-align: center;
+    .astroOleg {
+      width: 20%;
     }
 
-    .summary {
-        grid-column: 2/4;
-        grid-row: 1;
-
-        h3 {
-            text-align: center;
-            padding: 2px 0;
-            font-size: 25px;
-        }
+    .astroDavid {
+      width: 20%;
     }
 
-    .personalData {
-        grid-column: 1;
-        grid-row: 2;
+    .nameNick {
+      color: $clear-grey;
     }
 
-    .nasaExperience {
-        grid-column: 2/4;
-        grid-row: 2;
-
-        h3{
-            text-align: center;
-            padding: 2px 0;
-            font-size: 25px;
-        }
+    .nameAlexey {
+      color: $clear-grey;
     }
 
-    .twitterApi {
-        grid-column: 4;
-        grid-row: 1/2;
+    .nameChristina {
+      color: $clear-grey;
     }
 
-    .fb-page {
-        grid-column: 4;
-        grid-row: 2;
-        
+    .nameAnne {
+      color: $clear-grey;
     }
 
-    /* GRID SET UP ANNE MCCLAIN*/
-
-    .bodyInfo_anne_mcclain {
-
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-gap: 20px;
-        grid-template-rows: auto;
-        padding: 1vw;
-        
+    .nameOleg {
+      color: $clear-grey;
     }
 
-    .picture {
-
-        grid-column: 1;
-        grid-row: 1/2;
-        text-align: center;
+    .nameDavid {
+      color: $clear-grey;
     }
 
-    .summary {
-        grid-column: 2/4;
-        grid-row: 1;
+    /*   HOVER   */
 
-        h3 {
-
-            font-size: 25px;
-            padding: 2px 0;
-            text-align: center;
-
-        }
-
+    .astroNick:hover .nameNick {
+      color: #262626;
     }
 
-    .personalData {
-        grid-column: 1;
-        grid-row: 2;
-
+    .astroAlexey:hover .nameAlexey {
+      color: #262626;
     }
 
-    .nasaExperience {
-        grid-column: 2/4;
-        grid-row: 2;
-
-        h3{
-            text-align: center;
-            padding: 2px 0;
-            font-size: 25px;
-        }
+    .astroChristina:hover .nameChristina {
+      color: #262626;
     }
 
-    .twitterApi {
-        grid-column: 4;
-        grid-row: 1/2;
+    .astroAnne:hover .nameAnne {
+      color: #262626;
     }
 
-    .fb-page {
-        grid-column: 4;
-        grid-row: 2;
-        
+    .astroOleg:hover .nameOleg {
+      color: #262626;
     }
-}   
+
+    .astroDavid:hover .nameDavid {
+      color: #262626;
+    }
+  }
+
+  .menuBurger {
+    display: none;
+  }
+
+  /* GRID SET UP NICK HAGUE*/
+
+  .bodyInfo_nick_hague {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    padding: 1vw;
+  }
+
+  .picture {
+    grid-column: 1;
+    grid-row: 1/2;
+    text-align: center;
+  }
+
+  .summary {
+    grid-column: 2/4;
+    grid-row: 1;
+
+    h3 {
+      text-align: center;
+      padding: 2px 0;
+      font-size: 25px;
+    }
+  }
+
+  .personalData {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .nasaExperience {
+    grid-column: 2/4;
+    grid-row: 2;
+
+    h3 {
+      text-align: center;
+      padding: 2px 0;
+      font-size: 25px;
+    }
+  }
+
+  .twitterApi {
+    grid-column: 4;
+    grid-row: 1/2;
+  }
+
+  .fb-page {
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  /* GRID SET UP ANNE MCCLAIN*/
+
+  .bodyInfo_anne_mcclain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    padding: 1vw;
+  }
+
+  .picture {
+    grid-column: 1;
+    grid-row: 1/2;
+    text-align: center;
+  }
+
+  .summary {
+    grid-column: 2/4;
+    grid-row: 1;
+
+    h3 {
+      font-size: 25px;
+      padding: 2px 0;
+      text-align: center;
+    }
+  }
+
+  .personalData {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .nasaExperience {
+    grid-column: 2/4;
+    grid-row: 2;
+
+    h3 {
+      text-align: center;
+      padding: 2px 0;
+      font-size: 25px;
+    }
+  }
+
+  .twitterApi {
+    grid-column: 4;
+    grid-row: 1/2;
+  }
+
+  .fb-page {
+    grid-column: 4;
+    grid-row: 2;
+  }
+}
 
 @media screen and (max-width: 1000px) {
+  .tabs {
+    .astroNick {
+      display: none;
+    }
+    .astroAlexey {
+      display: none;
+    }
+    .astroChristina {
+      display: none;
+    }
+    .astroAnne {
+      display: none;
+    }
+    .astroOleg {
+      display: none;
+    }
+    .astroDavid {
+      display: none;
+    }
+  }
 
-    .tabs {
-
-        .astroNick {
-            display: none
-        };
-        .astroAlexey {
-            display: none
-        };
-        .astroChristina {
-            display: none
-        };
-        .astroAnne {
-            display: none
-        };
-        .astroOleg {
-            display: none
-        };
-        .astroDavid {
-            display: none
-        };
-        
-
-            }
-        
-        
-
-.menuBurger{
+  .menuBurger {
     display: inline !important;
-    margin: 2px auto ;
+    margin: 2px auto;
 
     .astronome {
-        background-color: #262626;
-        border: none;
-        color: $clear-grey;
-        font-size: 20px;
-        font-family: 'nasalization';
-
-        }
+      background-color: #262626;
+      border: none;
+      color: $clear-grey;
+      font-size: 20px;
+      font-family: "nasalization";
+      margin: auto;
     }
+  }
 }
 
 @media screen and (max-width: 900px) {
-
-     /* GRID SET UP */
-#main {
-
-     .bodyInfo_anne_mcclain,
-     .bodyInfo_nick_hague     {
-
-        display: grid;
-        grid-template-columns: auto;
-        grid-gap: 2px;
-        grid-template-rows: auto;
-        padding: 1vw;
-        
+  /* GRID SET UP */
+  #main {
+    .bodyInfo_anne_mcclain,
+    .bodyInfo_nick_hague {
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 2px;
+      grid-template-rows: auto;
+      padding: 1vw;
     }
-    .menuBurger{
-        grid-row: 1;
+    .menuBurger {
+      grid-row: 1;
     }
 
     .picture {
-        grid-row: 2;
+      grid-row: 2;
     }
 
     .summary {
-        grid-column: 1;
-        grid-row: 3;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      grid-column: 1;
+      grid-row: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-        span {
-            padding: 2px 0;
-            font-size: 25px;
-            color: $clear-grey;
-        }
+      span {
+        padding: 2px 0;
+        font-size: 25px;
+        color: $clear-grey;
+      }
 
-        h3 {
-            text-align: center;
-            padding: 2px 0;
-            font-size: 25px;
-        }
+      h3 {
+        text-align: center;
+        padding: 2px 0;
+        font-size: 25px;
+      }
     }
 
     .personalData {
-        grid-column: 1;
-        grid-row: 4;
+      grid-column: 1;
+      grid-row: 4;
 
-        hr {
-            color :$clear-grey;
-        }
+      hr {
+        color: $clear-grey;
+      }
     }
 
     .nasaExperience {
-        grid-column: 1;
-        grid-row: 5;
+      grid-column: 1;
+      grid-row: 5;
 
-        span {
-            text-align: center;
-            padding: 4px 0;
-            font-size: 25px;
-        }
+      span {
+        text-align: center;
+        padding: 4px 0;
+        font-size: 25px;
+      }
     }
 
     .twitterApi {
-        grid-column: 1;
-        grid-row: 6;
+      grid-column: 1;
+      grid-row: 6;
     }
 
     .fb-page {
-        grid-column: 1;
-        grid-row: 7;
-        
+      grid-column: 1;
+      grid-row: 7;
     }
-    
-}
+  }
 }
