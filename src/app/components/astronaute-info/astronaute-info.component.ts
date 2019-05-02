@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { GetAstrosService } from 'src/app/services/get-astros.service';
 
 
 
@@ -9,24 +11,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AstronauteInfoComponent implements OnInit {
 
-  conditionNick: boolean = true;
-  conditionAnne: boolean = false;
+  conditionNick = true;
+  conditionAnne = false;
 
   mobileScreen: boolean;
   displaySummary = true;
   displayExperience = true;
 
+  astronauts = [];
+  astro;
 
-
-  constructor() { }
+  constructor(public getAstroService: GetAstrosService) { }
 
   ngOnInit() {
+
+    this.getAstroService.getAstros()
+    .subscribe(data => this.astronauts = data);
+
     if (screen.width < 450) {
       this.mobileScreen = true;
       this.displaySummary = false;
       this.displayExperience = false;
       }
-      this.loadScriptsTwitter();
+    this.loadScriptsTwitter();
+
   }
 
   actionNick($event) {
@@ -34,14 +42,13 @@ export class AstronauteInfoComponent implements OnInit {
   this.conditionNick = true;
   this.conditionAnne = false;
   this.loadScriptsTwitter();
-  };
+  }
 
-  actionAnne($event){
+  actionAnne($event) {
     $event.preventDefault();
     this.conditionAnne = true;
     this.conditionNick = false;
     this.loadScriptsTwitter();
-
   }
 
   actionArticle() {
@@ -64,7 +71,21 @@ export class AstronauteInfoComponent implements OnInit {
       document.getElementsByTagName('head')[0].appendChild(node);
     }
   }
-  
+
+  changeAstro(astro) {
+    if (astro.name === 'Nick Hague') {
+      this.conditionNick = true;
+      this.conditionAnne = false;
+      this.loadScriptsTwitter();
+
+    } else if (astro.name === 'Anne McClain') {
+      this.conditionAnne = true;
+      this.conditionNick = false;
+      this.loadScriptsTwitter();
+
+    }
+  }
+
 }
 
 

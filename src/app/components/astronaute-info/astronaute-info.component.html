@@ -40,33 +40,33 @@
         </a>
       </li>
     </ul>
-    
+
   </div>
 
   <!--    BODY INFO ASTRONOTES N*1 NICK HAGUE  -->
 
-  <div *ngIf="conditionNick" class='bodyInfo_nick_hague'>
+
 
     <!--  MENU BURGER -->
 
-
-
     <div class="select menuBurger">
-          
-        <select class="astronome">
-          <option>ASTRONAUTS</option>
-          <option>Nick Hague</option>
-          <option>Alexey Ovchinin</option>
-          <option>Christina Koch</option>
-          <option>Anne McClain</option>
-          <option>Oleg Kononenko</option>
-          <option>David saint-jaques</option>
 
-          
+
+        <select
+          [(ngModel)]="astro"
+          (ngModelChange)="changeAstro(astro)"
+          class="astronome"
+          name="astro">
+            <option
+              *ngFor="let currentAstro of astronauts"
+              [ngValue]="currentAstro"
+              selected>
+                {{ currentAstro.name }}
+            </option>
         </select>
-      
-      </div>
+    </div>
 
+  <div *ngIf="conditionNick" class='bodyInfo_nick_hague'>
     <div class="picture">
 
       <img src="../../assets/profilPicture/NickHague.png" alt="Nick Hague">
@@ -233,8 +233,7 @@
   </div>
 
 </div>
-  
+
 
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-    
