@@ -7,10 +7,58 @@ $fontFamily : 'nasalization';
     background-size: cover;
     height: auto;
 }
-video#bgvid {
+
+.blackBackground {
+
+    background-color: black;
+    height: auto;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+video.bgvid {
 
     @include backgroundM();
     margin-bottom: -.5%;
+
+}
+
+video#video1 {
+
+    margin-top: -16vh;
+
+}
+
+video#video2 {
+
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    margin-top: -10vh;
+    margin-left: 5vw;
+  }
+
+  @supports (-moz-appearance: none) {
+
+    margin-top: -2vh;
+    margin-left: 15vw;
+
+  }
+
+}
+
+video#video3 {
+
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 10vh;
+
+
+}
+
+video#video4 {
+
+    margin-top: -10vh;
 
 }
 

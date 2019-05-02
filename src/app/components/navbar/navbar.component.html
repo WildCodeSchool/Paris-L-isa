@@ -1,10 +1,8 @@
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation" [ngClass]="{changeColor: changeColor}">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="https://spacex.com" target="_blank">
 			<img src="../assets/icons/logo.png" id="logo" width="112" height="28">
     </a>
-
-    <app-search-bar id="searchBar"></app-search-bar>
 
 		<a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" aria-label="menu"
 			aria-expanded="false" data-target="navbar-menu">
@@ -26,15 +24,18 @@
 					Planets
 				</a>
 
-				<div class="navbar-dropdown">
-					<a routerLink='planet' class="navbar-item">
+				<div class="navbar-dropdown" [ngClass]="{changeColor: changeColor}">
+					<a routerLink='planet' class="navbar-item" (click)="changePlanetInfo(0)">
 						Saturn
 					</a>
-					<a class="navbar-item">
-						Mars
+					<a routerLink='planet' class="navbar-item"  (click)="changePlanetInfo(1)">
+						Neptune
 					</a>
-					<a class="navbar-item">
-						Moon
+					<a routerLink='planet' class="navbar-item"  (click)="changePlanetInfo(2)">
+						Venus
+					</a>
+					<a routerLink='planet' class="navbar-item"  (click)="changePlanetInfo(3)">
+						Earth
 					</a>
 				</div>
 			</div>

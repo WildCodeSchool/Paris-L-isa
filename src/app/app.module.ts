@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule} from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,9 +34,11 @@ import { ListObsComponent } from './components/list-obs/list-obs.component';
 
 
 import { AgmCoreModule } from '@agm/core';
+import { SearchBarServiceService } from './services/search-bar-service.service';
 import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
+import { TabsHistoryScienceComponent } from './components/tabs-history-science/tabs-history-science.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
@@ -60,7 +64,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ListObsComponent,
     PlanetPageComponent,
     PlanetComponent,
-    AgendaBOComponent
+    AgendaBOComponent,
+    TabsHistoryScienceComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -71,12 +77,17 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AngularFirestoreModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBrG5ywjbq-2E1tu0fWTH1x0oENVVQNGYY'
     })
   ],
-  providers: [EventsService, AngularFirestoreModule],
+  providers: [
+    EventsService,
+    SearchBarServiceService,
+    AngularFirestoreModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

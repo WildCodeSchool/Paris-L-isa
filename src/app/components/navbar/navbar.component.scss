@@ -3,6 +3,11 @@ nav {
   top: 0;
   width: 100vw;
   background:rgba(255,255,255,0.1);
+  padding: 1vh;
+
+  &.changeColor {
+    background-color: black;
+  }
 }
 
 .navbar {
@@ -11,24 +16,26 @@ nav {
 
 div.navbar-dropdown {
   background:rgba(255,255,255,0.1);
+
+  &.changeColor {
+    background-color: black;
+  }
 }
 
 a.navbar-item {
   color: white;
+
+  &:hover {
+    color: red !important;
+  }
 }
 
 a.navbar-link {
   color: white;
-}
 
-/* SearchBar integration */
-
-#searchBar {
-  margin: auto;
-}
-
-.searchBarMobile {
-  display: none;
+  &:hover {
+    color: red !important;
+  }
 }
 
 /* Mobile Version + Media Queries */
@@ -44,6 +51,7 @@ a:hover {
 @media screen and (max-width: 1087px){
   .navbar {
     background-color: black;
+    z-index: 31; //this z-index is for the display of search bar in mobile version.
   }
 
   .navbar-menu {
