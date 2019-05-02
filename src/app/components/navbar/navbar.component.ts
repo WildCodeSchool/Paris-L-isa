@@ -1,4 +1,5 @@
-import { Component, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { PlanetService } from 'src/app/services/planet.service';
 import { HostListener, Inject } from "@angular/core";
 
 @Component({
@@ -13,9 +14,17 @@ export class NavbarComponent {
   @ViewChild('navBurger') navBurger: ElementRef;
   @ViewChild('navMenu') navMenu: ElementRef;
 
+  constructor(private planetService: PlanetService){}
+
   toggleNavbar() {
     this.navBurger.nativeElement.classList.toggle('is-active');
     this.navMenu.nativeElement.classList.toggle('is-active');
+  }
+
+  changePlanetInfo(i) { 
+
+    this.planetService.changePlanetInfo(i);
+
   }
 
   @HostListener("window:scroll", [])

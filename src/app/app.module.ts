@@ -38,6 +38,7 @@ import { SearchBarServiceService } from './services/search-bar-service.service';
 import { PlanetPageComponent } from './pages/planet-page/planet-page.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { AgendaBOComponent } from './components/agenda-bo/agenda-bo.component';
+import { TabsHistoryScienceComponent } from './components/tabs-history-science/tabs-history-science.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
@@ -64,6 +65,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     PlanetPageComponent,
     PlanetComponent,
     AgendaBOComponent,
+    TabsHistoryScienceComponent,
     FilterPipe
   ],
   imports: [

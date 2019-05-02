@@ -16,14 +16,26 @@ nav {
 
 div.navbar-dropdown {
   background:rgba(255,255,255,0.1);
+
+  &.changeColor {
+    background-color: black;
+  }
 }
 
 a.navbar-item {
   color: white;
+
+  &:hover {
+    color: red !important;
+  }
 }
 
 a.navbar-link {
   color: white;
+
+  &:hover {
+    color: red !important;
+  }
 }
 
 /* Mobile Version + Media Queries */

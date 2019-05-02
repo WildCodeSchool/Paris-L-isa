@@ -24,15 +24,18 @@
 					Planets
 				</a>
 
-				<div class="navbar-dropdown">
-					<a routerLink='planet' class="navbar-item">
+				<div class="navbar-dropdown" [ngClass]="{changeColor: changeColor}">
+					<a routerLink='planet' class="navbar-item" (click)="changePlanetInfo(0)">
 						Saturn
 					</a>
-					<a class="navbar-item">
-						Mars
+					<a routerLink='planet' class="navbar-item"  (click)="changePlanetInfo(1)">
+						Neptune
 					</a>
-					<a class="navbar-item">
-						Moon
+					<a routerLink='planet' class="navbar-item"  (click)="changePlanetInfo(2)">
+						Venus
+					</a>
+					<a routerLink='planet' class="navbar-item"  (click)="changePlanetInfo(3)">
+						Earth
 					</a>
 				</div>
 			</div>
