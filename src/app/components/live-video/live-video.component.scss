@@ -9,9 +9,9 @@
 }
 
 
-@media screen and (max-width: 1087px) {
+@media (max-width:920px) {
   .background {
-    @include backgroundM(url('../../../assets/LiveISS/moonBackground.png'));
+    @include backgroundM(url('../../../assets/LiveISS/milky-way-3619475_640.jpg'));
   }
   #myVideo {
     display : none;
