@@ -1,5 +1,6 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { PlanetService } from 'src/app/services/planet.service';
+import { WindowRef } from '@agm/core/utils/browser-globals';
 
 @Component({
   selector: 'app-planet',
@@ -30,6 +31,7 @@ export class PlanetComponent implements OnInit, DoCheck{
 
     }
 
+
   }
 
   changePlanetInfo(i) { 
@@ -37,4 +39,5 @@ export class PlanetComponent implements OnInit, DoCheck{
     this.currentIndex = this.planetService.changePlanetInfo(i);
 
   }
+
 }

@@ -26,14 +26,12 @@ export class CountDownConfComponent implements OnInit {
         } as Monthevents;
       });
     this.dateConf = this.confToPromote[0].monthName.slice(0,3) + ' ' + this.confToPromote[0].eventDay + ',' + ' ' + '2020' + ' ' + '12:00:00';
-    console.log(this.dateConf);
     });
   }
 
   countDown = setInterval(() => {
 
     this.nowDate = new Date().getTime();
-    console.log(this.nowDate);
     this.eventDate = new Date(this.dateConf).getTime();
 
     // Find the distance between now and the count down date

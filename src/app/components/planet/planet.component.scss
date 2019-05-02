@@ -173,3 +173,68 @@ span {
   }
 
 }
+
+@media screen and (max-width: 918px ) {
+
+  .rectangleSwitchPlanet {
+
+    display: block;
+
+  }
+
+  .colUnit, .sideBarPlanet, .contHr {
+
+    display: none;
+
+  }
+
+  .properties {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5vw 0;
+
+  }
+
+  .properties ul{
+
+    align-items: start;
+    width: 32vw;
+    background-color: rgba(38, 38, 38, 0.6);
+    padding: 2vh 2vw;
+    color: #ddd;
+
+  }
+
+  .row1 h2 {
+
+    padding-top: 10vh;
+
+  }
+
+  .tabsHistSci {
+
+    padding: 0 5vw;
+
+  }
+
+}
+
+@media screen and (max-width: 586px ) {
+
+  .properties {
+
+    display: block;
+    width: 90vw;
+    margin-left: 5vw;
+
+  }
+
+  .properties ul {
+
+    width: 100vw;
+
+  }
+
+}
