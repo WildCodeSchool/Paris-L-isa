@@ -28,7 +28,7 @@ $fontFamily : 'nasalization';
   
   @media screen and (max-width: 1087px) {
     .background {
-      @include backgroundM(url('../../../assets/LiveISS/moonBackground.png'));
+      @include backgroundM(url('../../../assets/home/homeBackgroundAstronaut.jpg'));
       padding-bottom: 5vh;
     }
 
