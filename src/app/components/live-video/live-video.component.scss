@@ -11,7 +11,8 @@
 
 @media (max-width:920px) {
   .background {
-    @include backgroundM(url('../../../assets/LiveISS/milky-way-3619475_640.jpg'));
+    @include backgroundM(url('../../../assets/LiveISS/milky-way-967967_1920.jpg'));
+    height: 300vh;
   }
   #myVideo {
     display : none;
