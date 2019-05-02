@@ -1,17 +1,21 @@
-.colUnit {
+.colUnit, .sideBarPlanet {
 
   width: 3vw;
-  height: 52vh;
-  margin-top: -31%;
+  margin-top: -30%;
   color: whitesmoke;
-  margin-left: 48%;
   align-items: center;
   grid-row: 2 / span 2;
   grid-column: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 2.5rem;
+  font-family: 'nazalisation', sans-serif;
+
+}
+
+.colUnit {
+
+  margin-left: 48%;
 
 }
 
@@ -22,13 +26,24 @@
 
 }
 
-h2 {
+h2, h3 {
 
     color: #eee;
     font-family: 'nazalisation', sans-serif;
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 6vh;
+
+}
+
+h2 {
+
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 6vh;
+
+}
+
+h3 {
+
+  font-size: 1.5rem;
 
 }
 
@@ -36,8 +51,9 @@ hr {
 
   width: 2vw;
   grid-column: 2;
-  grid-row: 2/span 3;
+  grid-row: 2 / span 3;
   margin: 0.5rem 0;
+  color: #ddd;
 
 }
 
@@ -50,6 +66,20 @@ hr:nth-child(1), hr:nth-child(11), hr:nth-child(21), hr:nth-child(31) {
 hr:nth-child(6), hr:nth-child(16), hr:nth-child(26) {
 
   width:3.5vw;
+
+}
+
+.properties {
+
+  grid-column: 5;
+  grid-row: 2;
+  color: #ddd;
+
+}
+
+.properties ul div {
+
+  margin-left: 3%;
 
 }
 
@@ -68,3 +98,78 @@ hr:nth-child(6), hr:nth-child(16), hr:nth-child(26) {
 
 }
 
+.sideBarPlanet {
+
+  height: 100%;
+  grid-column: 3;
+  grid-row: 2 / span 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+
+}
+
+.sideBarPlanet p:hover {
+
+  cursor: pointer;
+  color: #333;
+
+}
+
+span {
+
+  line-height: 2rem;
+
+}
+
+.tabsHistSci {
+
+  grid-column: 4;
+  grid-row: 4 / span 2;
+  height: 350px;
+
+}
+
+// media queries only for chrome //
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    
+    .colUnit, .sideBarPlanet {
+
+      height: 47vh;
+      font-size: 1.8rem;
+      margin-top: -15px;
+
+    }
+
+    h3 {
+
+      font-size: 1.3rem;
+    
+    }
+
+    
+
+}
+
+
+@supports (-moz-appearance: none) {
+
+  .colUnit, .sideBarPlanet {
+
+    height: 100%;
+    margin-top: -25px;
+    font-size: 2.5rem;
+
+  }
+
+  h3 {
+
+    font-size: 1.5rem;
+  
+  }
+
+}

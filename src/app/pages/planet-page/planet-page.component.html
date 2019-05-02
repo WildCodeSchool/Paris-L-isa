@@ -1,6 +1,28 @@
 <app-planet class="planetStyle"></app-planet>
-<video autoplay loop poster="../../../assets/planetVideo/Saturn9053.mp4" id="bgvid">
-    <source src="../../../assets/planetVideo/Saturn9053.webm" type="video/mp4">
-    <source src="../../../assets/planetVideo/Saturn9053.mp4" type="video/mp4">
-</video>
-    
+<div class="blackBackground" *ngIf="currentIndexVideo == 0">
+    <video id="video1" autoplay loop poster="../../../assets/planetVideo/Saturn9053.mp4" class="bgvid">
+        <source src="../../../assets/planetVideo/Saturn9053.webm" type="video/webm">
+        <source src="../../../assets/planetVideo/Saturn9053.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="blackBackground" *ngIf="currentIndexVideo == 1">
+    <video id="video2" autoplay loop poster="../../../assets/planetVideo/Neptune398.mp4" class="bgvid">
+        <source src="../../../assets/planetVideo/Neptune398.webm" type="video/webm">
+        <source src="../../../assets/planetVideo/Neptune398.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="blackBackground" *ngIf="currentIndexVideo == 2">
+    <video id="video3" autoplay [muted]="true" loop poster="../../../assets/planetVideo/Venus1.mp4" class="bgvid">
+        <source src="../../../assets/planetVideo/Venus1.webm" type="video/webm">
+        <source src="../../../assets/planetVideo/Venus1.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="blackBackground" *ngIf="currentIndexVideo == 3">
+    <video id="video4" autoplay loop poster="../../../assets/planetVideo/Earth2045.mp4" class="bgvid">
+        <source src="../../../assets/planetVideo/Earth2045.webm" type="video/webm">
+        <source src="../../../assets/planetVideo/Earth2045.mp4" type="video/mp4">
+    </video>
+</div>
