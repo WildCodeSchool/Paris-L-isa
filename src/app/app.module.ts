@@ -43,6 +43,7 @@ import { EventBoSkyEventComponent } from './components/event-bo-sky-event/event-
 import { EventBoConferenceComponent } from './components/event-bo-conference/event-bo-conference.component';
 import { TabsHistoryScienceComponent } from './components/tabs-history-science/tabs-history-science.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { CountDownConfComponent } from './components/count-down-conf/count-down-conf.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     PlanetComponent,
     AgendaBOComponent,
     TabsHistoryScienceComponent,
-    FilterPipe
+    FilterPipe,
+    CountDownConfComponent
   ],
   imports: [
     BrowserModule,

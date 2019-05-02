@@ -1,29 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeEventService } from 'src/app/services/home-event.service';
+import { Monthevents } from '../../classes/monthevents.model';
+
 
 @Component({
-  selector: 'app-count-down',
-  templateUrl: './count-down.component.html',
-  styleUrls: ['./count-down.component.scss']
+  selector: 'app-count-down-conf',
+  templateUrl: './count-down-conf.component.html',
+  styleUrls: ['./count-down-conf.component.scss']
 })
-
-export class CountDownComponent implements OnInit {
+export class CountDownConfComponent implements OnInit {
   nowDate;
   count;
-  dateEvent;
-  eventDate;
   dateConf;
+  eventDate;
+  confToPromote = [];
 
   constructor(private service: HomeEventService) { }
 
   ngOnInit() {
-    this.dateEvent = this.service.tableEventSky["0"].date;
+    this.service.sendToConf().subscribe(data => {
+      this.confToPromote = data.map(e => {
+        return {
+          id : e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Monthevents;
+      });
+    this.dateConf = this.confToPromote[0].monthName.slice(0,3) + ' ' + this.confToPromote[0].eventDay + ',' + ' ' + '2020' + ' ' + '12:00:00';
+    console.log(this.dateConf);
+    });
   }
 
   countDown = setInterval(() => {
 
     this.nowDate = new Date().getTime();
-    this.eventDate = new Date(this.dateEvent).getTime();
+    console.log(this.nowDate);
+    this.eventDate = new Date(this.dateConf).getTime();
 
     // Find the distance between now and the count down date
     let distance = this.eventDate - this.nowDate;
@@ -42,5 +53,4 @@ export class CountDownComponent implements OnInit {
     this.count = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
   }, 1000);
-
 }
