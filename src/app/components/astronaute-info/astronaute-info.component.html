@@ -53,10 +53,8 @@
 
     <div class="select menuBurger">
 
-        <select [formControl]="selectedAstroControl" [compareWith]="compareAstro" class="astronome">
-          <option *ngFor="let astro of astronauts" [ngValue]="astro">
-            {{ astro.name }}
-          </option>
+        <select [(ngModel)]="astro" (ngModelChange)="changeAstro(astro)" class="astronome" name="astro">
+          <option *ngFor="let currentAstro of astronauts" [ngValue]="currentAstro">{{ currentAstro.name }}</option>
         </select>
 
       </div>
