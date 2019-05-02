@@ -4,20 +4,31 @@ $fontFamily : 'nasalization';
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+}
+
+@mixin title () {
+    color:white;
+    font-family: $fontFamily;
+    font-size: 2rem;
+    padding-top: 120px;
+    text-align: center;
+    
 }
 
 section {
     @include background();
     background-image: url('../../../assets/calendar/agendaBackground.png');
-    min-height: 100vh;
+    width: 100%;
+    height: auto;
     overflow: hidden;
 
+    h1 {
+        @include title();
+    }
+
     h2 {
-        color:white;
-        font-family: $fontFamily;
-        font-size: 2rem;
-        padding-top: 120px;
+        @include title();
+        padding-top: 40px;
     }
 
     /* media queries */
@@ -75,7 +86,7 @@ section {
     .cardsBack {
         height: 100%;
         opacity: 0;
-        transition: opacity 1s, visibility 1s;
+        transition: opacity 1s;
         visibility: hidden;
         width: 100%;
       }
